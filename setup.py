@@ -10,7 +10,7 @@ setup(
     description="A Python package that mimics Java collection classes",
     long_description=open("README.md").read(),  # Long description from README
     long_description_content_type="text/markdown",
-    url="https://github.com/Sariya-Ansari/pyj.git",  # Link to your project repository
+    url="https://github.com/Sariya-Ansari/pyjcore.git",  # Link to project repository
     classifiers=[                        # Metadata
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
