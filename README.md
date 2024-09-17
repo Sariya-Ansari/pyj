@@ -1,8 +1,8 @@
-# pyj
-PyJ is a Python library designed to replicate key aspects of Java's collections framework and string handling.
+# pyjcore
+pyjcore is a Python library designed to replicate key aspects of Java's collections framework and string handling.
 
 ## Project Overview
-PyJ is a Python library designed to replicate key aspects of Java's collections framework and string handling functionalities.
+pyjcore is a Python library designed to replicate key aspects of Java's collections framework and string handling functionalities.
 This project aims to provide Pythonic equivalents of Java's well-established data structures and string utilities, making it easier for developers familiar with Java to transition to Python.
 
 ### jcollections
@@ -36,7 +36,7 @@ The jcollections and jstring libraries provide robust tools for Python developer
 You can install the package using pip command:
 
 ```bash
-pip install pyj
+pip install pyjcore
 ```
 
 ## Unit Test
