@@ -1,5 +1,3 @@
-<meta name="google-site-verification" content="pvuzeLfLQjcDxel2HnnwipDXx18ka6ybO_0Q2CmcNVo" />
-
 # pyjcore
 pyjcore is a Python library designed to replicate key aspects of Java's collections framework and string handling.
 
