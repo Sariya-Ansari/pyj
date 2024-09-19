@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pyjcore</title>
+  <style>
+    /* Optional: Add some basic styling for better readability */
+    body {
+      font-family: sans-serif;
+      line-height: 1.5;
+    }
+    h1, h2, h3 {
+      margin-top: 1em;
+    }
+    h2, h3 {
+      font-size: 1.2em;
+    }
+    code {
+      background-color: #f5f5f5;
+      padding: 0.2em;
+    }
+  </style>
+</head>
+<body>
+  <h1>pyjcore</h1>
+  <p>pyjcore is a Python library designed to replicate key aspects of Java's collections framework and string handling.</p>
+
+  <h2>Project Overview</h2>
+  <p>pyjcore is a Python library designed to replicate key aspects of Java's collections framework and string handling functionalities. This project aims to provide Pythonic equivalents of Java's well-established data structures and string utilities, making it easier for developers familiar with Java to transition to Python.</p>
+
+  <h3>jcollections</h3>
+  <p>The jcollections library mirrors Java's collection framework and allows java like methods. It allows to operate on various data structures like List, Map, Vector, Set, Queue etc.</p>
+
+  <h3>jstring</h3>
+  <p>The jstring library is a Pythonic recreation of Java's String class, designed to support various string manipulations and utilities.</p>
+  <ul>
+    <li>String Initialization: Supports constructors for initializing strings from raw data, other string-like objects, and byte arrays.</li>
+    <li>String Operations: Methods for substring extraction, character retrieval, and code point operations.</li>
+    <li>Utility methods like toLowerCase, toUpperCase, and trim.</li>
+    <li>Formatting and Conversion: Provides methods for formatting, comparing, and converting strings.</li>
+  </ul>
+
+  <h3>Testing</h3>
+  <p>To ensure correctness and reliability, the project includes:</p>
+  <ul>
+    <li>API Usage Tests: Validate core functionalities and interactions of the collection classes, demonstrating expected behaviors through various operations.</li>
+    <li>Unit Tests: Specifically target the String class, covering a wide range of string operations to ensure conformance to Java's String class behavior.</li>
+  </ul>
+
+  <h3>Conclusion</h3>
+  <p>The jcollections and jstring libraries provide robust tools for Python developers who need Java-like collection and string handling capabilities. By mimicking Java’s well-known frameworks and utilities, these libraries offer a familiar interface for Java developers and extend Python’s capabilities in handling complex data structures and string operations.</p>
+
+  <h2>Installation</h2>
+  <p>You can install the package using pip command:</p>
+  <code>pip install pyjcore</code>
+
+  <h2>Unit Test</h2>
+  <p>Goto the project root directory & run the below command (change the name of the unit test file):</p>
+  <code>python -m unittest tests.test_stringbuilder</code>
+</body>
+</html>
