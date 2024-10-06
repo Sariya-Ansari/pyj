@@ -1,3 +1,43 @@
+"""
+This module defines the `TreeSet` class, a sorted set implementation that maintains elements in ascending order.
+
+Classes:
+    - TreeSet: A sorted set that maintains its elements in ascending order, based on either natural ordering or a custom comparator.
+
+Attributes:
+    - _elements: Internal list to store elements in sorted order.
+    - _comparator: Optional comparator function to define the ordering of elements.
+
+Methods:
+    - comparator: Returns the comparator used to order elements in the set, or None if natural ordering is used.
+    - first: Returns the first (lowest) element in the TreeSet.
+    - last: Returns the last (highest) element in the TreeSet.
+    - add: Adds an element to the set in sorted order.
+    - addAll: Adds all elements from a collection to the set.
+    - ceiling: Returns the least element greater than or equal to a specified element.
+    - clear: Removes all elements from the set.
+    - contains: Checks if the set contains a specific element.
+    - headSet: Returns a view of elements strictly less than a specified element.
+    - subSet: Returns a view of elements between two specified elements.
+    - tailSet: Returns a view of elements greater than or equal to a specified element.
+    - iterator: Returns an iterator over the elements in ascending order.
+    - size: Returns the number of elements in the set.
+    - isEmpty: Checks if the set is empty.
+    - remove: Removes a specific element from the set.
+    - pollFirst: Removes and returns the first (lowest) element.
+    - pollLast: Removes and returns the last (highest) element.
+    - removeAll: Removes all elements in a specified collection from the set.
+    - retainAll: Retains only elements that are present in a specified collection.
+    - removeIf: Removes all elements that satisfy a given predicate.
+    - stream: Returns an iterator for the set.
+    - parallelStream: Returns an iterator for the set (same as `stream()` in Python).
+    - toArray: Converts the set to an array.
+    - containsAll: Checks if the set contains all elements in a specified collection.
+    - equals: Compares the set for equality with another object.
+    - hashCode: Returns the hash code value for the set.
+    - __iter__: Returns an iterator for the set.
+"""
+
 from bisect import bisect_left, bisect_right
 from jcollections.sortedset import SortedSet
 

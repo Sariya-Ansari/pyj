@@ -1,5 +1,9 @@
-from typing import TypeVar, Dict, Set, Collection, Optional, Generic
+"""
+The `hashmap` module implements the `HashMap` class, a key-value pair data structure that provides fast lookups, insertions,
+and deletions, similar to Java's `HashMap`.
+"""
 
+from typing import TypeVar, Dict, Set, Collection, Optional, Generic
 from jcollections.map import Map
 from jcollections.mapentry import MapEntry
 

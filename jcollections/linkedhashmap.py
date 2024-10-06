@@ -1,5 +1,13 @@
-from collections.abc import Set
+"""
+This module provides a `LinkedHashMap` class, which extends the `HashMap` class to maintain
+the insertion order or access order of key-value pairs.
 
+Classes:
+    - LinkedHashMap: A hash map implementation that maintains the order of entries based
+      on either insertion or access.
+"""
+
+from collections.abc import Set
 from jcollections.hashmap import HashMap
 from jcollections.mapentry import MapEntry
 from typing import Dict, List, Callable, Optional, TypeVar

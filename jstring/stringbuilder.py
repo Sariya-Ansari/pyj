@@ -1,3 +1,8 @@
+"""
+The `stringbuilder` module implements the `StringBuilder` class, which provides an efficient way to build strings through
+a mutable sequence of characters, similar to Java's `StringBuilder`.
+"""
+
 class StringBuilder:
     """
     A mutable sequence of characters, similar to Java's StringBuilder.
@@ -42,7 +47,7 @@ class StringBuilder:
         Initializes a StringBuilder with optional initial data and capacity.
 
         :param initial_data: Initial content for the builder, which can be a string, list, tuple, or an integer
-                              representing the initial capacity.
+                             representing the initial capacity.
         :param capacity: The initial capacity of the builder.
         """
         self._internal_capacity = capacity

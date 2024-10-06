@@ -1,3 +1,41 @@
+"""
+This module defines the `TreeMap` class, a map implementation that maintains its keys in a sorted order.
+
+Classes:
+    - TreeMap: A sorted map that implements the `SortedMap` interface, maintaining keys in a sorted order.
+
+Attributes:
+    - _map: Internal storage for key-value pairs as a dictionary.
+    - _comparator: Optional comparator function used to order the keys.
+
+Methods:
+    - comparator: Returns the comparator used to order the keys, or None if natural ordering is used.
+    - firstKey: Returns the first (smallest) key in the map.
+    - lastKey: Returns the last (largest) key in the map.
+    - headMap: Returns a view of the map with keys less than the specified `toKey`.
+    - subMap: Returns a view of the map with keys between `fromKey` (inclusive) and `toKey` (exclusive).
+    - tailMap: Returns a view of the map with keys greater than or equal to the specified `fromKey`.
+    - entrySet: Returns a set of MapEntry objects representing all key-value pairs in the map.
+    - keySet: Returns a set of all keys in the map.
+    - values: Returns a collection of all values in the map.
+    - clear: Removes all entries from the map.
+    - containsKey: Checks if the map contains a mapping for the specified key.
+    - containsValue: Checks if the map contains a mapping for the specified value.
+    - get: Retrieves the value associated with the specified key.
+    - put: Associates the specified value with the specified key in the map.
+    - putAll: Copies all key-value mappings from the specified map to this map.
+    - remove: Removes the mapping for the specified key from the map.
+    - size: Returns the number of key-value pairs in the map.
+    - isEmpty: Checks if the map is empty.
+    - ceilingEntry: Retrieves the least key greater than or equal to the specified key.
+    - descendingMap: Returns a TreeMap with entries in descending order.
+    - clone: Creates a shallow copy of the map.
+    - replace: Replaces the value for a specified key if it exists.
+    - pollFirstEntry: Removes and returns the first (smallest) entry.
+    - pollLastEntry: Removes and returns the last (largest) entry.
+    - forEach: Applies a function to each key-value pair in the map.
+"""
+
 from typing import Callable, Optional, Dict, TypeVar, Set, Collection
 from jcollections.mapentry import MapEntry
 from jcollections.sortedmap import SortedMap
@@ -14,35 +52,8 @@ class TreeMap(SortedMap[K, V]):
     This class provides a way to map keys to values while keeping the keys sorted based on a comparator or natural ordering.
 
     Attributes:
-        _map: Internal storage for key-value pairs as a dictionary.
-        _comparator: Optional comparator function used to order the keys.
-
-    Methods:
-        comparator: Returns the comparator used to order the keys, or None if natural ordering is used.
-        firstKey: Returns the first (smallest) key in the map.
-        lastKey: Returns the last (largest) key in the map.
-        headMap: Returns a view of the map with keys less than the specified `toKey`.
-        subMap: Returns a view of the map with keys between `fromKey` (inclusive) and `toKey` (exclusive).
-        tailMap: Returns a view of the map with keys greater than or equal to the specified `fromKey`.
-        entrySet: Returns a set of MapEntry objects representing all key-value pairs in the map.
-        keySet: Returns a set of all keys in the map.
-        values: Returns a collection of all values in the map.
-        clear: Removes all entries from the map.
-        containsKey: Checks if the map contains a mapping for the specified key.
-        containsValue: Checks if the map contains a mapping for the specified value.
-        get: Retrieves the value associated with the specified key.
-        put: Associates the specified value with the specified key in the map.
-        putAll: Copies all key-value mappings from the specified map to this map.
-        remove: Removes the mapping for the specified key from the map.
-        size: Returns the number of key-value pairs in the map.
-        isEmpty: Checks if the map is empty.
-        ceilingEntry: Retrieves the least key greater than or equal to the specified key.
-        descendingMap: Returns a TreeMap with entries in descending order.
-        clone: Creates a shallow copy of the map.
-        replace: Replaces the value for a specified key if it exists.
-        pollFirstEntry: Removes and returns the first (smallest) entry.
-        pollLastEntry: Removes and returns the last (largest) entry.
-        forEach: Applies a function to each key-value pair in the map.
+        _map (Dict[K, V]): Internal storage for key-value pairs as a dictionary.
+        _comparator (Optional[Callable[[K, K], int]]): Optional comparator function used to order the keys.
     """
 
     def __init__(self, comparator: Optional[Callable[[K, K], int]] = None, jmap: Optional[Dict[K, V]] = None):
@@ -52,7 +63,7 @@ class TreeMap(SortedMap[K, V]):
         :param comparator: Optional comparator to order the keys.
         :param jmap: Optional initial data to populate the map.
         """
-        self._map: Dict[K, V] = jmap if jmap is not None else {}  # Internal storage of keys and values
+        self._map: Dict[K, V] = jmap if jmap is not None else {}
         self._comparator = comparator
 
     def comparator(self) -> Optional[Callable[[K, K], int]]:

@@ -1,32 +1,40 @@
+"""
+The `hashset` module implements the `HashSet` class, which is a set implementation backed by a `HashMap`, ensuring unique
+elements without any specific order.
+"""
+
 from jcollections.set import Set
+
 
 class HashSet(Set):
     """
-    Implementation of a HashSet, a collection that does not allow duplicate elements
-    and does not guarantee any specific order of elements.
+    HashSet implementation that does not allow duplicate elements and does not guarantee any specific order of elements.
+
+    This class uses Python's built-in set as the internal storage. The initial capacity and load factor are ignored since
+    Python sets handle these aspects automatically.
 
     Inherits from:
-        - Set: Provides abstract methods for set operations.
+        - Set: Abstract class providing set-related operations.
     """
 
     def __init__(self, initial_capacity: int = 16, load_factor: float = 0.75, elements=None):
         """
-        Constructs a HashSet with the specified initial capacity and load factor.
+        Initializes a new HashSet with an optional initial capacity, load factor, and an optional collection of elements.
 
-        :param initial_capacity: The initial capacity of the HashSet. (Not used in Python's set)
-        :param load_factor: The load factor of the HashSet. (Not used in Python's set)
-        :param elements: An optional collection of elements to add to the HashSet at initialization.
+        :param initial_capacity: The initial capacity for the set (ignored in Python).
+        :param load_factor: The load factor for the set (ignored in Python).
+        :param elements: An optional collection of elements to initialize the set with.
         """
-        self._set = set()  # Using Python's built-in set for internal storage
-        self._initial_capacity = initial_capacity
-        self._load_factor = load_factor
+        self._set = set()  # Internal Python set
+        self._initial_capacity = initial_capacity  # Initial capacity
+        self._load_factor = load_factor  # Load factor
 
         if elements:
             self.addAll(elements)
 
     def add(self, e) -> bool:
         """
-        Adds the specified element if it is not already present in the set.
+        Adds the specified element to the set if it is not already present.
 
         :param e: The element to add.
         :return: True if the element was added, False if it was already present.
@@ -38,9 +46,9 @@ class HashSet(Set):
 
     def addAll(self, c) -> bool:
         """
-        Adds all elements from the specified collection if they are not already present.
+        Adds all elements from the specified collection to the set if they are not already present.
 
-        :param c: Collection of elements to add.
+        :param c: The collection of elements to add.
         :return: True if any elements were added, False otherwise.
         """
         initial_size = len(self._set)
@@ -57,23 +65,23 @@ class HashSet(Set):
         """
         Checks if the set contains the specified element.
 
-        :param o: The element to check for.
-        :return: True if the set contains the element, False otherwise.
+        :param o: The element to check.
+        :return: True if the element is present, False otherwise.
         """
         return o in self._set
 
     def containsAll(self, c) -> bool:
         """
-        Checks if the set contains all elements of the specified collection.
+        Checks if the set contains all elements in the specified collection.
 
-        :param c: Collection of elements to check for.
+        :param c: The collection of elements to check for.
         :return: True if all elements are present, False otherwise.
         """
         return all(item in self._set for item in c)
 
     def equals(self, o) -> bool:
         """
-        Compares the set with another object for equality.
+        Compares this set to another object for equality.
 
         :param o: The object to compare with.
         :return: True if the object is a HashSet and contains the same elements, False otherwise.
@@ -84,9 +92,9 @@ class HashSet(Set):
 
     def hashCode(self) -> int:
         """
-        Returns a hash code value for this set.
+        Returns the hash code of the set.
 
-        :return: Hash code of the set.
+        :return: The hash code of the set.
         """
         return hash(frozenset(self._set))
 
@@ -102,13 +110,13 @@ class HashSet(Set):
         """
         Returns an iterator over the elements in the set.
 
-        :return: Iterator for the set.
+        :return: An iterator over the set's elements.
         """
         return iter(self._set)
 
     def remove(self, o) -> bool:
         """
-        Removes the specified element if it is present.
+        Removes the specified element from the set if it is present.
 
         :param o: The element to remove.
         :return: True if the element was removed, False if it was not present.
@@ -120,9 +128,9 @@ class HashSet(Set):
 
     def removeAll(self, c) -> bool:
         """
-        Removes from the set all elements that are contained in the specified collection.
+        Removes all elements from the set that are also contained in the specified collection.
 
-        :param c: Collection of elements to remove.
+        :param c: The collection of elements to remove.
         :return: True if any elements were removed, False otherwise.
         """
         initial_size = len(self._set)
@@ -133,7 +141,7 @@ class HashSet(Set):
         """
         Retains only the elements in the set that are contained in the specified collection.
 
-        :param c: Collection of elements to retain.
+        :param c: The collection of elements to retain.
         :return: True if the set was modified, False otherwise.
         """
         initial_size = len(self._set)
@@ -144,15 +152,15 @@ class HashSet(Set):
         """
         Returns the number of elements in the set.
 
-        :return: Size of the set.
+        :return: The size of the set.
         """
         return len(self._set)
 
     def spliterator(self):
         """
-        Creates a Spliterator over the elements in the set.
+        Creates a spliterator over the elements in the set (mock implementation).
 
-        :return: An iterator for the set (mock implementation, as Python does not have a direct Spliterator equivalent).
+        :return: An iterator over the set's elements.
         """
         return iter(self._set)
 
@@ -160,31 +168,31 @@ class HashSet(Set):
         """
         Returns an array containing all the elements in the set.
 
-        :return: List of elements in the set.
+        :return: A list of the set's elements.
         """
         return list(self._set)
 
     def clone(self):
         """
-        Returns a shallow copy of this HashSet instance.
+        Creates a shallow copy of the HashSet.
 
-        :return: A new HashSet instance with the same elements.
+        :return: A new HashSet instance containing the same elements.
         """
         return HashSet(elements=self._set)
 
     def __str__(self):
         """
-        Returns a string representation of this set.
+        Returns a string representation of the set.
 
-        :return: String representation of the set.
+        :return: The string representation of the set.
         """
         return str(self._set)
 
     def removeIf(self, predicate) -> bool:
         """
-        Removes all elements that satisfy the given predicate.
+        Removes all elements from the set that satisfy the given predicate.
 
-        :param predicate: Function that returns True for elements to remove.
+        :param predicate: A function that returns True for elements to be removed.
         :return: True if any elements were removed, False otherwise.
         """
         initial_size = len(self._set)
@@ -193,24 +201,24 @@ class HashSet(Set):
 
     def stream(self):
         """
-        Returns a sequential stream (iterator in Python terms) of the set elements.
+        Returns a sequential stream (iterator) of the set's elements.
 
-        :return: Iterator for the set.
+        :return: An iterator over the set's elements.
         """
         return iter(self._set)
 
     def parallelStream(self):
         """
-        In Python, no direct parallel stream equivalent. Mocked as the same as stream().
+        Returns a parallel stream (iterator) of the set's elements. (Mock implementation).
 
-        :return: Iterator for the set (same as stream() in Python).
+        :return: An iterator over the set's elements.
         """
         return iter(self._set)
 
     def __iter__(self):
         """
-        Returns an iterator to make the class iterable.
+        Returns an iterator to make the HashSet iterable.
 
-        :return: Iterator for the set.
+        :return: An iterator over the set's elements.
         """
         return self.iterator()

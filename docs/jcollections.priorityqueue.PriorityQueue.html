@@ -1,0 +1,1476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>jcollections.priorityqueue.PriorityQueue</title>
+    <meta name="generator" content="pydoctor 24.3.3"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          PyJCore <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="jcollections.priorityqueue.PriorityQueue.html" class="internal-link" title="This class"><wbr></wbr>Priority<wbr></wbr>Queue</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__init__" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.__init__">__init__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__iter__" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.__iter__">__iter__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#add" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.add">add</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#addAll" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.addAll">add<wbr></wbr>All</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#clear" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.clear">clear</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#comparator" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.comparator">comparator</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#contains" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.contains">contains</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#containsAll" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.containsAll">contains<wbr></wbr>All</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#element" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.element">element</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#equals" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.equals">equals</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#hashCode" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.hashCode">hash<wbr></wbr>Code</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#isEmpty" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.isEmpty">is<wbr></wbr>Empty</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#iterator" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.iterator">iterator</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#offer" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.offer">offer</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#parallelStream" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.parallelStream">parallel<wbr></wbr>Stream</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#peek" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.peek">peek</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#poll" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.poll">poll</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#remove" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.remove">remove</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#removeAll" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.removeAll">remove<wbr></wbr>All</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#removeIf" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.removeIf">remove<wbr></wbr>If</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#retainAll" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.retainAll">retain<wbr></wbr>All</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#size" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.size">size</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#spliterator" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.spliterator">spliterator</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#stream" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.stream">stream</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#toArray" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.toArray">to<wbr></wbr>Array</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#toArrayWithType" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.toArrayWithType">to<wbr></wbr>Array<wbr></wbr>With<wbr></wbr>Type</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Inherited Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.queue.Queue.html#addLast" class="internal-link" title="jcollections.queue.Queue.addLast">add<wbr></wbr>Last</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.queue.Queue.html#getList" class="internal-link" title="jcollections.queue.Queue.getList">get<wbr></wbr>List</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.queue.Queue.html#removeFirst" class="internal-link" title="jcollections.queue.Queue.removeFirst">remove<wbr></wbr>First</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_heap" class="internal-link" title="jcollections.priorityqueue.PriorityQueue._heap">_heap</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Inherited Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.queue.Queue.html#list" class="internal-link" title="jcollections.queue.Queue.list">list</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="jcollections.priorityqueue.html" class="internal-link" title="The parent of this class">priorityqueue</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.priorityqueue.PriorityQueue.html" class="internal-link" title="jcollections.priorityqueue.PriorityQueue"><wbr></wbr>Priority<wbr></wbr>Queue</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="jcollections.html" class="internal-link">jcollections</a></code><wbr></wbr>.<code><a href="jcollections.priorityqueue.html" class="internal-link" title="jcollections.priorityqueue">priorityqueue</a></code><wbr></wbr>.<code><a href="jcollections.priorityqueue.PriorityQueue.html" class="internal-link" title="jcollections.priorityqueue.PriorityQueue">PriorityQueue</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">PriorityQueue</span>(<a href="jcollections.collection.Collection.html" class="internal-link" title="jcollections.collection.Collection">Collection</a>, <a href="jcollections.queue.Queue.html" class="internal-link" title="jcollections.queue.Queue">Queue</a>):</code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.__init__">PriorityQueue(initial, comparator, initial_capacity)</a></code></p>
+          <p><a href="classIndex.html#jcollections.priorityqueue.PriorityQueue">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="pre">A priority queue implementation using a binary heap. This class allows elements to be stored
+and retrieved based on their priority. An optional comparator can be provided for custom ordering.
+
+Attributes:
+    _heap (list): Internal heap structure to store elements.
+    comparator (Callable, optional): A function to compare elements for priority ordering.</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id44">
+  
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.__init__">__init__</a></code></td>
+    <td>Initializes a PriorityQueue with optional initial elements, a comparator, and an initial capacity.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__iter__" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.__iter__">__iter__</a></code></td>
+    <td>Returns an iterator over the elements in the priority queue.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#add" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.add">add</a></code></td>
+    <td>Adds an element to the priority queue.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#addAll" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.addAll">add<wbr></wbr>All</a></code></td>
+    <td>Adds all elements from another collection to the queue.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#clear" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.clear">clear</a></code></td>
+    <td>Removes all elements from the queue.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#comparator" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.comparator">comparator</a></code></td>
+    <td>Returns the comparator function used for the priority queue.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#contains" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.contains">contains</a></code></td>
+    <td>Checks if the queue contains a specific element.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#containsAll" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.containsAll">contains<wbr></wbr>All</a></code></td>
+    <td>Checks if all elements in the given collection are in the queue.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#element" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.element">element</a></code></td>
+    <td>Retrieves but does not remove the highest-priority element.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#equals" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.equals">equals</a></code></td>
+    <td>Compares this queue with another for equality.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#hashCode" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.hashCode">hash<wbr></wbr>Code</a></code></td>
+    <td>Returns the hash code for this queue.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#isEmpty" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.isEmpty">is<wbr></wbr>Empty</a></code></td>
+    <td>Checks if the queue is empty.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#iterator" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.iterator">iterator</a></code></td>
+    <td>Returns an iterator over the elements in the queue.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#offer" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.offer">offer</a></code></td>
+    <td>Adds an element to the priority queue. Same as `add()`.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#parallelStream" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.parallelStream">parallel<wbr></wbr>Stream</a></code></td>
+    <td>Returns a parallel stream (not applicable in Python).</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#peek" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.peek">peek</a></code></td>
+    <td>Retrieves but does not remove the highest-priority element from the queue.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#poll" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.poll">poll</a></code></td>
+    <td>Removes and returns the highest-priority element from the queue.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#remove" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.remove">remove</a></code></td>
+    <td>Removes a specific element from the queue.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#removeAll" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.removeAll">remove<wbr></wbr>All</a></code></td>
+    <td>Removes all elements that are also contained in the specified collection.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#removeIf" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.removeIf">remove<wbr></wbr>If</a></code></td>
+    <td>Removes all elements that satisfy the given predicate.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#retainAll" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.retainAll">retain<wbr></wbr>All</a></code></td>
+    <td>Retains only the elements contained in the specified collection.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#size" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.size">size</a></code></td>
+    <td>Returns the number of elements in the queue.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#spliterator" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.spliterator">spliterator</a></code></td>
+    <td>Returns a spliterator (not implemented).</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#stream" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.stream">stream</a></code></td>
+    <td>Returns a generator for the elements in the queue.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#toArray" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.toArray">to<wbr></wbr>Array</a></code></td>
+    <td>Converts the queue to a list.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#toArrayWithType" class="internal-link" title="jcollections.priorityqueue.PriorityQueue.toArrayWithType">to<wbr></wbr>Array<wbr></wbr>With<wbr></wbr>Type</a></code></td>
+    <td>Converts the queue to an array with the runtime type of the specified array.</td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_heap" class="internal-link" title="jcollections.priorityqueue.PriorityQueue._heap">_heap</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+            <p class="inheritedFrom">
+              Inherited from <code><a href="jcollections.queue.Queue.html" class="internal-link" title="jcollections.queue.Queue">Queue</a></code> (via <code><a href="jcollections.collection.Collection.html" class="internal-link" title="jcollections.collection.Collection">Collection</a></code>, <code><a href="jcollections.Iterable.Iterable.html" class="internal-link" title="jcollections.Iterable.Iterable">Iterable</a></code>):
+            </p>
+            <table class="children sortable" id="id45">
+  
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.queue.Queue.html#addLast" class="internal-link" title="jcollections.queue.Queue.addLast">add<wbr></wbr>Last</a></code></td>
+    <td>Adds the given element to the end of the queue.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.queue.Queue.html#getList" class="internal-link" title="jcollections.queue.Queue.getList">get<wbr></wbr>List</a></code></td>
+    <td>Returns the internal list instance used by the queue.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.queue.Queue.html#removeFirst" class="internal-link" title="jcollections.queue.Queue.removeFirst">remove<wbr></wbr>First</a></code></td>
+    <td>Removes and returns the first element of the queue.</td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="jcollections.queue.Queue.html#list" class="internal-link" title="jcollections.queue.Queue.list">list</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+            
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basemethod">
+  
+  
+  <a name="jcollections.priorityqueue.PriorityQueue.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, initial=None, comparator=None, initial_capacity=11)</span>:
+    
+    <a class="headerLink" href="#__init__" title="jcollections.priorityqueue.PriorityQueue.__init__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.queue.Queue.html#__init__" class="internal-link">jcollections.queue.Queue.__init__</a></code></div>
+    <div><p>Initializes a PriorityQueue with optional initial elements, a comparator, and an initial capacity.</p>
+<p>:param initial: Collection or list of initial elements. :param comparator: Function to compare elements for priority. :param initial_capacity: Initial capacity (not used in this implementation).</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.priorityqueue.PriorityQueue.__iter__">
+    
+  </a>
+  <a name="__iter__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__iter__</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#__iter__" title="jcollections.priorityqueue.PriorityQueue.__iter__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.Iterable.Iterable.html#__iter__" class="internal-link">jcollections.Iterable.Iterable.__iter__</a></code></div>
+    <div><p>Returns an iterator over the elements in the priority queue.</p>
+<p>:return: An iterator for the queue.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.priorityqueue.PriorityQueue.add">
+    
+  </a>
+  <a name="add">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">add</span><span class="function-signature">(self, e)</span>:
+    
+    <a class="headerLink" href="#add" title="jcollections.priorityqueue.PriorityQueue.add">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#add" class="internal-link">jcollections.collection.Collection.add</a></code></div>
+    <div><p>Adds an element to the priority queue.</p>
+<p>:param e: The element to add. :return: True if the element was successfully added.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.priorityqueue.PriorityQueue.addAll">
+    
+  </a>
+  <a name="addAll">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">addAll</span><span class="function-signature">(self, collection)</span>:
+    
+    <a class="headerLink" href="#addAll" title="jcollections.priorityqueue.PriorityQueue.addAll">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Adds all elements from another collection to the queue.</p>
+<p>:param collection: The collection of elements to add.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.priorityqueue.PriorityQueue.clear">
+    
+  </a>
+  <a name="clear">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">clear</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#clear" title="jcollections.priorityqueue.PriorityQueue.clear">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#clear" class="internal-link">jcollections.collection.Collection.clear</a></code></div>
+    <div><p>Removes all elements from the queue.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.priorityqueue.PriorityQueue.comparator">
+    
+  </a>
+  <a name="comparator">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">comparator</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#comparator" title="jcollections.priorityqueue.PriorityQueue.comparator">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the comparator function used for the priority queue.</p>
+<p>:return: The comparator function.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.priorityqueue.PriorityQueue.contains">
+    
+  </a>
+  <a name="contains">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">contains</span><span class="function-signature">(self, o)</span>:
+    
+    <a class="headerLink" href="#contains" title="jcollections.priorityqueue.PriorityQueue.contains">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#contains" class="internal-link">jcollections.collection.Collection.contains</a></code></div>
+    <div><p>Checks if the queue contains a specific element.</p>
+<p>:param o: The element to check for. :return: True if the element is present, False otherwise.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.priorityqueue.PriorityQueue.containsAll">
+    
+  </a>
+  <a name="containsAll">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">containsAll</span><span class="function-signature">(self, collection)</span>:
+    
+    <a class="headerLink" href="#containsAll" title="jcollections.priorityqueue.PriorityQueue.containsAll">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#containsAll" class="internal-link">jcollections.collection.Collection.containsAll</a></code></div>
+    <div><p>Checks if all elements in the given collection are in the queue.</p>
+<p>:param collection: The collection to check. :return: True if all elements are present, False otherwise.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.priorityqueue.PriorityQueue.element">
+    
+  </a>
+  <a name="element">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">element</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#element" title="jcollections.priorityqueue.PriorityQueue.element">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.queue.Queue.html#element" class="internal-link">jcollections.queue.Queue.element</a></code></div>
+    <div><p>Retrieves but does not remove the highest-priority element.</p>
+<p>:return: The highest-priority element. :raises IndexError: If the queue is empty.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.priorityqueue.PriorityQueue.equals">
+    
+  </a>
+  <a name="equals">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">equals</span><span class="function-signature">(self, other)</span>:
+    
+    <a class="headerLink" href="#equals" title="jcollections.priorityqueue.PriorityQueue.equals">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#equals" class="internal-link">jcollections.collection.Collection.equals</a></code></div>
+    <div><p>Compares this queue with another for equality.</p>
+<p>:param other: The queue to compare with. :return: True if the queues have the same elements, False otherwise.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.priorityqueue.PriorityQueue.hashCode">
+    
+  </a>
+  <a name="hashCode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">hashCode</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#hashCode" title="jcollections.priorityqueue.PriorityQueue.hashCode">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#hashCode" class="internal-link">jcollections.collection.Collection.hashCode</a></code></div>
+    <div><p>Returns the hash code for this queue.</p>
+<p>:return: The hash code.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.priorityqueue.PriorityQueue.isEmpty">
+    
+  </a>
+  <a name="isEmpty">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">isEmpty</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#isEmpty" title="jcollections.priorityqueue.PriorityQueue.isEmpty">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#isEmpty" class="internal-link">jcollections.collection.Collection.isEmpty</a></code></div>
+    <div><p>Checks if the queue is empty.</p>
+<p>:return: True if the queue is empty, False otherwise.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.priorityqueue.PriorityQueue.iterator">
+    
+  </a>
+  <a name="iterator">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">iterator</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#iterator" title="jcollections.priorityqueue.PriorityQueue.iterator">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#iterator" class="internal-link">jcollections.collection.Collection.iterator</a></code></div>
+    <div><p>Returns an iterator over the elements in the queue.</p>
+<p>:return: An iterator for the queue.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.priorityqueue.PriorityQueue.offer">
+    
+  </a>
+  <a name="offer">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">offer</span><span class="function-signature">(self, e)</span>:
+    
+    <a class="headerLink" href="#offer" title="jcollections.priorityqueue.PriorityQueue.offer">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.queue.Queue.html#offer" class="internal-link">jcollections.queue.Queue.offer</a></code></div>
+    <div><p>Adds an element to the priority queue. Same as `add()`.</p>
+<p>:param e: The element to add. :return: True if the element was successfully added.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.priorityqueue.PriorityQueue.parallelStream">
+    
+  </a>
+  <a name="parallelStream">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">parallelStream</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#parallelStream" title="jcollections.priorityqueue.PriorityQueue.parallelStream">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#parallelStream" class="internal-link">jcollections.collection.Collection.parallelStream</a></code></div>
+    <div><p>Returns a parallel stream (not applicable in Python).</p>
+<p>:return: A normal stream (iterator).</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.priorityqueue.PriorityQueue.peek">
+    
+  </a>
+  <a name="peek">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">peek</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#peek" title="jcollections.priorityqueue.PriorityQueue.peek">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.queue.Queue.html#peek" class="internal-link">jcollections.queue.Queue.peek</a></code></div>
+    <div><p>Retrieves but does not remove the highest-priority element from the queue.</p>
+<p>:return: The highest-priority element, or None if the queue is empty.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.priorityqueue.PriorityQueue.poll">
+    
+  </a>
+  <a name="poll">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">poll</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#poll" title="jcollections.priorityqueue.PriorityQueue.poll">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.queue.Queue.html#poll" class="internal-link">jcollections.queue.Queue.poll</a></code></div>
+    <div><p>Removes and returns the highest-priority element from the queue.</p>
+<p>:return: The highest-priority element, or None if the queue is empty.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.priorityqueue.PriorityQueue.remove">
+    
+  </a>
+  <a name="remove">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">remove</span><span class="function-signature">(self, o)</span>:
+    
+    <a class="headerLink" href="#remove" title="jcollections.priorityqueue.PriorityQueue.remove">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#remove" class="internal-link">jcollections.collection.Collection.remove</a></code></div>
+    <div><p>Removes a specific element from the queue.</p>
+<p>:param o: The element to remove. :return: True if the element was successfully removed, False otherwise.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.priorityqueue.PriorityQueue.removeAll">
+    
+  </a>
+  <a name="removeAll">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">removeAll</span><span class="function-signature">(self, collection)</span>:
+    
+    <a class="headerLink" href="#removeAll" title="jcollections.priorityqueue.PriorityQueue.removeAll">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#removeAll" class="internal-link">jcollections.collection.Collection.removeAll</a></code></div>
+    <div><p>Removes all elements that are also contained in the specified collection.</p>
+<p>:param collection: The collection of elements to remove.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.priorityqueue.PriorityQueue.removeIf">
+    
+  </a>
+  <a name="removeIf">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">removeIf</span><span class="function-signature">(self, predicate)</span>:
+    
+    <a class="headerLink" href="#removeIf" title="jcollections.priorityqueue.PriorityQueue.removeIf">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#removeIf" class="internal-link">jcollections.collection.Collection.removeIf</a></code></div>
+    <div><p>Removes all elements that satisfy the given predicate.</p>
+<p>:param predicate: The predicate to evaluate.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.priorityqueue.PriorityQueue.retainAll">
+    
+  </a>
+  <a name="retainAll">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">retainAll</span><span class="function-signature">(self, collection)</span>:
+    
+    <a class="headerLink" href="#retainAll" title="jcollections.priorityqueue.PriorityQueue.retainAll">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#retainAll" class="internal-link">jcollections.collection.Collection.retainAll</a></code></div>
+    <div><p>Retains only the elements contained in the specified collection.</p>
+<p>:param collection: The collection to retain.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.priorityqueue.PriorityQueue.size">
+    
+  </a>
+  <a name="size">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">size</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#size" title="jcollections.priorityqueue.PriorityQueue.size">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#size" class="internal-link">jcollections.collection.Collection.size</a></code></div>
+    <div><p>Returns the number of elements in the queue.</p>
+<p>:return: The number of elements.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.priorityqueue.PriorityQueue.spliterator">
+    
+  </a>
+  <a name="spliterator">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">spliterator</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#spliterator" title="jcollections.priorityqueue.PriorityQueue.spliterator">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#spliterator" class="internal-link">jcollections.collection.Collection.spliterator</a></code></div>
+    <div><p>Returns a spliterator (not implemented).</p>
+<p>:return: None.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.priorityqueue.PriorityQueue.stream">
+    
+  </a>
+  <a name="stream">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">stream</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#stream" title="jcollections.priorityqueue.PriorityQueue.stream">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#stream" class="internal-link">jcollections.collection.Collection.stream</a></code></div>
+    <div><p>Returns a generator for the elements in the queue.</p>
+<p>:return: A generator for the elements.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.priorityqueue.PriorityQueue.toArray">
+    
+  </a>
+  <a name="toArray">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">toArray</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#toArray" title="jcollections.priorityqueue.PriorityQueue.toArray">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#toArray" class="internal-link">jcollections.collection.Collection.toArray</a></code></div>
+    <div><p>Converts the queue to a list.</p>
+<p>:return: A list of elements in the queue.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.priorityqueue.PriorityQueue.toArrayWithType">
+    
+  </a>
+  <a name="toArrayWithType">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">toArrayWithType</span><span class="function-signature">(self, arr)</span>:
+    
+    <a class="headerLink" href="#toArrayWithType" title="jcollections.priorityqueue.PriorityQueue.toArrayWithType">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Converts the queue to an array with the runtime type of the specified array.</p>
+<p>:param arr: The array type to convert to. :return: A list of elements in the queue.</p>
+</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="jcollections.priorityqueue.PriorityQueue._heap">
+    
+  </a>
+  <a name="_heap">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_heap</span> =
+    
+    <a class="headerLink" href="#_heap" title="jcollections.priorityqueue.PriorityQueue._heap">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container">
+    <a href="index.html">API Documentation</a> for PyJCore,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.3.3 at 2024-10-06 14:13:38.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

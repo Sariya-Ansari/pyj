@@ -1,3 +1,16 @@
+"""
+This module defines a thread-safe implementation of a Hashtable that uses locks to ensure
+concurrency. The Hashtable class supports basic key-value storage, retrieval, and map operations.
+
+Classes:
+    - Hashtable: A thread-safe implementation of a hash table (dictionary) with support for
+                 operations such as put, get, remove, and more.
+
+Attributes:
+    - K: Type variable for keys.
+    - V: Type variable for values.
+"""
+
 from typing import Optional, Set, Collection, Any, TypeVar
 from collections import defaultdict
 from threading import RLock

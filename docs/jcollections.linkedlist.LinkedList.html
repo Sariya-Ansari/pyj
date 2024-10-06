@@ -1,0 +1,2607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>jcollections.linkedlist.LinkedList</title>
+    <meta name="generator" content="pydoctor 24.3.3"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          PyJCore <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="jcollections.linkedlist.LinkedList.html" class="internal-link" title="This class"><wbr></wbr>Linked<wbr></wbr>List</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__hash__" class="internal-link" title="jcollections.linkedlist.LinkedList.__hash__">__hash__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__init__" class="internal-link" title="jcollections.linkedlist.LinkedList.__init__">__init__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__iter__" class="internal-link" title="jcollections.linkedlist.LinkedList.__iter__">__iter__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#add" class="internal-link" title="jcollections.linkedlist.LinkedList.add">add</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#addAll" class="internal-link" title="jcollections.linkedlist.LinkedList.addAll">add<wbr></wbr>All</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#addAt" class="internal-link" title="jcollections.linkedlist.LinkedList.addAt">add<wbr></wbr>At</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#addFirst" class="internal-link" title="jcollections.linkedlist.LinkedList.addFirst">add<wbr></wbr>First</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#addLast" class="internal-link" title="jcollections.linkedlist.LinkedList.addLast">add<wbr></wbr>Last</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#clear" class="internal-link" title="jcollections.linkedlist.LinkedList.clear">clear</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#clone" class="internal-link" title="jcollections.linkedlist.LinkedList.clone">clone</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#contains" class="internal-link" title="jcollections.linkedlist.LinkedList.contains">contains</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#containsAll" class="internal-link" title="jcollections.linkedlist.LinkedList.containsAll">contains<wbr></wbr>All</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#descendingIterator" class="internal-link" title="jcollections.linkedlist.LinkedList.descendingIterator">descending<wbr></wbr>Iterator</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#element" class="internal-link" title="jcollections.linkedlist.LinkedList.element">element</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#equals" class="internal-link" title="jcollections.linkedlist.LinkedList.equals">equals</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get" class="internal-link" title="jcollections.linkedlist.LinkedList.get">get</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#getFirst" class="internal-link" title="jcollections.linkedlist.LinkedList.getFirst">get<wbr></wbr>First</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#getLast" class="internal-link" title="jcollections.linkedlist.LinkedList.getLast">get<wbr></wbr>Last</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#hashCode" class="internal-link" title="jcollections.linkedlist.LinkedList.hashCode">hash<wbr></wbr>Code</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#indexOf" class="internal-link" title="jcollections.linkedlist.LinkedList.indexOf">index<wbr></wbr>Of</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#isEmpty" class="internal-link" title="jcollections.linkedlist.LinkedList.isEmpty">is<wbr></wbr>Empty</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#iterator" class="internal-link" title="jcollections.linkedlist.LinkedList.iterator">iterator</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#lastIndexOf" class="internal-link" title="jcollections.linkedlist.LinkedList.lastIndexOf">last<wbr></wbr>Index<wbr></wbr>Of</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#listIterator" class="internal-link" title="jcollections.linkedlist.LinkedList.listIterator">list<wbr></wbr>Iterator</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#offer" class="internal-link" title="jcollections.linkedlist.LinkedList.offer">offer</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#offerFirst" class="internal-link" title="jcollections.linkedlist.LinkedList.offerFirst">offer<wbr></wbr>First</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#offerLast" class="internal-link" title="jcollections.linkedlist.LinkedList.offerLast">offer<wbr></wbr>Last</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#parallelStream" class="internal-link" title="jcollections.linkedlist.LinkedList.parallelStream">parallel<wbr></wbr>Stream</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#peek" class="internal-link" title="jcollections.linkedlist.LinkedList.peek">peek</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#peekFirst" class="internal-link" title="jcollections.linkedlist.LinkedList.peekFirst">peek<wbr></wbr>First</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#peekLast" class="internal-link" title="jcollections.linkedlist.LinkedList.peekLast">peek<wbr></wbr>Last</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#poll" class="internal-link" title="jcollections.linkedlist.LinkedList.poll">poll</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#pollFirst" class="internal-link" title="jcollections.linkedlist.LinkedList.pollFirst">poll<wbr></wbr>First</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#pollLast" class="internal-link" title="jcollections.linkedlist.LinkedList.pollLast">poll<wbr></wbr>Last</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#pop" class="internal-link" title="jcollections.linkedlist.LinkedList.pop">pop</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#push" class="internal-link" title="jcollections.linkedlist.LinkedList.push">push</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#remove" class="internal-link" title="jcollections.linkedlist.LinkedList.remove">remove</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#removeAll" class="internal-link" title="jcollections.linkedlist.LinkedList.removeAll">remove<wbr></wbr>All</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#removeAt" class="internal-link" title="jcollections.linkedlist.LinkedList.removeAt">remove<wbr></wbr>At</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#removeElement" class="internal-link" title="jcollections.linkedlist.LinkedList.removeElement">remove<wbr></wbr>Element</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#removeFirst" class="internal-link" title="jcollections.linkedlist.LinkedList.removeFirst">remove<wbr></wbr>First</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#removeFirstOccurrence" class="internal-link" title="jcollections.linkedlist.LinkedList.removeFirstOccurrence">remove<wbr></wbr>First<wbr></wbr>Occurrence</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#removeIf" class="internal-link" title="jcollections.linkedlist.LinkedList.removeIf">remove<wbr></wbr>If</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#removeLast" class="internal-link" title="jcollections.linkedlist.LinkedList.removeLast">remove<wbr></wbr>Last</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#removeLastOccurrence" class="internal-link" title="jcollections.linkedlist.LinkedList.removeLastOccurrence">remove<wbr></wbr>Last<wbr></wbr>Occurrence</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#replaceAll" class="internal-link" title="jcollections.linkedlist.LinkedList.replaceAll">replace<wbr></wbr>All</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#retainAll" class="internal-link" title="jcollections.linkedlist.LinkedList.retainAll">retain<wbr></wbr>All</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#set" class="internal-link" title="jcollections.linkedlist.LinkedList.set">set</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#size" class="internal-link" title="jcollections.linkedlist.LinkedList.size">size</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#sort" class="internal-link" title="jcollections.linkedlist.LinkedList.sort">sort</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#spliterator" class="internal-link" title="jcollections.linkedlist.LinkedList.spliterator">spliterator</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#stream" class="internal-link" title="jcollections.linkedlist.LinkedList.stream">stream</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#subList" class="internal-link" title="jcollections.linkedlist.LinkedList.subList">sub<wbr></wbr>List</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#toArray" class="internal-link" title="jcollections.linkedlist.LinkedList.toArray">to<wbr></wbr>Array</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_removeNode" class="internal-link" title="jcollections.linkedlist.LinkedList._removeNode">_remove<wbr></wbr>Node</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#head" class="internal-link" title="jcollections.linkedlist.LinkedList.head">head</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#tail" class="internal-link" title="jcollections.linkedlist.LinkedList.tail">tail</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_size" class="internal-link" title="jcollections.linkedlist.LinkedList._size">_size</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="jcollections.linkedlist.html" class="internal-link" title="The parent of this class">linkedlist</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.linkedlist.LinkedList.html" class="internal-link" title="jcollections.linkedlist.LinkedList"><wbr></wbr>Linked<wbr></wbr>List</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.linkedlist.LinkedListIterator.html" class="internal-link" title="jcollections.linkedlist.LinkedListIterator"><wbr></wbr>Linked<wbr></wbr>List<wbr></wbr>Iterator</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.linkedlist.Node.html" class="internal-link" title="jcollections.linkedlist.Node"><wbr></wbr>Node</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="jcollections.html" class="internal-link">jcollections</a></code><wbr></wbr>.<code><a href="jcollections.linkedlist.html" class="internal-link" title="jcollections.linkedlist">linkedlist</a></code><wbr></wbr>.<code><a href="jcollections.linkedlist.LinkedList.html" class="internal-link" title="jcollections.linkedlist.LinkedList">LinkedList</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">LinkedList</span>(<a href="jcollections.list.List.html" class="internal-link" title="jcollections.list.List">List</a>):</code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="jcollections.linkedlist.LinkedList.__init__">LinkedList(collection)</a></code></p>
+          <p><a href="classIndex.html#jcollections.linkedlist.LinkedList">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p>Implements a doubly linked list where each element points to both the next and previous elements. Provides methods for adding, removing, and accessing elements in the list.</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id32">
+  
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__hash__" class="internal-link" title="jcollections.linkedlist.LinkedList.__hash__">__hash__</a></code></td>
+    <td>Returns the hash code for the list.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__" class="internal-link" title="jcollections.linkedlist.LinkedList.__init__">__init__</a></code></td>
+    <td>Initializes an empty linked list or creates it from a given collection.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__iter__" class="internal-link" title="jcollections.linkedlist.LinkedList.__iter__">__iter__</a></code></td>
+    <td>Returns an iterator for the linked list.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#add" class="internal-link" title="jcollections.linkedlist.LinkedList.add">add</a></code></td>
+    <td>Adds an element to the list:</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#addAll" class="internal-link" title="jcollections.linkedlist.LinkedList.addAll">add<wbr></wbr>All</a></code></td>
+    <td>Adds all elements from a collection:</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#addAt" class="internal-link" title="jcollections.linkedlist.LinkedList.addAt">add<wbr></wbr>At</a></code></td>
+    <td>Adds an element at the specified index:</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#addFirst" class="internal-link" title="jcollections.linkedlist.LinkedList.addFirst">add<wbr></wbr>First</a></code></td>
+    <td>Adds an element to the beginning of the list.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#addLast" class="internal-link" title="jcollections.linkedlist.LinkedList.addLast">add<wbr></wbr>Last</a></code></td>
+    <td>Adds an element to the end of the list.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#clear" class="internal-link" title="jcollections.linkedlist.LinkedList.clear">clear</a></code></td>
+    <td>Removes all elements from the list and resets size to 0.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#clone" class="internal-link" title="jcollections.linkedlist.LinkedList.clone">clone</a></code></td>
+    <td>Creates and returns a deep copy of the list.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#contains" class="internal-link" title="jcollections.linkedlist.LinkedList.contains">contains</a></code></td>
+    <td>Checks if the list contains the specified element.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#containsAll" class="internal-link" title="jcollections.linkedlist.LinkedList.containsAll">contains<wbr></wbr>All</a></code></td>
+    <td>Checks if all elements in the specified collection are in the list.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#descendingIterator" class="internal-link" title="jcollections.linkedlist.LinkedList.descendingIterator">descending<wbr></wbr>Iterator</a></code></td>
+    <td>Returns an iterator that traverses the list in reverse order.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#element" class="internal-link" title="jcollections.linkedlist.LinkedList.element">element</a></code></td>
+    <td>Returns the first element of the list. Raises IndexError if the list is empty.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#equals" class="internal-link" title="jcollections.linkedlist.LinkedList.equals">equals</a></code></td>
+    <td>Checks if this list is equal to another list.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#get" class="internal-link" title="jcollections.linkedlist.LinkedList.get">get</a></code></td>
+    <td>Retrieves the element at the specified index. Raises IndexError if the index is out of bounds.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#getFirst" class="internal-link" title="jcollections.linkedlist.LinkedList.getFirst">get<wbr></wbr>First</a></code></td>
+    <td>Returns the first element of the list. Raises IndexError if the list is empty.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#getLast" class="internal-link" title="jcollections.linkedlist.LinkedList.getLast">get<wbr></wbr>Last</a></code></td>
+    <td>Returns the last element of the list. Raises IndexError if the list is empty.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#hashCode" class="internal-link" title="jcollections.linkedlist.LinkedList.hashCode">hash<wbr></wbr>Code</a></code></td>
+    <td>Returns the hash code for the list.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#indexOf" class="internal-link" title="jcollections.linkedlist.LinkedList.indexOf">index<wbr></wbr>Of</a></code></td>
+    <td>Finds the index of the first occurrence of the specified element. Returns -1 if the element is not found.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#isEmpty" class="internal-link" title="jcollections.linkedlist.LinkedList.isEmpty">is<wbr></wbr>Empty</a></code></td>
+    <td>Checks if the list is empty.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#iterator" class="internal-link" title="jcollections.linkedlist.LinkedList.iterator">iterator</a></code></td>
+    <td>Returns an iterator for the list.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#lastIndexOf" class="internal-link" title="jcollections.linkedlist.LinkedList.lastIndexOf">last<wbr></wbr>Index<wbr></wbr>Of</a></code></td>
+    <td>Finds the index of the last occurrence of the specified element. Returns -1 if the element is not found.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#listIterator" class="internal-link" title="jcollections.linkedlist.LinkedList.listIterator">list<wbr></wbr>Iterator</a></code></td>
+    <td>Returns an iterator starting from the specified index. Raises IndexError if the index is out of bounds.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#offer" class="internal-link" title="jcollections.linkedlist.LinkedList.offer">offer</a></code></td>
+    <td>Adds the element to the end of the list (similar to addLast).</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#offerFirst" class="internal-link" title="jcollections.linkedlist.LinkedList.offerFirst">offer<wbr></wbr>First</a></code></td>
+    <td>Adds the element to the beginning of the list (similar to addFirst).</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#offerLast" class="internal-link" title="jcollections.linkedlist.LinkedList.offerLast">offer<wbr></wbr>Last</a></code></td>
+    <td>Adds the element to the end of the list (similar to addLast).</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#parallelStream" class="internal-link" title="jcollections.linkedlist.LinkedList.parallelStream">parallel<wbr></wbr>Stream</a></code></td>
+    <td>Not implemented. Raises NotImplementedError.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#peek" class="internal-link" title="jcollections.linkedlist.LinkedList.peek">peek</a></code></td>
+    <td>Returns the first element of the list without removing it. Returns None if the list is empty.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#peekFirst" class="internal-link" title="jcollections.linkedlist.LinkedList.peekFirst">peek<wbr></wbr>First</a></code></td>
+    <td>Returns the first element of the list without removing it.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#peekLast" class="internal-link" title="jcollections.linkedlist.LinkedList.peekLast">peek<wbr></wbr>Last</a></code></td>
+    <td>Returns the last element of the list without removing it. Returns None if the list is empty.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#poll" class="internal-link" title="jcollections.linkedlist.LinkedList.poll">poll</a></code></td>
+    <td>Removes and returns the first element of the list. Returns None if the list is empty.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#pollFirst" class="internal-link" title="jcollections.linkedlist.LinkedList.pollFirst">poll<wbr></wbr>First</a></code></td>
+    <td>Removes and returns the first element of the list.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#pollLast" class="internal-link" title="jcollections.linkedlist.LinkedList.pollLast">poll<wbr></wbr>Last</a></code></td>
+    <td>Removes and returns the last element of the list. Returns None if the list is empty.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#pop" class="internal-link" title="jcollections.linkedlist.LinkedList.pop">pop</a></code></td>
+    <td>Removes and returns the first element of the list (similar to pollFirst).</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#push" class="internal-link" title="jcollections.linkedlist.LinkedList.push">push</a></code></td>
+    <td>Adds the element to the beginning of the list (similar to addFirst).</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#remove" class="internal-link" title="jcollections.linkedlist.LinkedList.remove">remove</a></code></td>
+    <td>Removes an element from the list:</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#removeAll" class="internal-link" title="jcollections.linkedlist.LinkedList.removeAll">remove<wbr></wbr>All</a></code></td>
+    <td>Removes all elements that are present in the specified collection.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#removeAt" class="internal-link" title="jcollections.linkedlist.LinkedList.removeAt">remove<wbr></wbr>At</a></code></td>
+    <td>Removes the element at the specified index. Raises IndexError if the index is out of bounds.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#removeElement" class="internal-link" title="jcollections.linkedlist.LinkedList.removeElement">remove<wbr></wbr>Element</a></code></td>
+    <td>Removes the first occurrence of the specified element. Returns True if an element was removed, False otherwise.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#removeFirst" class="internal-link" title="jcollections.linkedlist.LinkedList.removeFirst">remove<wbr></wbr>First</a></code></td>
+    <td>Removes and returns the first element of the list. Raises IndexError if the list is empty.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#removeFirstOccurrence" class="internal-link" title="jcollections.linkedlist.LinkedList.removeFirstOccurrence">remove<wbr></wbr>First<wbr></wbr>Occurrence</a></code></td>
+    <td>Removes the first occurrence of the specified element.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#removeIf" class="internal-link" title="jcollections.linkedlist.LinkedList.removeIf">remove<wbr></wbr>If</a></code></td>
+    <td>Removes all elements that satisfy the given predicate.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#removeLast" class="internal-link" title="jcollections.linkedlist.LinkedList.removeLast">remove<wbr></wbr>Last</a></code></td>
+    <td>Removes and returns the last element of the list. Raises IndexError if the list is empty.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#removeLastOccurrence" class="internal-link" title="jcollections.linkedlist.LinkedList.removeLastOccurrence">remove<wbr></wbr>Last<wbr></wbr>Occurrence</a></code></td>
+    <td>Removes the last occurrence of the specified element.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#replaceAll" class="internal-link" title="jcollections.linkedlist.LinkedList.replaceAll">replace<wbr></wbr>All</a></code></td>
+    <td>Replaces each element with the result of applying the given operator.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#retainAll" class="internal-link" title="jcollections.linkedlist.LinkedList.retainAll">retain<wbr></wbr>All</a></code></td>
+    <td>Retains only elements that are present in the specified collection.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set" class="internal-link" title="jcollections.linkedlist.LinkedList.set">set</a></code></td>
+    <td>Sets the element at the specified index. Raises IndexError if the index is out of bounds.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#size" class="internal-link" title="jcollections.linkedlist.LinkedList.size">size</a></code></td>
+    <td>Returns the number of elements in the list.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#sort" class="internal-link" title="jcollections.linkedlist.LinkedList.sort">sort</a></code></td>
+    <td>Sorts the list elements.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#spliterator" class="internal-link" title="jcollections.linkedlist.LinkedList.spliterator">spliterator</a></code></td>
+    <td>Returns an iterator for the list.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#stream" class="internal-link" title="jcollections.linkedlist.LinkedList.stream">stream</a></code></td>
+    <td>Returns a generator for iterating over the list elements.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#subList" class="internal-link" title="jcollections.linkedlist.LinkedList.subList">sub<wbr></wbr>List</a></code></td>
+    <td>Returns a sublist from the specified range. Raises IndexError if the indices are out of bounds or invalid.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#toArray" class="internal-link" title="jcollections.linkedlist.LinkedList.toArray">to<wbr></wbr>Array</a></code></td>
+    <td>Converts the list to an array:</td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#head" class="internal-link" title="jcollections.linkedlist.LinkedList.head">head</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#tail" class="internal-link" title="jcollections.linkedlist.LinkedList.tail">tail</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method private">
+    
+    <td>Method</td>
+    <td><code><a href="#_removeNode" class="internal-link" title="jcollections.linkedlist.LinkedList._removeNode">_remove<wbr></wbr>Node</a></code></td>
+    <td>Removes the given node from the list.</td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_size" class="internal-link" title="jcollections.linkedlist.LinkedList._size">_size</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.__hash__">
+    
+  </a>
+  <a name="__hash__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__hash__</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#__hash__" title="jcollections.linkedlist.LinkedList.__hash__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the hash code for the list.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, collection=None)</span>:
+    
+    <a class="headerLink" href="#__init__" title="jcollections.linkedlist.LinkedList.__init__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Initializes an empty linked list or creates it from a given collection.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.__iter__">
+    
+  </a>
+  <a name="__iter__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__iter__</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#__iter__" title="jcollections.linkedlist.LinkedList.__iter__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.Iterable.Iterable.html#__iter__" class="internal-link">jcollections.Iterable.Iterable.__iter__</a></code></div>
+    <div><p>Returns an iterator for the linked list.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.add">
+    
+  </a>
+  <a name="add">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">add</span><span class="function-signature">(self, *args)</span>:
+    
+    <a class="headerLink" href="#add" title="jcollections.linkedlist.LinkedList.add">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.list.List.html#add" class="internal-link">jcollections.list.List.add</a></code></div>
+    <div><p>Adds an element to the list:</p>
+<ul class="rst-simple">
+<li>Single argument: Adds the element at the end.</li>
+<li>Two arguments: Adds the element at the specified index.</li>
+</ul>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.addAll">
+    
+  </a>
+  <a name="addAll">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">addAll</span><span class="function-signature">(self, *args)</span>:
+    
+    <a class="headerLink" href="#addAll" title="jcollections.linkedlist.LinkedList.addAll">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Adds all elements from a collection:</p>
+<ul class="rst-simple">
+<li>Single argument: Adds all elements at the end.</li>
+<li>Two arguments: Adds elements at the specified index.</li>
+</ul>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.addAt">
+    
+  </a>
+  <a name="addAt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">addAt</span><span class="function-signature">(self, index, element)</span>:
+    
+    <a class="headerLink" href="#addAt" title="jcollections.linkedlist.LinkedList.addAt">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Adds an element at the specified index:</p>
+<ul class="rst-simple">
+<li>Index 0: Adds at the beginning.</li>
+<li>Index size: Adds at the end.</li>
+<li>Otherwise: Inserts at the specified index.</li>
+</ul>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.addFirst">
+    
+  </a>
+  <a name="addFirst">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">addFirst</span><span class="function-signature">(self, element)</span>:
+    
+    <a class="headerLink" href="#addFirst" title="jcollections.linkedlist.LinkedList.addFirst">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Adds an element to the beginning of the list.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.addLast">
+    
+  </a>
+  <a name="addLast">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">addLast</span><span class="function-signature">(self, element)</span>:
+    
+    <a class="headerLink" href="#addLast" title="jcollections.linkedlist.LinkedList.addLast">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Adds an element to the end of the list.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.clear">
+    
+  </a>
+  <a name="clear">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">clear</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#clear" title="jcollections.linkedlist.LinkedList.clear">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.list.List.html#clear" class="internal-link">jcollections.list.List.clear</a></code></div>
+    <div><p>Removes all elements from the list and resets size to 0.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.clone">
+    
+  </a>
+  <a name="clone">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">clone</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#clone" title="jcollections.linkedlist.LinkedList.clone">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Creates and returns a deep copy of the list.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.contains">
+    
+  </a>
+  <a name="contains">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">contains</span><span class="function-signature">(self, element)</span>:
+    
+    <a class="headerLink" href="#contains" title="jcollections.linkedlist.LinkedList.contains">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.list.List.html#contains" class="internal-link">jcollections.list.List.contains</a></code></div>
+    <div><p>Checks if the list contains the specified element.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.containsAll">
+    
+  </a>
+  <a name="containsAll">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">containsAll</span><span class="function-signature">(self, collection)</span>:
+    
+    <a class="headerLink" href="#containsAll" title="jcollections.linkedlist.LinkedList.containsAll">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.list.List.html#containsAll" class="internal-link">jcollections.list.List.containsAll</a></code></div>
+    <div><p>Checks if all elements in the specified collection are in the list.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.descendingIterator">
+    
+  </a>
+  <a name="descendingIterator">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">descendingIterator</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#descendingIterator" title="jcollections.linkedlist.LinkedList.descendingIterator">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns an iterator that traverses the list in reverse order.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.element">
+    
+  </a>
+  <a name="element">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">element</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#element" title="jcollections.linkedlist.LinkedList.element">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the first element of the list. Raises IndexError if the list is empty.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.equals">
+    
+  </a>
+  <a name="equals">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">equals</span><span class="function-signature">(self, other)</span>:
+    
+    <a class="headerLink" href="#equals" title="jcollections.linkedlist.LinkedList.equals">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.list.List.html#equals" class="internal-link">jcollections.list.List.equals</a></code></div>
+    <div><p>Checks if this list is equal to another list.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.get">
+    
+  </a>
+  <a name="get">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get</span><span class="function-signature">(self, index)</span>:
+    
+    <a class="headerLink" href="#get" title="jcollections.linkedlist.LinkedList.get">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.list.List.html#get" class="internal-link">jcollections.list.List.get</a></code></div>
+    <div><p>Retrieves the element at the specified index. Raises IndexError if the index is out of bounds.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.getFirst">
+    
+  </a>
+  <a name="getFirst">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">getFirst</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#getFirst" title="jcollections.linkedlist.LinkedList.getFirst">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the first element of the list. Raises IndexError if the list is empty.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.getLast">
+    
+  </a>
+  <a name="getLast">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">getLast</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#getLast" title="jcollections.linkedlist.LinkedList.getLast">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the last element of the list. Raises IndexError if the list is empty.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.hashCode">
+    
+  </a>
+  <a name="hashCode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">hashCode</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#hashCode" title="jcollections.linkedlist.LinkedList.hashCode">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.list.List.html#hashCode" class="internal-link">jcollections.list.List.hashCode</a></code></div>
+    <div><p>Returns the hash code for the list.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.indexOf">
+    
+  </a>
+  <a name="indexOf">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">indexOf</span><span class="function-signature">(self, element)</span>:
+    
+    <a class="headerLink" href="#indexOf" title="jcollections.linkedlist.LinkedList.indexOf">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.list.List.html#indexOf" class="internal-link">jcollections.list.List.indexOf</a></code></div>
+    <div><p>Finds the index of the first occurrence of the specified element. Returns -1 if the element is not found.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.isEmpty">
+    
+  </a>
+  <a name="isEmpty">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">isEmpty</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#isEmpty" title="jcollections.linkedlist.LinkedList.isEmpty">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.list.List.html#isEmpty" class="internal-link">jcollections.list.List.isEmpty</a></code></div>
+    <div><p>Checks if the list is empty.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.iterator">
+    
+  </a>
+  <a name="iterator">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">iterator</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#iterator" title="jcollections.linkedlist.LinkedList.iterator">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.list.List.html#iterator" class="internal-link">jcollections.list.List.iterator</a></code></div>
+    <div><p>Returns an iterator for the list.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.lastIndexOf">
+    
+  </a>
+  <a name="lastIndexOf">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">lastIndexOf</span><span class="function-signature">(self, element)</span>:
+    
+    <a class="headerLink" href="#lastIndexOf" title="jcollections.linkedlist.LinkedList.lastIndexOf">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.list.List.html#lastIndexOf" class="internal-link">jcollections.list.List.lastIndexOf</a></code></div>
+    <div><p>Finds the index of the last occurrence of the specified element. Returns -1 if the element is not found.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.listIterator">
+    
+  </a>
+  <a name="listIterator">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">listIterator</span><span class="function-signature">(self, index=0)</span>:
+    
+    <a class="headerLink" href="#listIterator" title="jcollections.linkedlist.LinkedList.listIterator">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.list.List.html#listIterator" class="internal-link">jcollections.list.List.listIterator</a></code></div>
+    <div><p>Returns an iterator starting from the specified index. Raises IndexError if the index is out of bounds.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.offer">
+    
+  </a>
+  <a name="offer">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">offer</span><span class="function-signature">(self, element)</span>:
+    
+    <a class="headerLink" href="#offer" title="jcollections.linkedlist.LinkedList.offer">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Adds the element to the end of the list (similar to addLast).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.offerFirst">
+    
+  </a>
+  <a name="offerFirst">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">offerFirst</span><span class="function-signature">(self, element)</span>:
+    
+    <a class="headerLink" href="#offerFirst" title="jcollections.linkedlist.LinkedList.offerFirst">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Adds the element to the beginning of the list (similar to addFirst).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.offerLast">
+    
+  </a>
+  <a name="offerLast">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">offerLast</span><span class="function-signature">(self, element)</span>:
+    
+    <a class="headerLink" href="#offerLast" title="jcollections.linkedlist.LinkedList.offerLast">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Adds the element to the end of the list (similar to addLast).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.parallelStream">
+    
+  </a>
+  <a name="parallelStream">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">parallelStream</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#parallelStream" title="jcollections.linkedlist.LinkedList.parallelStream">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#parallelStream" class="internal-link">jcollections.collection.Collection.parallelStream</a></code></div>
+    <div><p>Not implemented. Raises NotImplementedError.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.peek">
+    
+  </a>
+  <a name="peek">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">peek</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#peek" title="jcollections.linkedlist.LinkedList.peek">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the first element of the list without removing it. Returns None if the list is empty.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.peekFirst">
+    
+  </a>
+  <a name="peekFirst">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">peekFirst</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#peekFirst" title="jcollections.linkedlist.LinkedList.peekFirst">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the first element of the list without removing it.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.peekLast">
+    
+  </a>
+  <a name="peekLast">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">peekLast</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#peekLast" title="jcollections.linkedlist.LinkedList.peekLast">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the last element of the list without removing it. Returns None if the list is empty.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.poll">
+    
+  </a>
+  <a name="poll">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">poll</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#poll" title="jcollections.linkedlist.LinkedList.poll">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Removes and returns the first element of the list. Returns None if the list is empty.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.pollFirst">
+    
+  </a>
+  <a name="pollFirst">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">pollFirst</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#pollFirst" title="jcollections.linkedlist.LinkedList.pollFirst">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Removes and returns the first element of the list.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.pollLast">
+    
+  </a>
+  <a name="pollLast">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">pollLast</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#pollLast" title="jcollections.linkedlist.LinkedList.pollLast">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Removes and returns the last element of the list. Returns None if the list is empty.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.pop">
+    
+  </a>
+  <a name="pop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">pop</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#pop" title="jcollections.linkedlist.LinkedList.pop">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Removes and returns the first element of the list (similar to pollFirst).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.push">
+    
+  </a>
+  <a name="push">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">push</span><span class="function-signature">(self, element)</span>:
+    
+    <a class="headerLink" href="#push" title="jcollections.linkedlist.LinkedList.push">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Adds the element to the beginning of the list (similar to addFirst).</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.remove">
+    
+  </a>
+  <a name="remove">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">remove</span><span class="function-signature">(self, *args)</span>:
+    
+    <a class="headerLink" href="#remove" title="jcollections.linkedlist.LinkedList.remove">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.list.List.html#remove" class="internal-link">jcollections.list.List.remove</a></code></div>
+    <div><p>Removes an element from the list:</p>
+<ul class="rst-simple">
+<li>No arguments: Removes the first element.</li>
+<li>Single integer argument: Removes the element at the specified index.</li>
+<li>Single non-integer argument: Removes the first occurrence of the specified element.</li>
+</ul>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.removeAll">
+    
+  </a>
+  <a name="removeAll">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">removeAll</span><span class="function-signature">(self, collection)</span>:
+    
+    <a class="headerLink" href="#removeAll" title="jcollections.linkedlist.LinkedList.removeAll">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.list.List.html#removeAll" class="internal-link">jcollections.list.List.removeAll</a></code></div>
+    <div><p>Removes all elements that are present in the specified collection.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.removeAt">
+    
+  </a>
+  <a name="removeAt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">removeAt</span><span class="function-signature">(self, index)</span>:
+    
+    <a class="headerLink" href="#removeAt" title="jcollections.linkedlist.LinkedList.removeAt">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Removes the element at the specified index. Raises IndexError if the index is out of bounds.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.removeElement">
+    
+  </a>
+  <a name="removeElement">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">removeElement</span><span class="function-signature">(self, element)</span>:
+    
+    <a class="headerLink" href="#removeElement" title="jcollections.linkedlist.LinkedList.removeElement">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Removes the first occurrence of the specified element. Returns True if an element was removed, False otherwise.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.removeFirst">
+    
+  </a>
+  <a name="removeFirst">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">removeFirst</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#removeFirst" title="jcollections.linkedlist.LinkedList.removeFirst">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Removes and returns the first element of the list. Raises IndexError if the list is empty.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.removeFirstOccurrence">
+    
+  </a>
+  <a name="removeFirstOccurrence">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">removeFirstOccurrence</span><span class="function-signature">(self, element)</span>:
+    
+    <a class="headerLink" href="#removeFirstOccurrence" title="jcollections.linkedlist.LinkedList.removeFirstOccurrence">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Removes the first occurrence of the specified element.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.removeIf">
+    
+  </a>
+  <a name="removeIf">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">removeIf</span><span class="function-signature">(self, predicate)</span>:
+    
+    <a class="headerLink" href="#removeIf" title="jcollections.linkedlist.LinkedList.removeIf">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#removeIf" class="internal-link">jcollections.collection.Collection.removeIf</a></code></div>
+    <div><p>Removes all elements that satisfy the given predicate.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.removeLast">
+    
+  </a>
+  <a name="removeLast">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">removeLast</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#removeLast" title="jcollections.linkedlist.LinkedList.removeLast">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Removes and returns the last element of the list. Raises IndexError if the list is empty.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.removeLastOccurrence">
+    
+  </a>
+  <a name="removeLastOccurrence">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">removeLastOccurrence</span><span class="function-signature">(self, element)</span>:
+    
+    <a class="headerLink" href="#removeLastOccurrence" title="jcollections.linkedlist.LinkedList.removeLastOccurrence">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Removes the last occurrence of the specified element.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.replaceAll">
+    
+  </a>
+  <a name="replaceAll">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">replaceAll</span><span class="function-signature">(self, operator)</span>:
+    
+    <a class="headerLink" href="#replaceAll" title="jcollections.linkedlist.LinkedList.replaceAll">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.list.List.html#replaceAll" class="internal-link">jcollections.list.List.replaceAll</a></code></div>
+    <div><p>Replaces each element with the result of applying the given operator.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.retainAll">
+    
+  </a>
+  <a name="retainAll">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">retainAll</span><span class="function-signature">(self, collection)</span>:
+    
+    <a class="headerLink" href="#retainAll" title="jcollections.linkedlist.LinkedList.retainAll">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.list.List.html#retainAll" class="internal-link">jcollections.list.List.retainAll</a></code></div>
+    <div><p>Retains only elements that are present in the specified collection.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.set">
+    
+  </a>
+  <a name="set">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">set</span><span class="function-signature">(self, index, element)</span>:
+    
+    <a class="headerLink" href="#set" title="jcollections.linkedlist.LinkedList.set">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.list.List.html#set" class="internal-link">jcollections.list.List.set</a></code></div>
+    <div><p>Sets the element at the specified index. Raises IndexError if the index is out of bounds.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.size">
+    
+  </a>
+  <a name="size">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">size</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#size" title="jcollections.linkedlist.LinkedList.size">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.list.List.html#size" class="internal-link">jcollections.list.List.size</a></code></div>
+    <div><p>Returns the number of elements in the list.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.sort">
+    
+  </a>
+  <a name="sort">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">sort</span><span class="function-signature">(self, key=None, reverse=False)</span>:
+    
+    <a class="headerLink" href="#sort" title="jcollections.linkedlist.LinkedList.sort">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.list.List.html#sort" class="internal-link">jcollections.list.List.sort</a></code></div>
+    <div><p>Sorts the list elements.</p>
+<ul class="rst-simple">
+<li>key: A function to customize the sorting.</li>
+<li>reverse: If True, sorts in descending order.</li>
+</ul>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.spliterator">
+    
+  </a>
+  <a name="spliterator">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">spliterator</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#spliterator" title="jcollections.linkedlist.LinkedList.spliterator">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.list.List.html#spliterator" class="internal-link">jcollections.list.List.spliterator</a></code></div>
+    <div><p>Returns an iterator for the list.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.stream">
+    
+  </a>
+  <a name="stream">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">stream</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#stream" title="jcollections.linkedlist.LinkedList.stream">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#stream" class="internal-link">jcollections.collection.Collection.stream</a></code></div>
+    <div><p>Returns a generator for iterating over the list elements.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.subList">
+    
+  </a>
+  <a name="subList">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">subList</span><span class="function-signature">(self, fromIndex, toIndex)</span>:
+    
+    <a class="headerLink" href="#subList" title="jcollections.linkedlist.LinkedList.subList">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.list.List.html#subList" class="internal-link">jcollections.list.List.subList</a></code></div>
+    <div><p>Returns a sublist from the specified range. Raises IndexError if the indices are out of bounds or invalid.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.toArray">
+    
+  </a>
+  <a name="toArray">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">toArray</span><span class="function-signature">(self, *args)</span>:
+    
+    <a class="headerLink" href="#toArray" title="jcollections.linkedlist.LinkedList.toArray">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.list.List.html#toArray" class="internal-link">jcollections.list.List.toArray</a></code></div>
+    <div><p>Converts the list to an array:</p>
+<ul class="rst-simple">
+<li>No arguments: Returns a new list.</li>
+<li>Single argument: Fills the provided array with list elements.</li>
+</ul>
+</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.head">
+    
+  </a>
+  <a name="head">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">head</span> =
+    
+    <a class="headerLink" href="#head" title="jcollections.linkedlist.LinkedList.head">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList.tail">
+    
+  </a>
+  <a name="tail">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">tail</span> =
+    
+    <a class="headerLink" href="#tail" title="jcollections.linkedlist.LinkedList.tail">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="basemethod private">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList._removeNode">
+    
+  </a>
+  <a name="_removeNode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">_removeNode</span><span class="function-signature">(self, node)</span>:
+    
+    <a class="headerLink" href="#_removeNode" title="jcollections.linkedlist.LinkedList._removeNode">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Removes the given node from the list.</p></div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="jcollections.linkedlist.LinkedList._size">
+    
+  </a>
+  <a name="_size">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_size</span>: <code>int</code> =
+    
+    <a class="headerLink" href="#_size" title="jcollections.linkedlist.LinkedList._size">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container">
+    <a href="index.html">API Documentation</a> for PyJCore,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.3.3 at 2024-10-06 14:13:38.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

@@ -1,0 +1,2022 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>jcollections.arraydeque.ArrayDeque</title>
+    <meta name="generator" content="pydoctor 24.3.3"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          PyJCore <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="jcollections.arraydeque.ArrayDeque.html" class="internal-link" title="This class"><wbr></wbr>Array<wbr></wbr>Deque</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__init__" class="internal-link" title="jcollections.arraydeque.ArrayDeque.__init__">__init__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__iter__" class="internal-link" title="jcollections.arraydeque.ArrayDeque.__iter__">__iter__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#add" class="internal-link" title="jcollections.arraydeque.ArrayDeque.add">add</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#addAll" class="internal-link" title="jcollections.arraydeque.ArrayDeque.addAll">add<wbr></wbr>All</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#addFirst" class="internal-link" title="jcollections.arraydeque.ArrayDeque.addFirst">add<wbr></wbr>First</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#addLast" class="internal-link" title="jcollections.arraydeque.ArrayDeque.addLast">add<wbr></wbr>Last</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#clear" class="internal-link" title="jcollections.arraydeque.ArrayDeque.clear">clear</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#contains" class="internal-link" title="jcollections.arraydeque.ArrayDeque.contains">contains</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#containsAll" class="internal-link" title="jcollections.arraydeque.ArrayDeque.containsAll">contains<wbr></wbr>All</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#descendingIterator" class="internal-link" title="jcollections.arraydeque.ArrayDeque.descendingIterator">descending<wbr></wbr>Iterator</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#element" class="internal-link" title="jcollections.arraydeque.ArrayDeque.element">element</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#equals" class="internal-link" title="jcollections.arraydeque.ArrayDeque.equals">equals</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#getFirst" class="internal-link" title="jcollections.arraydeque.ArrayDeque.getFirst">get<wbr></wbr>First</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#getLast" class="internal-link" title="jcollections.arraydeque.ArrayDeque.getLast">get<wbr></wbr>Last</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#hashCode" class="internal-link" title="jcollections.arraydeque.ArrayDeque.hashCode">hash<wbr></wbr>Code</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#isEmpty" class="internal-link" title="jcollections.arraydeque.ArrayDeque.isEmpty">is<wbr></wbr>Empty</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#iterator" class="internal-link" title="jcollections.arraydeque.ArrayDeque.iterator">iterator</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#offer" class="internal-link" title="jcollections.arraydeque.ArrayDeque.offer">offer</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#offerFirst" class="internal-link" title="jcollections.arraydeque.ArrayDeque.offerFirst">offer<wbr></wbr>First</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#offerLast" class="internal-link" title="jcollections.arraydeque.ArrayDeque.offerLast">offer<wbr></wbr>Last</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#parallelStream" class="internal-link" title="jcollections.arraydeque.ArrayDeque.parallelStream">parallel<wbr></wbr>Stream</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#peek" class="internal-link" title="jcollections.arraydeque.ArrayDeque.peek">peek</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#peekFirst" class="internal-link" title="jcollections.arraydeque.ArrayDeque.peekFirst">peek<wbr></wbr>First</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#peekLast" class="internal-link" title="jcollections.arraydeque.ArrayDeque.peekLast">peek<wbr></wbr>Last</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#poll" class="internal-link" title="jcollections.arraydeque.ArrayDeque.poll">poll</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#pollFirst" class="internal-link" title="jcollections.arraydeque.ArrayDeque.pollFirst">poll<wbr></wbr>First</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#pollLast" class="internal-link" title="jcollections.arraydeque.ArrayDeque.pollLast">poll<wbr></wbr>Last</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#pop" class="internal-link" title="jcollections.arraydeque.ArrayDeque.pop">pop</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#push" class="internal-link" title="jcollections.arraydeque.ArrayDeque.push">push</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#remove" class="internal-link" title="jcollections.arraydeque.ArrayDeque.remove">remove</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#removeAll" class="internal-link" title="jcollections.arraydeque.ArrayDeque.removeAll">remove<wbr></wbr>All</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#removeFirst" class="internal-link" title="jcollections.arraydeque.ArrayDeque.removeFirst">remove<wbr></wbr>First</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#removeFirstOccurrence" class="internal-link" title="jcollections.arraydeque.ArrayDeque.removeFirstOccurrence">remove<wbr></wbr>First<wbr></wbr>Occurrence</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#removeIf" class="internal-link" title="jcollections.arraydeque.ArrayDeque.removeIf">remove<wbr></wbr>If</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#removeLast" class="internal-link" title="jcollections.arraydeque.ArrayDeque.removeLast">remove<wbr></wbr>Last</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#removeLastOccurrence" class="internal-link" title="jcollections.arraydeque.ArrayDeque.removeLastOccurrence">remove<wbr></wbr>Last<wbr></wbr>Occurrence</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#retainAll" class="internal-link" title="jcollections.arraydeque.ArrayDeque.retainAll">retain<wbr></wbr>All</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#size" class="internal-link" title="jcollections.arraydeque.ArrayDeque.size">size</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#spliterator" class="internal-link" title="jcollections.arraydeque.ArrayDeque.spliterator">spliterator</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#stream" class="internal-link" title="jcollections.arraydeque.ArrayDeque.stream">stream</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#toArray" class="internal-link" title="jcollections.arraydeque.ArrayDeque.toArray">to<wbr></wbr>Array</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_deque" class="internal-link" title="jcollections.arraydeque.ArrayDeque._deque">_deque</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="jcollections.arraydeque.html" class="internal-link" title="The parent of this class">arraydeque</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.arraydeque.ArrayDeque.html" class="internal-link" title="jcollections.arraydeque.ArrayDeque"><wbr></wbr>Array<wbr></wbr>Deque</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="jcollections.html" class="internal-link">jcollections</a></code><wbr></wbr>.<code><a href="jcollections.arraydeque.html" class="internal-link" title="jcollections.arraydeque">arraydeque</a></code><wbr></wbr>.<code><a href="jcollections.arraydeque.ArrayDeque.html" class="internal-link" title="jcollections.arraydeque.ArrayDeque">ArrayDeque</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">ArrayDeque</span>(<a href="jcollections.collection.Collection.html" class="internal-link" title="jcollections.collection.Collection">Collection</a>):</code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="jcollections.arraydeque.ArrayDeque.__init__">ArrayDeque(initial)</a></code></p>
+          <p><a href="classIndex.html#jcollections.arraydeque.ArrayDeque">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="pre">ArrayDeque is a resizable-array implementation of the Deque (double-ended queue) interface.
+
+It supports element insertion and removal from both ends of the queue.
+The class offers operations for efficiently adding elements at both the front and back,
+while also allowing for element removal and access.
+
+Inherits from:
+    Collection: The base interface for all collection types.
+
+Attributes:
+    _deque (list): The underlying list that stores elements.
+    _capacity (int, optional): The initial capacity of the deque if specified.</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id7">
+  
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__" class="internal-link" title="jcollections.arraydeque.ArrayDeque.__init__">__init__</a></code></td>
+    <td>Constructs an empty deque or deque with an initial collection or initial capacity.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__iter__" class="internal-link" title="jcollections.arraydeque.ArrayDeque.__iter__">__iter__</a></code></td>
+    <td>Returns an iterator over the elements in the deque in proper sequence.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#add" class="internal-link" title="jcollections.arraydeque.ArrayDeque.add">add</a></code></td>
+    <td>Inserts the specified element at the end of the deque (tail).</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#addAll" class="internal-link" title="jcollections.arraydeque.ArrayDeque.addAll">add<wbr></wbr>All</a></code></td>
+    <td>Adds all elements from another collection to the deque.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#addFirst" class="internal-link" title="jcollections.arraydeque.ArrayDeque.addFirst">add<wbr></wbr>First</a></code></td>
+    <td>Inserts the specified element at the front of the deque.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#addLast" class="internal-link" title="jcollections.arraydeque.ArrayDeque.addLast">add<wbr></wbr>Last</a></code></td>
+    <td>Inserts the specified element at the end of the deque.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#clear" class="internal-link" title="jcollections.arraydeque.ArrayDeque.clear">clear</a></code></td>
+    <td>Removes all elements from the deque.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#contains" class="internal-link" title="jcollections.arraydeque.ArrayDeque.contains">contains</a></code></td>
+    <td>Returns True if the deque contains the specified element.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#containsAll" class="internal-link" title="jcollections.arraydeque.ArrayDeque.containsAll">contains<wbr></wbr>All</a></code></td>
+    <td>Returns True if the deque contains all elements from the specified collection.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#descendingIterator" class="internal-link" title="jcollections.arraydeque.ArrayDeque.descendingIterator">descending<wbr></wbr>Iterator</a></code></td>
+    <td>Returns an iterator over the elements in reverse order.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#element" class="internal-link" title="jcollections.arraydeque.ArrayDeque.element">element</a></code></td>
+    <td>Retrieves, but does not remove, the first element of the deque.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#equals" class="internal-link" title="jcollections.arraydeque.ArrayDeque.equals">equals</a></code></td>
+    <td>Compares this deque with another for equality.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#getFirst" class="internal-link" title="jcollections.arraydeque.ArrayDeque.getFirst">get<wbr></wbr>First</a></code></td>
+    <td>Retrieves, but does not remove, the first element.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#getLast" class="internal-link" title="jcollections.arraydeque.ArrayDeque.getLast">get<wbr></wbr>Last</a></code></td>
+    <td>Retrieves, but does not remove, the last element.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#hashCode" class="internal-link" title="jcollections.arraydeque.ArrayDeque.hashCode">hash<wbr></wbr>Code</a></code></td>
+    <td>Returns a hash code for the deque.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#isEmpty" class="internal-link" title="jcollections.arraydeque.ArrayDeque.isEmpty">is<wbr></wbr>Empty</a></code></td>
+    <td>Returns True if the deque is empty.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#iterator" class="internal-link" title="jcollections.arraydeque.ArrayDeque.iterator">iterator</a></code></td>
+    <td>Returns an iterator over the elements in the deque.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#offer" class="internal-link" title="jcollections.arraydeque.ArrayDeque.offer">offer</a></code></td>
+    <td>Inserts the element at the tail if possible.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#offerFirst" class="internal-link" title="jcollections.arraydeque.ArrayDeque.offerFirst">offer<wbr></wbr>First</a></code></td>
+    <td>Inserts the element at the front of the deque.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#offerLast" class="internal-link" title="jcollections.arraydeque.ArrayDeque.offerLast">offer<wbr></wbr>Last</a></code></td>
+    <td>Inserts the element at the end of the deque.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#parallelStream" class="internal-link" title="jcollections.arraydeque.ArrayDeque.parallelStream">parallel<wbr></wbr>Stream</a></code></td>
+    <td>Returns a possibly parallel stream with this deque as its source.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#peek" class="internal-link" title="jcollections.arraydeque.ArrayDeque.peek">peek</a></code></td>
+    <td>Retrieves, but does not remove, the first element of the deque.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#peekFirst" class="internal-link" title="jcollections.arraydeque.ArrayDeque.peekFirst">peek<wbr></wbr>First</a></code></td>
+    <td>Retrieves, but does not remove, the first element.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#peekLast" class="internal-link" title="jcollections.arraydeque.ArrayDeque.peekLast">peek<wbr></wbr>Last</a></code></td>
+    <td>Retrieves, but does not remove, the last element.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#poll" class="internal-link" title="jcollections.arraydeque.ArrayDeque.poll">poll</a></code></td>
+    <td>Retrieves and removes the first element.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#pollFirst" class="internal-link" title="jcollections.arraydeque.ArrayDeque.pollFirst">poll<wbr></wbr>First</a></code></td>
+    <td>Retrieves and removes the first element.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#pollLast" class="internal-link" title="jcollections.arraydeque.ArrayDeque.pollLast">poll<wbr></wbr>Last</a></code></td>
+    <td>Retrieves and removes the last element.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#pop" class="internal-link" title="jcollections.arraydeque.ArrayDeque.pop">pop</a></code></td>
+    <td>Pops an element from the stack (first element).</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#push" class="internal-link" title="jcollections.arraydeque.ArrayDeque.push">push</a></code></td>
+    <td>Pushes an element onto the stack (head of the deque).</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#remove" class="internal-link" title="jcollections.arraydeque.ArrayDeque.remove">remove</a></code></td>
+    <td>Retrieves and removes the first element, or removes a specific element.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#removeAll" class="internal-link" title="jcollections.arraydeque.ArrayDeque.removeAll">remove<wbr></wbr>All</a></code></td>
+    <td>Removes all elements in the deque that are also contained in the specified collection.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#removeFirst" class="internal-link" title="jcollections.arraydeque.ArrayDeque.removeFirst">remove<wbr></wbr>First</a></code></td>
+    <td>Retrieves and removes the first element.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#removeFirstOccurrence" class="internal-link" title="jcollections.arraydeque.ArrayDeque.removeFirstOccurrence">remove<wbr></wbr>First<wbr></wbr>Occurrence</a></code></td>
+    <td>Removes the first occurrence of the specified element.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#removeIf" class="internal-link" title="jcollections.arraydeque.ArrayDeque.removeIf">remove<wbr></wbr>If</a></code></td>
+    <td>Removes all elements of the deque that satisfy the given predicate.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#removeLast" class="internal-link" title="jcollections.arraydeque.ArrayDeque.removeLast">remove<wbr></wbr>Last</a></code></td>
+    <td>Retrieves and removes the last element.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#removeLastOccurrence" class="internal-link" title="jcollections.arraydeque.ArrayDeque.removeLastOccurrence">remove<wbr></wbr>Last<wbr></wbr>Occurrence</a></code></td>
+    <td>Removes the last occurrence of the specified element.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#retainAll" class="internal-link" title="jcollections.arraydeque.ArrayDeque.retainAll">retain<wbr></wbr>All</a></code></td>
+    <td>Retains only the elements in the deque that are also in the specified collection.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#size" class="internal-link" title="jcollections.arraydeque.ArrayDeque.size">size</a></code></td>
+    <td>Returns the number of elements in the deque.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#spliterator" class="internal-link" title="jcollections.arraydeque.ArrayDeque.spliterator">spliterator</a></code></td>
+    <td>Creates a spliterator over the elements in the deque.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#stream" class="internal-link" title="jcollections.arraydeque.ArrayDeque.stream">stream</a></code></td>
+    <td>Returns a sequential stream with this deque as its source.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#toArray" class="internal-link" title="jcollections.arraydeque.ArrayDeque.toArray">to<wbr></wbr>Array</a></code></td>
+    <td>Converts the deque to an array.</td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_deque" class="internal-link" title="jcollections.arraydeque.ArrayDeque._deque">_deque</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, initial=None)</span>:
+    
+    <a class="headerLink" href="#__init__" title="jcollections.arraydeque.ArrayDeque.__init__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Constructs an empty deque or deque with an initial collection or initial capacity.</p>
+<p>:param initial: Can be None (default), a Collection, or an integer (capacity). :type initial: Optional[Collection or int] :raises TypeError: If the initial argument is not None, Collection, or int.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.__iter__">
+    
+  </a>
+  <a name="__iter__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__iter__</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#__iter__" title="jcollections.arraydeque.ArrayDeque.__iter__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.Iterable.Iterable.html#__iter__" class="internal-link">jcollections.Iterable.Iterable.__iter__</a></code></div>
+    <div><p>Returns an iterator over the elements in the deque in proper sequence.</p>
+<p>:returns: An iterator over the deque elements. :rtype: Iterator</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.add">
+    
+  </a>
+  <a name="add">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">add</span><span class="function-signature">(self, e)</span>:
+    
+    <a class="headerLink" href="#add" title="jcollections.arraydeque.ArrayDeque.add">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#add" class="internal-link">jcollections.collection.Collection.add</a></code></div>
+    <div><p>Inserts the specified element at the end of the deque (tail).</p>
+<p>:param e: The element to be added. :type e: Any :returns: True if the element was successfully added. :rtype: bool</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.addAll">
+    
+  </a>
+  <a name="addAll">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">addAll</span><span class="function-signature">(self, collection)</span>:
+    
+    <a class="headerLink" href="#addAll" title="jcollections.arraydeque.ArrayDeque.addAll">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Adds all elements from another collection to the deque.</p>
+<p>:param collection: The collection of elements to be added. :type collection: Collection :returns: True if all elements were added. :rtype: bool</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.addFirst">
+    
+  </a>
+  <a name="addFirst">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">addFirst</span><span class="function-signature">(self, e)</span>:
+    
+    <a class="headerLink" href="#addFirst" title="jcollections.arraydeque.ArrayDeque.addFirst">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Inserts the specified element at the front of the deque.</p>
+<p>:param e: The element to be added at the front. :type e: Any</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.addLast">
+    
+  </a>
+  <a name="addLast">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">addLast</span><span class="function-signature">(self, e)</span>:
+    
+    <a class="headerLink" href="#addLast" title="jcollections.arraydeque.ArrayDeque.addLast">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Inserts the specified element at the end of the deque.</p>
+<p>:param e: The element to be added at the end. :type e: Any</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.clear">
+    
+  </a>
+  <a name="clear">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">clear</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#clear" title="jcollections.arraydeque.ArrayDeque.clear">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#clear" class="internal-link">jcollections.collection.Collection.clear</a></code></div>
+    <div><p>Removes all elements from the deque.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.contains">
+    
+  </a>
+  <a name="contains">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">contains</span><span class="function-signature">(self, o)</span>:
+    
+    <a class="headerLink" href="#contains" title="jcollections.arraydeque.ArrayDeque.contains">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#contains" class="internal-link">jcollections.collection.Collection.contains</a></code></div>
+    <div><p>Returns True if the deque contains the specified element.</p>
+<p>:param o: The element to check for. :type o: Any :returns: True if the element is present, False otherwise. :rtype: bool</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.containsAll">
+    
+  </a>
+  <a name="containsAll">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">containsAll</span><span class="function-signature">(self, c)</span>:
+    
+    <a class="headerLink" href="#containsAll" title="jcollections.arraydeque.ArrayDeque.containsAll">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#containsAll" class="internal-link">jcollections.collection.Collection.containsAll</a></code></div>
+    <div><p>Returns True if the deque contains all elements from the specified collection.</p>
+<p>:param c: The collection of elements to check. :type c: Collection :returns: True if all elements are present, False otherwise. :rtype: bool</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.descendingIterator">
+    
+  </a>
+  <a name="descendingIterator">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">descendingIterator</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#descendingIterator" title="jcollections.arraydeque.ArrayDeque.descendingIterator">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns an iterator over the elements in reverse order.</p>
+<p>:returns: An iterator over the deque elements in reverse order. :rtype: Iterator</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.element">
+    
+  </a>
+  <a name="element">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">element</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#element" title="jcollections.arraydeque.ArrayDeque.element">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Retrieves, but does not remove, the first element of the deque.</p>
+<p>:returns: The first element of the deque. :rtype: Any :raises IndexError: If the deque is empty.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.equals">
+    
+  </a>
+  <a name="equals">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">equals</span><span class="function-signature">(self, o)</span>:
+    
+    <a class="headerLink" href="#equals" title="jcollections.arraydeque.ArrayDeque.equals">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#equals" class="internal-link">jcollections.collection.Collection.equals</a></code></div>
+    <div><p>Compares this deque with another for equality.</p>
+<p>:param o: The other deque to compare with. :type o: ArrayDeque :returns: True if the two deques are equal, False otherwise. :rtype: bool</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.getFirst">
+    
+  </a>
+  <a name="getFirst">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">getFirst</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#getFirst" title="jcollections.arraydeque.ArrayDeque.getFirst">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Retrieves, but does not remove, the first element.</p>
+<p>:returns: The first element in the deque. :rtype: Any :raises IndexError: If the deque is empty.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.getLast">
+    
+  </a>
+  <a name="getLast">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">getLast</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#getLast" title="jcollections.arraydeque.ArrayDeque.getLast">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Retrieves, but does not remove, the last element.</p>
+<p>:returns: The last element in the deque. :rtype: Any :raises IndexError: If the deque is empty.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.hashCode">
+    
+  </a>
+  <a name="hashCode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">hashCode</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#hashCode" title="jcollections.arraydeque.ArrayDeque.hashCode">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#hashCode" class="internal-link">jcollections.collection.Collection.hashCode</a></code></div>
+    <div><p>Returns a hash code for the deque.</p>
+<p>:returns: The hash code of the deque. :rtype: int</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.isEmpty">
+    
+  </a>
+  <a name="isEmpty">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">isEmpty</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#isEmpty" title="jcollections.arraydeque.ArrayDeque.isEmpty">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#isEmpty" class="internal-link">jcollections.collection.Collection.isEmpty</a></code></div>
+    <div><p>Returns True if the deque is empty.</p>
+<p>:returns: True if the deque is empty, False otherwise. :rtype: bool</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.iterator">
+    
+  </a>
+  <a name="iterator">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">iterator</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#iterator" title="jcollections.arraydeque.ArrayDeque.iterator">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#iterator" class="internal-link">jcollections.collection.Collection.iterator</a></code></div>
+    <div><p>Returns an iterator over the elements in the deque.</p>
+<p>:returns: An iterator over the deque elements. :rtype: Iterator</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.offer">
+    
+  </a>
+  <a name="offer">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">offer</span><span class="function-signature">(self, e)</span>:
+    
+    <a class="headerLink" href="#offer" title="jcollections.arraydeque.ArrayDeque.offer">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Inserts the element at the tail if possible.</p>
+<p>:param e: The element to be added. :type e: Any :returns: True if the element was added. :rtype: bool</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.offerFirst">
+    
+  </a>
+  <a name="offerFirst">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">offerFirst</span><span class="function-signature">(self, e)</span>:
+    
+    <a class="headerLink" href="#offerFirst" title="jcollections.arraydeque.ArrayDeque.offerFirst">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Inserts the element at the front of the deque.</p>
+<p>:param e: The element to be added at the front. :type e: Any :returns: True if the element was added. :rtype: bool</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.offerLast">
+    
+  </a>
+  <a name="offerLast">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">offerLast</span><span class="function-signature">(self, e)</span>:
+    
+    <a class="headerLink" href="#offerLast" title="jcollections.arraydeque.ArrayDeque.offerLast">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Inserts the element at the end of the deque.</p>
+<p>:param e: The element to be added at the end. :type e: Any :returns: True if the element was added. :rtype: bool</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.parallelStream">
+    
+  </a>
+  <a name="parallelStream">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">parallelStream</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#parallelStream" title="jcollections.arraydeque.ArrayDeque.parallelStream">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#parallelStream" class="internal-link">jcollections.collection.Collection.parallelStream</a></code></div>
+    <div><p>Returns a possibly parallel stream with this deque as its source.</p>
+<p>:returns: A parallel stream over the deque elements. :rtype: Iterator</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.peek">
+    
+  </a>
+  <a name="peek">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">peek</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#peek" title="jcollections.arraydeque.ArrayDeque.peek">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Retrieves, but does not remove, the first element of the deque.</p>
+<p>:returns: The first element, or None if the deque is empty. :rtype: Any</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.peekFirst">
+    
+  </a>
+  <a name="peekFirst">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">peekFirst</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#peekFirst" title="jcollections.arraydeque.ArrayDeque.peekFirst">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Retrieves, but does not remove, the first element.</p>
+<p>:returns: The first element, or None if the deque is empty. :rtype: Any</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.peekLast">
+    
+  </a>
+  <a name="peekLast">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">peekLast</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#peekLast" title="jcollections.arraydeque.ArrayDeque.peekLast">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Retrieves, but does not remove, the last element.</p>
+<p>:returns: The last element, or None if the deque is empty. :rtype: Any</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.poll">
+    
+  </a>
+  <a name="poll">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">poll</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#poll" title="jcollections.arraydeque.ArrayDeque.poll">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Retrieves and removes the first element.</p>
+<p>:returns: The first element, or None if the deque is empty. :rtype: Any</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.pollFirst">
+    
+  </a>
+  <a name="pollFirst">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">pollFirst</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#pollFirst" title="jcollections.arraydeque.ArrayDeque.pollFirst">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Retrieves and removes the first element.</p>
+<p>:returns: The first element, or None if the deque is empty. :rtype: Any</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.pollLast">
+    
+  </a>
+  <a name="pollLast">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">pollLast</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#pollLast" title="jcollections.arraydeque.ArrayDeque.pollLast">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Retrieves and removes the last element.</p>
+<p>:returns: The last element, or None if the deque is empty. :rtype: Any</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.pop">
+    
+  </a>
+  <a name="pop">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">pop</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#pop" title="jcollections.arraydeque.ArrayDeque.pop">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Pops an element from the stack (first element).</p>
+<p>:returns: The first element after removing it. :rtype: Any</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.push">
+    
+  </a>
+  <a name="push">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">push</span><span class="function-signature">(self, e)</span>:
+    
+    <a class="headerLink" href="#push" title="jcollections.arraydeque.ArrayDeque.push">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Pushes an element onto the stack (head of the deque).</p>
+<p>:param e: The element to be pushed. :type e: Any</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.remove">
+    
+  </a>
+  <a name="remove">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">remove</span><span class="function-signature">(self, o=None)</span>:
+    
+    <a class="headerLink" href="#remove" title="jcollections.arraydeque.ArrayDeque.remove">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#remove" class="internal-link">jcollections.collection.Collection.remove</a></code></div>
+    <div><p>Retrieves and removes the first element, or removes a specific element.</p>
+<p>:param o: Optional. The element to remove. :type o: Any :returns: The removed element, or True if a specific element was removed. :rtype: Any or bool :raises IndexError: If the deque is empty when removing the first element.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.removeAll">
+    
+  </a>
+  <a name="removeAll">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">removeAll</span><span class="function-signature">(self, c)</span>:
+    
+    <a class="headerLink" href="#removeAll" title="jcollections.arraydeque.ArrayDeque.removeAll">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#removeAll" class="internal-link">jcollections.collection.Collection.removeAll</a></code></div>
+    <div><p>Removes all elements in the deque that are also contained in the specified collection.</p>
+<p>:param c: The collection of elements to be removed. :type c: Collection :returns: True if any elements were removed, False otherwise. :rtype: bool</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.removeFirst">
+    
+  </a>
+  <a name="removeFirst">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">removeFirst</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#removeFirst" title="jcollections.arraydeque.ArrayDeque.removeFirst">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Retrieves and removes the first element.</p>
+<p>:returns: The first element, or None if the deque is empty. :rtype: Any</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.removeFirstOccurrence">
+    
+  </a>
+  <a name="removeFirstOccurrence">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">removeFirstOccurrence</span><span class="function-signature">(self, o)</span>:
+    
+    <a class="headerLink" href="#removeFirstOccurrence" title="jcollections.arraydeque.ArrayDeque.removeFirstOccurrence">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Removes the first occurrence of the specified element.</p>
+<p>:param o: The element to be removed. :type o: Any :returns: True if the element was found and removed, False otherwise. :rtype: bool</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.removeIf">
+    
+  </a>
+  <a name="removeIf">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">removeIf</span><span class="function-signature">(self, predicate)</span>:
+    
+    <a class="headerLink" href="#removeIf" title="jcollections.arraydeque.ArrayDeque.removeIf">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#removeIf" class="internal-link">jcollections.collection.Collection.removeIf</a></code></div>
+    <div><p>Removes all elements of the deque that satisfy the given predicate.</p>
+<p>:param predicate: A function that returns True for elements to be removed. :type predicate: Callable :returns: True if any elements were removed, False otherwise. :rtype: bool</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.removeLast">
+    
+  </a>
+  <a name="removeLast">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">removeLast</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#removeLast" title="jcollections.arraydeque.ArrayDeque.removeLast">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Retrieves and removes the last element.</p>
+<p>:returns: The last element, or None if the deque is empty. :rtype: Any</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.removeLastOccurrence">
+    
+  </a>
+  <a name="removeLastOccurrence">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">removeLastOccurrence</span><span class="function-signature">(self, o)</span>:
+    
+    <a class="headerLink" href="#removeLastOccurrence" title="jcollections.arraydeque.ArrayDeque.removeLastOccurrence">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Removes the last occurrence of the specified element.</p>
+<p>:param o: The element to be removed. :type o: Any :returns: True if the element was found and removed, False otherwise. :rtype: bool</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.retainAll">
+    
+  </a>
+  <a name="retainAll">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">retainAll</span><span class="function-signature">(self, c)</span>:
+    
+    <a class="headerLink" href="#retainAll" title="jcollections.arraydeque.ArrayDeque.retainAll">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#retainAll" class="internal-link">jcollections.collection.Collection.retainAll</a></code></div>
+    <div><p>Retains only the elements in the deque that are also in the specified collection.</p>
+<p>:param c: The collection of elements to retain. :type c: Collection :returns: True if any elements were retained, False otherwise. :rtype: bool</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.size">
+    
+  </a>
+  <a name="size">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">size</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#size" title="jcollections.arraydeque.ArrayDeque.size">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#size" class="internal-link">jcollections.collection.Collection.size</a></code></div>
+    <div><p>Returns the number of elements in the deque.</p>
+<p>:returns: The number of elements. :rtype: int</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.spliterator">
+    
+  </a>
+  <a name="spliterator">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">spliterator</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#spliterator" title="jcollections.arraydeque.ArrayDeque.spliterator">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#spliterator" class="internal-link">jcollections.collection.Collection.spliterator</a></code></div>
+    <div><p>Creates a spliterator over the elements in the deque.</p>
+<p>:returns: A spliterator for the deque. :rtype: Iterator</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.stream">
+    
+  </a>
+  <a name="stream">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">stream</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#stream" title="jcollections.arraydeque.ArrayDeque.stream">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#stream" class="internal-link">jcollections.collection.Collection.stream</a></code></div>
+    <div><p>Returns a sequential stream with this deque as its source.</p>
+<p>:returns: A stream over the deque elements. :rtype: Iterator</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque.toArray">
+    
+  </a>
+  <a name="toArray">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">toArray</span><span class="function-signature">(self, *args)</span>:
+    
+    <a class="headerLink" href="#toArray" title="jcollections.arraydeque.ArrayDeque.toArray">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#toArray" class="internal-link">jcollections.collection.Collection.toArray</a></code></div>
+    <div><p>Converts the deque to an array.</p>
+<p>:returns: A list representing the elements in the deque. :rtype: list</p>
+</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="jcollections.arraydeque.ArrayDeque._deque">
+    
+  </a>
+  <a name="_deque">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_deque</span> =
+    
+    <a class="headerLink" href="#_deque" title="jcollections.arraydeque.ArrayDeque._deque">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container">
+    <a href="index.html">API Documentation</a> for PyJCore,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.3.3 at 2024-10-06 14:13:38.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

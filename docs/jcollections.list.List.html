@@ -1,0 +1,1242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>jcollections.list.List</title>
+    <meta name="generator" content="pydoctor 24.3.3"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          PyJCore <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="jcollections.list.List.html" class="internal-link" title="This class"><wbr></wbr>List</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#add" class="internal-link" title="jcollections.list.List.add">add</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#clear" class="internal-link" title="jcollections.list.List.clear">clear</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#contains" class="internal-link" title="jcollections.list.List.contains">contains</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#containsAll" class="internal-link" title="jcollections.list.List.containsAll">contains<wbr></wbr>All</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#equals" class="internal-link" title="jcollections.list.List.equals">equals</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get" class="internal-link" title="jcollections.list.List.get">get</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#hashCode" class="internal-link" title="jcollections.list.List.hashCode">hash<wbr></wbr>Code</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#indexOf" class="internal-link" title="jcollections.list.List.indexOf">index<wbr></wbr>Of</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#isEmpty" class="internal-link" title="jcollections.list.List.isEmpty">is<wbr></wbr>Empty</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#iterator" class="internal-link" title="jcollections.list.List.iterator">iterator</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#lastIndexOf" class="internal-link" title="jcollections.list.List.lastIndexOf">last<wbr></wbr>Index<wbr></wbr>Of</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#listIterator" class="internal-link" title="jcollections.list.List.listIterator">list<wbr></wbr>Iterator</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#remove" class="internal-link" title="jcollections.list.List.remove">remove</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#removeAll" class="internal-link" title="jcollections.list.List.removeAll">remove<wbr></wbr>All</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#replaceAll" class="internal-link" title="jcollections.list.List.replaceAll">replace<wbr></wbr>All</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#retainAll" class="internal-link" title="jcollections.list.List.retainAll">retain<wbr></wbr>All</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#set" class="internal-link" title="jcollections.list.List.set">set</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#size" class="internal-link" title="jcollections.list.List.size">size</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#sort" class="internal-link" title="jcollections.list.List.sort">sort</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#spliterator" class="internal-link" title="jcollections.list.List.spliterator">spliterator</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#subList" class="internal-link" title="jcollections.list.List.subList">sub<wbr></wbr>List</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#toArray" class="internal-link" title="jcollections.list.List.toArray">to<wbr></wbr>Array</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Inherited Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#parallelStream" class="internal-link" title="jcollections.collection.Collection.parallelStream">parallel<wbr></wbr>Stream</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#removeIf" class="internal-link" title="jcollections.collection.Collection.removeIf">remove<wbr></wbr>If</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#stream" class="internal-link" title="jcollections.collection.Collection.stream">stream</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.Iterable.Iterable.html#__iter__" class="internal-link" title="jcollections.Iterable.Iterable.__iter__">__iter__</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="jcollections.list.html" class="internal-link" title="The parent of this class">list</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.list.List.html" class="internal-link" title="jcollections.list.List"><wbr></wbr>List</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="jcollections.html" class="internal-link">jcollections</a></code><wbr></wbr>.<code><a href="jcollections.list.html" class="internal-link" title="jcollections.list">list</a></code><wbr></wbr>.<code><a href="jcollections.list.List.html" class="internal-link" title="jcollections.list.List">List</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">List</span>(<a href="jcollections.collection.Collection.html" class="internal-link" title="jcollections.collection.Collection">Collection</a>):</code></p><p>Known subclasses: <code><a href="jcollections.arraylist.ArrayList.html" class="internal-link">jcollections.arraylist.ArrayList</a></code>, <code><a href="jcollections.linkedlist.LinkedList.html" class="internal-link">jcollections.linkedlist.LinkedList</a></code>, <code><a href="jcollections.vector.Vector.html" class="internal-link">jcollections.vector.Vector</a></code></p>
+          <p><a href="classIndex.html#jcollections.list.List">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p>Abstract class representing an ordered collection (a list). Extends the Collection class to include operations specific to lists, such as positional access to elements. Subclasses of this class must implement all abstract methods to define specific list behaviors.</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id34">
+  
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#add" class="internal-link" title="jcollections.list.List.add">add</a></code></td>
+    <td>Adds an element or elements to the list.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#clear" class="internal-link" title="jcollections.list.List.clear">clear</a></code></td>
+    <td>Removes all the elements from this list (optional operation). Subclasses must implement this method to define how to clear the list.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#contains" class="internal-link" title="jcollections.list.List.contains">contains</a></code></td>
+    <td>Returns True if this list contains the specified element. :param o: The element to check for. :return: True if the element is present, otherwise False.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#containsAll" class="internal-link" title="jcollections.list.List.containsAll">contains<wbr></wbr>All</a></code></td>
+    <td>Returns True if this list contains all the elements of the specified collection. :param c: The collection to check for containment. :return: True if all elements are present, otherwise False.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#equals" class="internal-link" title="jcollections.list.List.equals">equals</a></code></td>
+    <td>Compares the specified object with this list for equality. :param o: The object to compare with. :return: True if the specified object is equal to this list, otherwise False.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#get" class="internal-link" title="jcollections.list.List.get">get</a></code></td>
+    <td>Returns the element at the specified position in this list. :param index: The index of the element to return. :return: The element at the specified index.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#hashCode" class="internal-link" title="jcollections.list.List.hashCode">hash<wbr></wbr>Code</a></code></td>
+    <td>Returns the hash code value for this list. :return: The hash code of the list.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#indexOf" class="internal-link" title="jcollections.list.List.indexOf">index<wbr></wbr>Of</a></code></td>
+    <td>Returns the index of the first occurrence of the specified element in this list, or -1 if the list does not contain the element. :param o: The element to search for. :return: The index of the first occurrence, or -1 if not found.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#isEmpty" class="internal-link" title="jcollections.list.List.isEmpty">is<wbr></wbr>Empty</a></code></td>
+    <td>Returns True if this list contains no elements. :return: True if the list is empty, otherwise False.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#iterator" class="internal-link" title="jcollections.list.List.iterator">iterator</a></code></td>
+    <td>Returns an iterator over the elements in this list in proper sequence. :return: An iterator for the list elements.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#lastIndexOf" class="internal-link" title="jcollections.list.List.lastIndexOf">last<wbr></wbr>Index<wbr></wbr>Of</a></code></td>
+    <td>Returns the index of the last occurrence of the specified element in this list, or -1 if the list does not contain the element. :param o: The element to search for. :return: The index of the last occurrence, or -1 if not found.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#listIterator" class="internal-link" title="jcollections.list.List.listIterator">list<wbr></wbr>Iterator</a></code></td>
+    <td>Returns a list iterator over the elements in this list. :param args: Optional start index for the iterator. :return: A list iterator for the elements.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#remove" class="internal-link" title="jcollections.list.List.remove">remove</a></code></td>
+    <td>Removes the element at the specified position in this list or a specified element.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#removeAll" class="internal-link" title="jcollections.list.List.removeAll">remove<wbr></wbr>All</a></code></td>
+    <td>Removes from this list all of its elements that are contained in the specified collection (optional operation). :param c: The collection of elements to be removed. :return: True if the list was modified, otherwise False.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#replaceAll" class="internal-link" title="jcollections.list.List.replaceAll">replace<wbr></wbr>All</a></code></td>
+    <td>Replaces each element of this list with the result of applying the operator to that element. :param operator: A function to apply to each element.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#retainAll" class="internal-link" title="jcollections.list.List.retainAll">retain<wbr></wbr>All</a></code></td>
+    <td>Retains only the elements in this list that are contained in the specified collection (optional operation). :param c: The collection to retain elements from. :return: True if the list was modified, otherwise False.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#set" class="internal-link" title="jcollections.list.List.set">set</a></code></td>
+    <td>Replaces the element at the specified position in this list with the specified element (optional operation). :param index: The index of the element to replace. :param element: The element to replace with...</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#size" class="internal-link" title="jcollections.list.List.size">size</a></code></td>
+    <td>Returns the number of elements in this list. :return: The size of the list.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#sort" class="internal-link" title="jcollections.list.List.sort">sort</a></code></td>
+    <td>Sorts this list according to the order induced by the specified Comparator. :param c: The comparator to determine the order of the list.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#spliterator" class="internal-link" title="jcollections.list.List.spliterator">spliterator</a></code></td>
+    <td>Creates a Spliterator over the elements in this list. :return: A Spliterator for the elements.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#subList" class="internal-link" title="jcollections.list.List.subList">sub<wbr></wbr>List</a></code></td>
+    <td>Returns a view of the portion of this list between the specified fromIndex, inclusive, and toIndex, exclusive. :param fromIndex: The starting index of the sublist. :param toIndex: The ending index of the sublist...</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#toArray" class="internal-link" title="jcollections.list.List.toArray">to<wbr></wbr>Array</a></code></td>
+    <td>Converts the list elements into an array. :param args: Optional argument specifying the type of array elements. :return: An array containing all the elements in the list.</td>
+  </tr>
+</table>
+          
+            <p class="inheritedFrom">
+              Inherited from <code><a href="jcollections.collection.Collection.html" class="internal-link" title="jcollections.collection.Collection">Collection</a></code>:
+            </p>
+            <table class="children sortable" id="id35">
+  
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#parallelStream" class="internal-link" title="jcollections.collection.Collection.parallelStream">parallel<wbr></wbr>Stream</a></code></td>
+    <td>Returns a possibly parallel Stream with this collection as its source.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#removeIf" class="internal-link" title="jcollections.collection.Collection.removeIf">remove<wbr></wbr>If</a></code></td>
+    <td>Removes all the elements of this collection that satisfy the given predicate.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#stream" class="internal-link" title="jcollections.collection.Collection.stream">stream</a></code></td>
+    <td>Returns a sequential Stream with this collection as its source.</td>
+  </tr>
+</table>
+            
+            <p class="inheritedFrom">
+              Inherited from <code><a href="jcollections.Iterable.Iterable.html" class="internal-link" title="jcollections.Iterable.Iterable">Iterable</a></code> (via <code><a href="jcollections.collection.Collection.html" class="internal-link" title="jcollections.collection.Collection">Collection</a></code>):
+            </p>
+            <table class="children sortable" id="id36">
+  
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.Iterable.Iterable.html#__iter__" class="internal-link" title="jcollections.Iterable.Iterable.__iter__">__iter__</a></code></td>
+    <td>Returns an iterator over the elements in the collection. Subclasses must implement this method to return an iterator object.</td>
+  </tr>
+</table>
+            
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basemethod">
+  
+  
+  <a name="jcollections.list.List.add">
+    
+  </a>
+  <a name="add">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">add</span><span class="function-signature">(self, *args)</span>:
+    
+    <a class="headerLink" href="#add" title="jcollections.list.List.add">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#add" class="internal-link">jcollections.collection.Collection.add</a></code></div><div class="interfaceinfo">overridden in <code><a href="jcollections.arraylist.ArrayList.html" class="internal-link">jcollections.arraylist.ArrayList</a></code>, <code><a href="jcollections.linkedlist.LinkedList.html" class="internal-link">jcollections.linkedlist.LinkedList</a></code>, <code><a href="jcollections.vector.Vector.html" class="internal-link">jcollections.vector.Vector</a></code></div>
+    <div><p class="pre">Adds an element or elements to the list.
+
+Subclasses must implement this method to define how elements are added to the list.
+
+This method supports two modes:
+
+- **Single argument**: Adds an element to the end of the list.
+- **Two arguments**: Adds an element at the specified index.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.list.List.clear">
+    
+  </a>
+  <a name="clear">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">clear</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#clear" title="jcollections.list.List.clear">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#clear" class="internal-link">jcollections.collection.Collection.clear</a></code></div><div class="interfaceinfo">overridden in <code><a href="jcollections.arraylist.ArrayList.html" class="internal-link">jcollections.arraylist.ArrayList</a></code>, <code><a href="jcollections.linkedlist.LinkedList.html" class="internal-link">jcollections.linkedlist.LinkedList</a></code>, <code><a href="jcollections.vector.Vector.html" class="internal-link">jcollections.vector.Vector</a></code></div>
+    <div><p>Removes all the elements from this list (optional operation). Subclasses must implement this method to define how to clear the list.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.list.List.contains">
+    
+  </a>
+  <a name="contains">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">contains</span><span class="function-signature">(self, o)</span>:
+    
+    <a class="headerLink" href="#contains" title="jcollections.list.List.contains">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#contains" class="internal-link">jcollections.collection.Collection.contains</a></code></div><div class="interfaceinfo">overridden in <code><a href="jcollections.arraylist.ArrayList.html" class="internal-link">jcollections.arraylist.ArrayList</a></code>, <code><a href="jcollections.linkedlist.LinkedList.html" class="internal-link">jcollections.linkedlist.LinkedList</a></code>, <code><a href="jcollections.vector.Vector.html" class="internal-link">jcollections.vector.Vector</a></code></div>
+    <div><p>Returns True if this list contains the specified element. :param o: The element to check for. :return: True if the element is present, otherwise False.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.list.List.containsAll">
+    
+  </a>
+  <a name="containsAll">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">containsAll</span><span class="function-signature">(self, c)</span>:
+    
+    <a class="headerLink" href="#containsAll" title="jcollections.list.List.containsAll">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#containsAll" class="internal-link">jcollections.collection.Collection.containsAll</a></code></div><div class="interfaceinfo">overridden in <code><a href="jcollections.arraylist.ArrayList.html" class="internal-link">jcollections.arraylist.ArrayList</a></code>, <code><a href="jcollections.linkedlist.LinkedList.html" class="internal-link">jcollections.linkedlist.LinkedList</a></code>, <code><a href="jcollections.vector.Vector.html" class="internal-link">jcollections.vector.Vector</a></code></div>
+    <div><p>Returns True if this list contains all the elements of the specified collection. :param c: The collection to check for containment. :return: True if all elements are present, otherwise False.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.list.List.equals">
+    
+  </a>
+  <a name="equals">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">equals</span><span class="function-signature">(self, o)</span>:
+    
+    <a class="headerLink" href="#equals" title="jcollections.list.List.equals">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#equals" class="internal-link">jcollections.collection.Collection.equals</a></code></div><div class="interfaceinfo">overridden in <code><a href="jcollections.arraylist.ArrayList.html" class="internal-link">jcollections.arraylist.ArrayList</a></code>, <code><a href="jcollections.linkedlist.LinkedList.html" class="internal-link">jcollections.linkedlist.LinkedList</a></code>, <code><a href="jcollections.vector.Vector.html" class="internal-link">jcollections.vector.Vector</a></code></div>
+    <div><p>Compares the specified object with this list for equality. :param o: The object to compare with. :return: True if the specified object is equal to this list, otherwise False.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.list.List.get">
+    
+  </a>
+  <a name="get">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">get</span><span class="function-signature">(self, index)</span>:
+    
+    <a class="headerLink" href="#get" title="jcollections.list.List.get">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <code><a href="jcollections.arraylist.ArrayList.html" class="internal-link">jcollections.arraylist.ArrayList</a></code>, <code><a href="jcollections.linkedlist.LinkedList.html" class="internal-link">jcollections.linkedlist.LinkedList</a></code>, <code><a href="jcollections.vector.Vector.html" class="internal-link">jcollections.vector.Vector</a></code></div>
+    <div><p>Returns the element at the specified position in this list. :param index: The index of the element to return. :return: The element at the specified index.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.list.List.hashCode">
+    
+  </a>
+  <a name="hashCode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">hashCode</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#hashCode" title="jcollections.list.List.hashCode">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#hashCode" class="internal-link">jcollections.collection.Collection.hashCode</a></code></div><div class="interfaceinfo">overridden in <code><a href="jcollections.arraylist.ArrayList.html" class="internal-link">jcollections.arraylist.ArrayList</a></code>, <code><a href="jcollections.linkedlist.LinkedList.html" class="internal-link">jcollections.linkedlist.LinkedList</a></code>, <code><a href="jcollections.vector.Vector.html" class="internal-link">jcollections.vector.Vector</a></code></div>
+    <div><p>Returns the hash code value for this list. :return: The hash code of the list.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.list.List.indexOf">
+    
+  </a>
+  <a name="indexOf">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">indexOf</span><span class="function-signature">(self, o)</span>:
+    
+    <a class="headerLink" href="#indexOf" title="jcollections.list.List.indexOf">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <code><a href="jcollections.arraylist.ArrayList.html" class="internal-link">jcollections.arraylist.ArrayList</a></code>, <code><a href="jcollections.linkedlist.LinkedList.html" class="internal-link">jcollections.linkedlist.LinkedList</a></code>, <code><a href="jcollections.vector.Vector.html" class="internal-link">jcollections.vector.Vector</a></code></div>
+    <div><p>Returns the index of the first occurrence of the specified element in this list, or -1 if the list does not contain the element. :param o: The element to search for. :return: The index of the first occurrence, or -1 if not found.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.list.List.isEmpty">
+    
+  </a>
+  <a name="isEmpty">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">isEmpty</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#isEmpty" title="jcollections.list.List.isEmpty">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#isEmpty" class="internal-link">jcollections.collection.Collection.isEmpty</a></code></div><div class="interfaceinfo">overridden in <code><a href="jcollections.arraylist.ArrayList.html" class="internal-link">jcollections.arraylist.ArrayList</a></code>, <code><a href="jcollections.linkedlist.LinkedList.html" class="internal-link">jcollections.linkedlist.LinkedList</a></code>, <code><a href="jcollections.vector.Vector.html" class="internal-link">jcollections.vector.Vector</a></code></div>
+    <div><p>Returns True if this list contains no elements. :return: True if the list is empty, otherwise False.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.list.List.iterator">
+    
+  </a>
+  <a name="iterator">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">iterator</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#iterator" title="jcollections.list.List.iterator">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#iterator" class="internal-link">jcollections.collection.Collection.iterator</a></code></div><div class="interfaceinfo">overridden in <code><a href="jcollections.arraylist.ArrayList.html" class="internal-link">jcollections.arraylist.ArrayList</a></code>, <code><a href="jcollections.linkedlist.LinkedList.html" class="internal-link">jcollections.linkedlist.LinkedList</a></code>, <code><a href="jcollections.vector.Vector.html" class="internal-link">jcollections.vector.Vector</a></code></div>
+    <div><p>Returns an iterator over the elements in this list in proper sequence. :return: An iterator for the list elements.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.list.List.lastIndexOf">
+    
+  </a>
+  <a name="lastIndexOf">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">lastIndexOf</span><span class="function-signature">(self, o)</span>:
+    
+    <a class="headerLink" href="#lastIndexOf" title="jcollections.list.List.lastIndexOf">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <code><a href="jcollections.arraylist.ArrayList.html" class="internal-link">jcollections.arraylist.ArrayList</a></code>, <code><a href="jcollections.linkedlist.LinkedList.html" class="internal-link">jcollections.linkedlist.LinkedList</a></code>, <code><a href="jcollections.vector.Vector.html" class="internal-link">jcollections.vector.Vector</a></code></div>
+    <div><p>Returns the index of the last occurrence of the specified element in this list, or -1 if the list does not contain the element. :param o: The element to search for. :return: The index of the last occurrence, or -1 if not found.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.list.List.listIterator">
+    
+  </a>
+  <a name="listIterator">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">listIterator</span><span class="function-signature">(self, *args)</span>:
+    
+    <a class="headerLink" href="#listIterator" title="jcollections.list.List.listIterator">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <code><a href="jcollections.arraylist.ArrayList.html" class="internal-link">jcollections.arraylist.ArrayList</a></code>, <code><a href="jcollections.linkedlist.LinkedList.html" class="internal-link">jcollections.linkedlist.LinkedList</a></code>, <code><a href="jcollections.vector.Vector.html" class="internal-link">jcollections.vector.Vector</a></code></div>
+    <div><p>Returns a list iterator over the elements in this list. :param args: Optional start index for the iterator. :return: A list iterator for the elements.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.list.List.remove">
+    
+  </a>
+  <a name="remove">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">remove</span><span class="function-signature">(self, *args)</span>:
+    
+    <a class="headerLink" href="#remove" title="jcollections.list.List.remove">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#remove" class="internal-link">jcollections.collection.Collection.remove</a></code></div><div class="interfaceinfo">overridden in <code><a href="jcollections.arraylist.ArrayList.html" class="internal-link">jcollections.arraylist.ArrayList</a></code>, <code><a href="jcollections.linkedlist.LinkedList.html" class="internal-link">jcollections.linkedlist.LinkedList</a></code>, <code><a href="jcollections.vector.Vector.html" class="internal-link">jcollections.vector.Vector</a></code></div>
+    <div><p>Removes the element at the specified position in this list or a specified element.</p>
+<ul class="rst-simple">
+<li>No arguments: Removes the first element.</li>
+<li>Single integer argument: Removes the element at the specified index.</li>
+<li>Single non-integer argument: Removes the first occurrence of the specified element.</li>
+</ul>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.list.List.removeAll">
+    
+  </a>
+  <a name="removeAll">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">removeAll</span><span class="function-signature">(self, c)</span>:
+    
+    <a class="headerLink" href="#removeAll" title="jcollections.list.List.removeAll">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#removeAll" class="internal-link">jcollections.collection.Collection.removeAll</a></code></div><div class="interfaceinfo">overridden in <code><a href="jcollections.arraylist.ArrayList.html" class="internal-link">jcollections.arraylist.ArrayList</a></code>, <code><a href="jcollections.linkedlist.LinkedList.html" class="internal-link">jcollections.linkedlist.LinkedList</a></code>, <code><a href="jcollections.vector.Vector.html" class="internal-link">jcollections.vector.Vector</a></code></div>
+    <div><p>Removes from this list all of its elements that are contained in the specified collection (optional operation). :param c: The collection of elements to be removed. :return: True if the list was modified, otherwise False.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.list.List.replaceAll">
+    
+  </a>
+  <a name="replaceAll">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">replaceAll</span><span class="function-signature">(self, operator)</span>:
+    
+    <a class="headerLink" href="#replaceAll" title="jcollections.list.List.replaceAll">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <code><a href="jcollections.arraylist.ArrayList.html" class="internal-link">jcollections.arraylist.ArrayList</a></code>, <code><a href="jcollections.linkedlist.LinkedList.html" class="internal-link">jcollections.linkedlist.LinkedList</a></code>, <code><a href="jcollections.vector.Vector.html" class="internal-link">jcollections.vector.Vector</a></code></div>
+    <div><p>Replaces each element of this list with the result of applying the operator to that element. :param operator: A function to apply to each element.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.list.List.retainAll">
+    
+  </a>
+  <a name="retainAll">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">retainAll</span><span class="function-signature">(self, c)</span>:
+    
+    <a class="headerLink" href="#retainAll" title="jcollections.list.List.retainAll">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#retainAll" class="internal-link">jcollections.collection.Collection.retainAll</a></code></div><div class="interfaceinfo">overridden in <code><a href="jcollections.arraylist.ArrayList.html" class="internal-link">jcollections.arraylist.ArrayList</a></code>, <code><a href="jcollections.linkedlist.LinkedList.html" class="internal-link">jcollections.linkedlist.LinkedList</a></code>, <code><a href="jcollections.vector.Vector.html" class="internal-link">jcollections.vector.Vector</a></code></div>
+    <div><p>Retains only the elements in this list that are contained in the specified collection (optional operation). :param c: The collection to retain elements from. :return: True if the list was modified, otherwise False.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.list.List.set">
+    
+  </a>
+  <a name="set">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">set</span><span class="function-signature">(self, index, element)</span>:
+    
+    <a class="headerLink" href="#set" title="jcollections.list.List.set">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <code><a href="jcollections.arraylist.ArrayList.html" class="internal-link">jcollections.arraylist.ArrayList</a></code>, <code><a href="jcollections.linkedlist.LinkedList.html" class="internal-link">jcollections.linkedlist.LinkedList</a></code>, <code><a href="jcollections.vector.Vector.html" class="internal-link">jcollections.vector.Vector</a></code></div>
+    <div><p>Replaces the element at the specified position in this list with the specified element (optional operation). :param index: The index of the element to replace. :param element: The element to replace with. :return: The element previously at the specified position.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.list.List.size">
+    
+  </a>
+  <a name="size">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">size</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#size" title="jcollections.list.List.size">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#size" class="internal-link">jcollections.collection.Collection.size</a></code></div><div class="interfaceinfo">overridden in <code><a href="jcollections.arraylist.ArrayList.html" class="internal-link">jcollections.arraylist.ArrayList</a></code>, <code><a href="jcollections.linkedlist.LinkedList.html" class="internal-link">jcollections.linkedlist.LinkedList</a></code>, <code><a href="jcollections.vector.Vector.html" class="internal-link">jcollections.vector.Vector</a></code></div>
+    <div><p>Returns the number of elements in this list. :return: The size of the list.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.list.List.sort">
+    
+  </a>
+  <a name="sort">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">sort</span><span class="function-signature">(self, c)</span>:
+    
+    <a class="headerLink" href="#sort" title="jcollections.list.List.sort">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <code><a href="jcollections.arraylist.ArrayList.html" class="internal-link">jcollections.arraylist.ArrayList</a></code>, <code><a href="jcollections.linkedlist.LinkedList.html" class="internal-link">jcollections.linkedlist.LinkedList</a></code>, <code><a href="jcollections.vector.Vector.html" class="internal-link">jcollections.vector.Vector</a></code></div>
+    <div><p>Sorts this list according to the order induced by the specified Comparator. :param c: The comparator to determine the order of the list.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.list.List.spliterator">
+    
+  </a>
+  <a name="spliterator">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">spliterator</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#spliterator" title="jcollections.list.List.spliterator">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#spliterator" class="internal-link">jcollections.collection.Collection.spliterator</a></code></div><div class="interfaceinfo">overridden in <code><a href="jcollections.arraylist.ArrayList.html" class="internal-link">jcollections.arraylist.ArrayList</a></code>, <code><a href="jcollections.linkedlist.LinkedList.html" class="internal-link">jcollections.linkedlist.LinkedList</a></code>, <code><a href="jcollections.vector.Vector.html" class="internal-link">jcollections.vector.Vector</a></code></div>
+    <div><p>Creates a Spliterator over the elements in this list. :return: A Spliterator for the elements.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.list.List.subList">
+    
+  </a>
+  <a name="subList">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">subList</span><span class="function-signature">(self, fromIndex, toIndex)</span>:
+    
+    <a class="headerLink" href="#subList" title="jcollections.list.List.subList">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <code><a href="jcollections.arraylist.ArrayList.html" class="internal-link">jcollections.arraylist.ArrayList</a></code>, <code><a href="jcollections.linkedlist.LinkedList.html" class="internal-link">jcollections.linkedlist.LinkedList</a></code>, <code><a href="jcollections.vector.Vector.html" class="internal-link">jcollections.vector.Vector</a></code></div>
+    <div><p>Returns a view of the portion of this list between the specified fromIndex, inclusive, and toIndex, exclusive. :param fromIndex: The starting index of the sublist. :param toIndex: The ending index of the sublist. :return: A sublist of the original list.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.list.List.toArray">
+    
+  </a>
+  <a name="toArray">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">toArray</span><span class="function-signature">(self, *args)</span>:
+    
+    <a class="headerLink" href="#toArray" title="jcollections.list.List.toArray">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#toArray" class="internal-link">jcollections.collection.Collection.toArray</a></code></div><div class="interfaceinfo">overridden in <code><a href="jcollections.arraylist.ArrayList.html" class="internal-link">jcollections.arraylist.ArrayList</a></code>, <code><a href="jcollections.linkedlist.LinkedList.html" class="internal-link">jcollections.linkedlist.LinkedList</a></code>, <code><a href="jcollections.vector.Vector.html" class="internal-link">jcollections.vector.Vector</a></code></div>
+    <div><p>Converts the list elements into an array. :param args: Optional argument specifying the type of array elements. :return: An array containing all the elements in the list.</p></div>
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container">
+    <a href="index.html">API Documentation</a> for PyJCore,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.3.3 at 2024-10-06 14:13:38.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

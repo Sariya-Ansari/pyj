@@ -1,3 +1,12 @@
+"""
+This module defines an abstract base class `List` that represents an ordered collection of elements.
+It extends the `Collection` class to provide additional operations for accessing elements based on their position
+and handling lists of elements.
+
+Classes:
+    - List: Abstract class for ordered collections that supports positional access.
+"""
+
 from abc import abstractmethod
 from jcollections.collection import Collection
 
@@ -5,19 +14,29 @@ class List(Collection):
     """
     Abstract class representing an ordered collection (a list).
     Extends the Collection class to include operations specific to lists, such as positional access to elements.
+    Subclasses of this class must implement all abstract methods to define specific list behaviors.
     """
 
     @abstractmethod
     def add(self, *args):
         """
         Adds an element or elements to the list.
+
+        Subclasses must implement this method to define how elements are added to the list.
+
+        This method supports two modes:
+
+        - **Single argument**: Adds an element to the end of the list.
+        - **Two arguments**: Adds an element at the specified index.
         """
+
         pass
 
     @abstractmethod
     def clear(self):
         """
         Removes all the elements from this list (optional operation).
+        Subclasses must implement this method to define how to clear the list.
         """
         pass
 
@@ -26,6 +45,7 @@ class List(Collection):
         """
         Returns True if this list contains the specified element.
         :param o: The element to check for.
+        :return: True if the element is present, otherwise False.
         """
         pass
 
@@ -34,6 +54,7 @@ class List(Collection):
         """
         Returns True if this list contains all the elements of the specified collection.
         :param c: The collection to check for containment.
+        :return: True if all elements are present, otherwise False.
         """
         pass
 
@@ -42,6 +63,7 @@ class List(Collection):
         """
         Compares the specified object with this list for equality.
         :param o: The object to compare with.
+        :return: True if the specified object is equal to this list, otherwise False.
         """
         pass
 
@@ -50,6 +72,7 @@ class List(Collection):
         """
         Returns the element at the specified position in this list.
         :param index: The index of the element to return.
+        :return: The element at the specified index.
         """
         pass
 
@@ -57,6 +80,7 @@ class List(Collection):
     def hashCode(self):
         """
         Returns the hash code value for this list.
+        :return: The hash code of the list.
         """
         pass
 
@@ -65,6 +89,7 @@ class List(Collection):
         """
         Returns the index of the first occurrence of the specified element in this list, or -1 if the list does not contain the element.
         :param o: The element to search for.
+        :return: The index of the first occurrence, or -1 if not found.
         """
         pass
 
@@ -72,6 +97,7 @@ class List(Collection):
     def isEmpty(self):
         """
         Returns True if this list contains no elements.
+        :return: True if the list is empty, otherwise False.
         """
         pass
 
@@ -79,6 +105,7 @@ class List(Collection):
     def iterator(self):
         """
         Returns an iterator over the elements in this list in proper sequence.
+        :return: An iterator for the list elements.
         """
         pass
 
@@ -87,6 +114,7 @@ class List(Collection):
         """
         Returns the index of the last occurrence of the specified element in this list, or -1 if the list does not contain the element.
         :param o: The element to search for.
+        :return: The index of the last occurrence, or -1 if not found.
         """
         pass
 
@@ -95,6 +123,7 @@ class List(Collection):
         """
         Returns a list iterator over the elements in this list.
         :param args: Optional start index for the iterator.
+        :return: A list iterator for the elements.
         """
         pass
 
@@ -102,6 +131,9 @@ class List(Collection):
     def remove(self, *args):
         """
         Removes the element at the specified position in this list or a specified element.
+        - No arguments: Removes the first element.
+        - Single integer argument: Removes the element at the specified index.
+        - Single non-integer argument: Removes the first occurrence of the specified element.
         """
         pass
 
@@ -110,6 +142,7 @@ class List(Collection):
         """
         Removes from this list all of its elements that are contained in the specified collection (optional operation).
         :param c: The collection of elements to be removed.
+        :return: True if the list was modified, otherwise False.
         """
         pass
 
@@ -126,6 +159,7 @@ class List(Collection):
         """
         Retains only the elements in this list that are contained in the specified collection (optional operation).
         :param c: The collection to retain elements from.
+        :return: True if the list was modified, otherwise False.
         """
         pass
 
@@ -135,6 +169,7 @@ class List(Collection):
         Replaces the element at the specified position in this list with the specified element (optional operation).
         :param index: The index of the element to replace.
         :param element: The element to replace with.
+        :return: The element previously at the specified position.
         """
         pass
 
@@ -142,6 +177,7 @@ class List(Collection):
     def size(self):
         """
         Returns the number of elements in this list.
+        :return: The size of the list.
         """
         pass
 
@@ -157,6 +193,7 @@ class List(Collection):
     def spliterator(self):
         """
         Creates a Spliterator over the elements in this list.
+        :return: A Spliterator for the elements.
         """
         pass
 
@@ -166,6 +203,7 @@ class List(Collection):
         Returns a view of the portion of this list between the specified fromIndex, inclusive, and toIndex, exclusive.
         :param fromIndex: The starting index of the sublist.
         :param toIndex: The ending index of the sublist.
+        :return: A sublist of the original list.
         """
         pass
 
@@ -174,5 +212,6 @@ class List(Collection):
         """
         Converts the list elements into an array.
         :param args: Optional argument specifying the type of array elements.
+        :return: An array containing all the elements in the list.
         """
         pass

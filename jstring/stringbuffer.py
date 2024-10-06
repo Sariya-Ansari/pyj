@@ -1,3 +1,8 @@
+"""
+The `stringbuffer` module implements the `StringBuffer` class, which provides a mutable sequence of characters. It allows
+modification of strings by appending, inserting, deleting, and replacing characters.
+"""
+
 from jstring import String
 
 
@@ -52,6 +57,11 @@ class CharSequence:
         :raises NotImplementedError: This method should be implemented by subclasses.
         """
         raise NotImplementedError
+
+"""
+The `stringbuffer` module implements the `StringBuffer` class, which provides a mutable sequence of characters. It allows
+modification of strings by appending, inserting, deleting, and replacing characters.
+"""
 
 class StringBuffer(CharSequence):
     """

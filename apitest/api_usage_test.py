@@ -1,3 +1,13 @@
+"""
+File: api_usage_test.py
+
+This file contains unit tests and usage examples for various collection types in the jcollections and jstring libraries.
+It showcases how to use different data structures and string utilities, including HashMap, TreeSet, ArrayList, and more.
+
+License: MIT License
+This is an Open Source project released under the MIT License.
+"""
+
 from jcollections.hashtable import Hashtable
 from jcollections.linkedhashmap import LinkedHashMap
 from jcollections.hashmap import HashMap
@@ -17,6 +27,27 @@ from jcollections.treemap import TreeMap
 
 
 def test_string():
+    """
+    Test various operations on StringBuilder and String classes to demonstrate their functionality.
+
+    StringBuilder operations:
+    - Initializing a StringBuilder with a string.
+    - Appending to the string using `append()`.
+    - Checking the capacity of the StringBuilder.
+    - Ensuring a specific capacity using `ensureCapacity()`.
+    - Accessing a substring using `substring()`.
+
+    String operations:
+    - Finding the index of a character using `indexOf()`.
+    - Comparing two strings using `equals()`.
+    - Concatenating two strings.
+    - Getting the length of a string.
+    - Extracting a substring.
+    - Converting a string to uppercase and lowercase.
+
+    This test ensures that essential string manipulation and comparison functionalities,
+    including dynamic string building, substring extraction, and transformations, are covered.
+    """
     s = StringBuilder("Sariya Python Java Lib to mimic the java collections and APIs")
     print(s.toString())
     s.append("-Based on Python")
@@ -54,6 +85,20 @@ def test_string():
     print("Lowercase: ", str2.toLowerCase())
 
 def test_arraylist():
+    """
+    Test various operations on the ArrayList class to demonstrate its functionality.
+
+    This test covers:
+    - Adding individual and multiple elements using `add()` and `addAll()`.
+    - Removing elements by index and value using `remove()`.
+    - Converting to an array using `toArray()`.
+    - Demonstrating predicate-based removal using `Predicate`.
+    - Showing exception handling during removal.
+    - Checking the size of the list using `size()`.
+
+    This test ensures that the important functionalities of ArrayList,
+    including list operations, conversions, and predicate-based filtering, are covered.
+    """
     # Create an ArrayList instance
     array_list = ArrayList()
 
@@ -148,6 +193,20 @@ def test_arraylist():
     print("Len:", len(pred_list.toArray()), " size:", pred_list.size())
 
 def test_linkedlist():
+    """
+    Test various operations on the LinkedList class to demonstrate its functionality.
+
+    This test covers:
+    - Adding elements using `add()`, `addFirst()`, and `addLast()`.
+    - Iterating over the list using a ListIterator.
+    - Cloning the list using `clone()`.
+    - Converting the list to an array using `toArray()`.
+    - Querying elements using `contains()`, `get()`, `indexOf()`, etc.
+    - Removing elements using `removeAt()`, `removeElement()`, and others.
+    - Demonstrating stack-like operations with `push()` and `pop()`.
+
+    This test ensures that LinkedList's functionality, including list operations, stack-like behavior, and iterability, is demonstrated.
+    """
     # Create a LinkedList and add some elements
     ll = LinkedList()
     ll.add("Zero")
@@ -204,6 +263,20 @@ def test_linkedlist():
         print(item)
 
 def test_vector():
+    """
+    Test various operations on the Vector class to demonstrate its functionality.
+
+    This test covers:
+    - Creating Vectors using different constructors.
+    - Adding elements with and without specifying an index.
+    - Capacity management with `ensureCapacity()`.
+    - Removal of elements using different methods like `remove()`, `removeAll()`, etc.
+    - Querying contents with methods like `contains()`, `indexOf()`, and `lastIndexOf()`.
+    - Demonstrating iteration using `iterator()` and `listIterator()`.
+
+    This comprehensive test ensures that Vector's functionality is demonstrated.
+    """
+
     # Testing Vector constructors
     print("Testing constructors...")
     v1 = Vector()  # Default constructor
@@ -419,6 +492,17 @@ def test_vector():
 
 
 def test_stack():
+    """
+    Test various operations on the Stack class with different data types.
+
+    This test covers:
+    - Testing with integers and strings: `push()`, `pop()`, `peek()`, `search()`.
+    - Using custom objects with `push()`, `pop()`, and `search()` for equality.
+    - Demonstrating inherited methods from Vector such as `addAll()`, `setElementAt()`, and `removeElementAt()`.
+
+    The Stack class's versatility for handling different data types is demonstrated.
+    """
+
     # Test stack functionality with integers
     stack_int = Stack()
     print("Is stack empty (int)?", stack_int.empty())  # Should be True
@@ -513,6 +597,17 @@ def test_stack():
     print("Stack after removeAllElements (int):", stack_int.toArray())  # []
 
 def test_queue():
+    """
+    Test various operations on the Queue class.
+
+    This test covers:
+    - Using `ArrayList` as the underlying list for the queue.
+    - Adding elements with `offer()` and retrieving the head with `element()`.
+    - Removing the head with `poll()` and showing the queue's state afterward.
+
+    The test also shows how Queue can use different list implementations.
+    """
+
     # Using ArrayList
     queue_with_array_list = Queue(ArrayList())
 
@@ -544,6 +639,17 @@ def test_queue():
     print(linked.getFirst())  # Output: 50 (LinkedList-specific method)
 
 def test_priorityQ():
+    """
+    Test various operations on the PriorityQueue class.
+
+    This test covers:
+    - Adding elements using `add()` and `offer()`.
+    - Using `peek()` to view the front element without removing it.
+    - Removing elements using `poll()` and `remove()`.
+    - Checking for element existence and clearing the queue with `clear()`.
+
+    Additional operations such as `removeIf()` and `retainAll()` are also covered.
+    """
     # Create PriorityQueue without comparator
     pq = PriorityQueue()
 
@@ -622,6 +728,17 @@ def test_priorityQ():
     print("All API checks completed!")
 
 def test_deque():
+    """
+    Test various operations on the ArrayDeque class.
+
+    This test covers:
+    - Adding elements using `add()`, `addFirst()`, and `addLast()`.
+    - Retrieving elements with `getFirst()` and `getLast()`.
+    - Removing elements with `poll()`, `remove()`, and `pop()`.
+    - Using `push()` to insert an element at the front and `pop()` to remove it.
+
+    ArrayDeque's deque behavior and list-like operations are demonstrated.
+    """
     dq = ArrayDeque()
 
     # Test add, addFirst, addLast
@@ -678,6 +795,17 @@ def test_deque():
 
 
 def test_hashset():
+    """
+    Test various operations on the HashSet class.
+
+    This test covers:
+    - Adding elements with `add()` and `addAll()`.
+    - Checking for element existence with `contains()`.
+    - Removing elements with `remove()` and `removeAll()`.
+    - Using `removeIf()` for conditional removal.
+
+    HashSet's uniqueness, size checking, and iteration capabilities are demonstrated.
+    """
     # Initialize a HashSet
     hs = HashSet()
 
@@ -754,6 +882,17 @@ def test_hashset():
 
 
 def test_linked_hash_set():
+    """
+    Test various operations on the LinkedHashSet class.
+
+    This test covers:
+    - Adding elements while maintaining insertion order.
+    - Checking for duplicates and existence with `contains()`.
+    - Removing elements with `remove()` and `removeAll()`.
+    - Iterating over the set with `iterator()`.
+
+    LinkedHashSet's unique behavior and ordered iteration are demonstrated.
+    """
     # Initialize a LinkedHashSet
     lhs = LinkedHashSet()
 
@@ -830,6 +969,17 @@ def test_linked_hash_set():
 
 
 def test_tree_set():
+    """
+    Test various operations on the TreeSet class.
+
+    This test covers:
+    - Adding elements and maintaining sorted order.
+    - Accessing the first and last elements.
+    - Using `headSet()`, `subSet()`, and `tailSet()` for range views.
+    - Conditional removal with `removeIf()`.
+
+    TreeSet's sorted behavior and range operations are demonstrated.
+    """
     ts = TreeSet()
 
     # Adding elements
@@ -871,6 +1021,18 @@ def test_tree_set():
     print("Final TreeSet: ", list(ts.iterator()))
 
 def test_hashmap():
+    """
+    Test various operations on the HashMap class.
+
+    This test covers:
+    - Adding key-value pairs with `put()` and `putIfAbsent()`.
+    - Retrieving values with `get()`.
+    - Checking for existence with `containsKey()` and `containsValue()`.
+    - Removing elements and checking the size.
+    - Iterating through the map with `entrySet()`.
+
+    HashMap's dynamic nature and key-value functionality are demonstrated.
+    """
     print("### HashMap Usage Test ###")
 
     # Create a new HashMap
@@ -927,6 +1089,18 @@ def test_hashmap():
     print("### End of HashMap Usage Test ###")
 
 def test_linked_hash_map():
+    """
+    Test various operations on the LinkedHashMap class.
+
+    This test covers:
+    - Adding key-value pairs while maintaining insertion order.
+    - Accessing elements and checking for existence.
+    - Removing elements with `remove()`.
+    - Using `putIfAbsent()` and `replace()` for conditional updates.
+    - Iterating through the map with `entrySet()`.
+
+    LinkedHashMap's ordered behavior and map operations are demonstrated.
+    """
     print("### LinkedHashMap Usage Test ###")
 
     # Create a new LinkedHashMap with default capacity and load factor
@@ -1032,6 +1206,18 @@ def test_linked_hash_map():
     print("### End of LinkedHashMap Usage Test ###")
 
 def test_hashtable():
+    """
+    Test various operations on the Hashtable class.
+
+    This test covers:
+    - Adding and retrieving key-value pairs with `put()` and `get()`.
+    - Checking for existence with `containsKey()` and `containsValue()`.
+    - Removing elements with `remove()`.
+    - Using `putIfAbsent()` and computing values conditionally with `compute()`.
+
+    Hashtable's map functionality and thread-safe behavior are demonstrated.
+    """
+
     # Initialize with default constructor
     table = Hashtable()
 
@@ -1097,6 +1283,19 @@ def test_hashtable():
 
 
 def test_treemap():
+    """
+    Test various operations on the TreeMap class.
+
+    This test covers:
+    - Adding key-value pairs while maintaining sorted order by keys.
+    - Accessing the first and last entries.
+    - Creating sub-maps with `subMap()` and `tailMap()`.
+    - Removing and replacing entries with `remove()` and `replace()`.
+    - Iterating through the map with `entrySet()`.
+
+    TreeMap's sorted map behavior and range operations are demonstrated.
+    """
+
     # Instantiate the TreeMap
     tree_map = TreeMap()
 

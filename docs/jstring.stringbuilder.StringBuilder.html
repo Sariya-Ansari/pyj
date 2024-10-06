@@ -1,0 +1,1432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>jstring.stringbuilder.StringBuilder</title>
+    <meta name="generator" content="pydoctor 24.3.3"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          PyJCore <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="jstring.stringbuilder.StringBuilder.html" class="internal-link" title="This class"><wbr></wbr>String<wbr></wbr>Builder</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__init__" class="internal-link" title="jstring.stringbuilder.StringBuilder.__init__">__init__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__str__" class="internal-link" title="jstring.stringbuilder.StringBuilder.__str__">__str__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#append" class="internal-link" title="jstring.stringbuilder.StringBuilder.append">append</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#capacity" class="internal-link" title="jstring.stringbuilder.StringBuilder.capacity">capacity</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#charAt" class="internal-link" title="jstring.stringbuilder.StringBuilder.charAt">char<wbr></wbr>At</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#codePointAt" class="internal-link" title="jstring.stringbuilder.StringBuilder.codePointAt">code<wbr></wbr>Point<wbr></wbr>At</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#codePointBefore" class="internal-link" title="jstring.stringbuilder.StringBuilder.codePointBefore">code<wbr></wbr>Point<wbr></wbr>Before</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#codePointCount" class="internal-link" title="jstring.stringbuilder.StringBuilder.codePointCount">code<wbr></wbr>Point<wbr></wbr>Count</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#delete" class="internal-link" title="jstring.stringbuilder.StringBuilder.delete">delete</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#deleteCharAt" class="internal-link" title="jstring.stringbuilder.StringBuilder.deleteCharAt">delete<wbr></wbr>Char<wbr></wbr>At</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#ensureCapacity" class="internal-link" title="jstring.stringbuilder.StringBuilder.ensureCapacity">ensure<wbr></wbr>Capacity</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#getChars" class="internal-link" title="jstring.stringbuilder.StringBuilder.getChars">get<wbr></wbr>Chars</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#indexOf" class="internal-link" title="jstring.stringbuilder.StringBuilder.indexOf">index<wbr></wbr>Of</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#insert" class="internal-link" title="jstring.stringbuilder.StringBuilder.insert">insert</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#lastIndexOf" class="internal-link" title="jstring.stringbuilder.StringBuilder.lastIndexOf">last<wbr></wbr>Index<wbr></wbr>Of</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#length" class="internal-link" title="jstring.stringbuilder.StringBuilder.length">length</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#offsetByCodePoints" class="internal-link" title="jstring.stringbuilder.StringBuilder.offsetByCodePoints">offset<wbr></wbr>By<wbr></wbr>Code<wbr></wbr>Points</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#replace" class="internal-link" title="jstring.stringbuilder.StringBuilder.replace">replace</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#reverse" class="internal-link" title="jstring.stringbuilder.StringBuilder.reverse">reverse</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#setCharAt" class="internal-link" title="jstring.stringbuilder.StringBuilder.setCharAt">set<wbr></wbr>Char<wbr></wbr>At</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#setLength" class="internal-link" title="jstring.stringbuilder.StringBuilder.setLength">set<wbr></wbr>Length</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#subSequence" class="internal-link" title="jstring.stringbuilder.StringBuilder.subSequence">sub<wbr></wbr>Sequence</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#substring" class="internal-link" title="jstring.stringbuilder.StringBuilder.substring">substring</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#toString" class="internal-link" title="jstring.stringbuilder.StringBuilder.toString">to<wbr></wbr>String</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#trimToSize" class="internal-link" title="jstring.stringbuilder.StringBuilder.trimToSize">trim<wbr></wbr>To<wbr></wbr>Size</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#data" class="internal-link" title="jstring.stringbuilder.StringBuilder.data">data</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_internal_capacity" class="internal-link" title="jstring.stringbuilder.StringBuilder._internal_capacity">_internal<wbr></wbr>_capacity</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="jstring.stringbuilder.html" class="internal-link" title="The parent of this class">stringbuilder</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jstring.stringbuilder.StringBuilder.html" class="internal-link" title="jstring.stringbuilder.StringBuilder"><wbr></wbr>String<wbr></wbr>Builder</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="jstring.html" class="internal-link">jstring</a></code><wbr></wbr>.<code><a href="jstring.stringbuilder.html" class="internal-link" title="jstring.stringbuilder">stringbuilder</a></code><wbr></wbr>.<code><a href="jstring.stringbuilder.StringBuilder.html" class="internal-link" title="jstring.stringbuilder.StringBuilder">StringBuilder</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">StringBuilder</span>:</code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="jstring.stringbuilder.StringBuilder.__init__">StringBuilder(initial_data, capacity)</a></code></p>
+          <p><a href="classIndex.html#jstring.stringbuilder.StringBuilder">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="pre">A mutable sequence of characters, similar to Java's StringBuilder.
+
+This class provides a way to build and manipulate strings more efficiently than using Python's built-in strings,
+which are immutable. It supports various operations to modify the contents, such as appending, inserting,
+deleting, and replacing characters.
+
+Attributes:
+    _internal_capacity: The current capacity of the builder.
+    data: A list of characters representing the current content of the builder.
+
+Methods:
+    __str__: Returns the string representation of the current content.
+    append: Appends the string representation of the given object to the builder.
+    capacity: Returns the current capacity of the builder.
+    charAt: Returns the character at the specified index.
+    codePointAt: Returns the Unicode code point of the character at the specified index.
+    codePointBefore: Returns the Unicode code point of the character before the specified index.
+    codePointCount: Returns the number of Unicode code points in the specified text range.
+    delete: Removes the characters in the specified range.
+    deleteCharAt: Removes the character at the specified index.
+    ensureCapacity: Ensures that the builder's capacity is at least the specified minimum.
+    getChars: Copies characters from the builder into a specified destination list.
+    indexOf: Finds the index of the first occurrence of a specified substring.
+    insert: Inserts the string representation of the given object at the specified offset.
+    lastIndexOf: Finds the index of the last occurrence of a specified substring.
+    length: Returns the length of the current content.
+    offsetByCodePoints: Calculates the offset of a position by a specified number of code points.
+    replace: Replaces the characters in the specified range with a new string.
+    reverse: Reverses the characters in the builder.
+    setCharAt: Sets the character at the specified index.
+    setLength: Sets the length of the builder's content, truncating or padding with null characters as needed.
+    subSequence: Returns a new string that is a subsequence of the builder's content.
+    substring: Returns a substring of the builder's content.
+    toString: Returns the string representation of the current content.
+    trimToSize: Adjusts the builder's capacity to match its current size.</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id80">
+  
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__" class="internal-link" title="jstring.stringbuilder.StringBuilder.__init__">__init__</a></code></td>
+    <td>Initializes a StringBuilder with optional initial data and capacity.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__str__" class="internal-link" title="jstring.stringbuilder.StringBuilder.__str__">__str__</a></code></td>
+    <td>Returns the string representation of the current content of the builder.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#append" class="internal-link" title="jstring.stringbuilder.StringBuilder.append">append</a></code></td>
+    <td>Appends the string representation of the given object to the builder.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#capacity" class="internal-link" title="jstring.stringbuilder.StringBuilder.capacity">capacity</a></code></td>
+    <td>Returns the current capacity of the builder.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#charAt" class="internal-link" title="jstring.stringbuilder.StringBuilder.charAt">char<wbr></wbr>At</a></code></td>
+    <td>Returns the character at the specified index.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#codePointAt" class="internal-link" title="jstring.stringbuilder.StringBuilder.codePointAt">code<wbr></wbr>Point<wbr></wbr>At</a></code></td>
+    <td>Returns the Unicode code point of the character at the specified index.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#codePointBefore" class="internal-link" title="jstring.stringbuilder.StringBuilder.codePointBefore">code<wbr></wbr>Point<wbr></wbr>Before</a></code></td>
+    <td>Returns the Unicode code point of the character before the specified index.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#codePointCount" class="internal-link" title="jstring.stringbuilder.StringBuilder.codePointCount">code<wbr></wbr>Point<wbr></wbr>Count</a></code></td>
+    <td>Returns the number of Unicode code points in the specified text range.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#delete" class="internal-link" title="jstring.stringbuilder.StringBuilder.delete">delete</a></code></td>
+    <td>Removes the characters in the specified range from the builder.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#deleteCharAt" class="internal-link" title="jstring.stringbuilder.StringBuilder.deleteCharAt">delete<wbr></wbr>Char<wbr></wbr>At</a></code></td>
+    <td>Removes the character at the specified index.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#ensureCapacity" class="internal-link" title="jstring.stringbuilder.StringBuilder.ensureCapacity">ensure<wbr></wbr>Capacity</a></code></td>
+    <td>Ensures that the builder's capacity is at least the specified minimum.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#getChars" class="internal-link" title="jstring.stringbuilder.StringBuilder.getChars">get<wbr></wbr>Chars</a></code></td>
+    <td>Copies characters from the builder into a specified destination list.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#indexOf" class="internal-link" title="jstring.stringbuilder.StringBuilder.indexOf">index<wbr></wbr>Of</a></code></td>
+    <td>Finds the index of the first occurrence of a specified substring.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#insert" class="internal-link" title="jstring.stringbuilder.StringBuilder.insert">insert</a></code></td>
+    <td>Inserts the string representation of the given object at the specified offset.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#lastIndexOf" class="internal-link" title="jstring.stringbuilder.StringBuilder.lastIndexOf">last<wbr></wbr>Index<wbr></wbr>Of</a></code></td>
+    <td>Finds the index of the last occurrence of a specified substring.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#length" class="internal-link" title="jstring.stringbuilder.StringBuilder.length">length</a></code></td>
+    <td>Returns the length of the current content.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#offsetByCodePoints" class="internal-link" title="jstring.stringbuilder.StringBuilder.offsetByCodePoints">offset<wbr></wbr>By<wbr></wbr>Code<wbr></wbr>Points</a></code></td>
+    <td>Calculates the offset of a position by a specified number of code points.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#replace" class="internal-link" title="jstring.stringbuilder.StringBuilder.replace">replace</a></code></td>
+    <td>Replaces the characters in the specified range with a new string.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#reverse" class="internal-link" title="jstring.stringbuilder.StringBuilder.reverse">reverse</a></code></td>
+    <td>Reverses the characters in the builder.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#setCharAt" class="internal-link" title="jstring.stringbuilder.StringBuilder.setCharAt">set<wbr></wbr>Char<wbr></wbr>At</a></code></td>
+    <td>Sets the character at the specified index.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#setLength" class="internal-link" title="jstring.stringbuilder.StringBuilder.setLength">set<wbr></wbr>Length</a></code></td>
+    <td>Sets the length of the builder's content. If the new length is less than the current length, the content is truncated. If the new length is greater, the content is padded with null characters.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#subSequence" class="internal-link" title="jstring.stringbuilder.StringBuilder.subSequence">sub<wbr></wbr>Sequence</a></code></td>
+    <td>Returns a new string that is a subsequence of the builder's content.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#substring" class="internal-link" title="jstring.stringbuilder.StringBuilder.substring">substring</a></code></td>
+    <td>Returns a substring of the builder's content.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#toString" class="internal-link" title="jstring.stringbuilder.StringBuilder.toString">to<wbr></wbr>String</a></code></td>
+    <td>Returns the string representation of the current content.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#trimToSize" class="internal-link" title="jstring.stringbuilder.StringBuilder.trimToSize">trim<wbr></wbr>To<wbr></wbr>Size</a></code></td>
+    <td>Adjusts the builder's capacity to match its current size.</td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#data" class="internal-link" title="jstring.stringbuilder.StringBuilder.data">data</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_internal_capacity" class="internal-link" title="jstring.stringbuilder.StringBuilder._internal_capacity">_internal<wbr></wbr>_capacity</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basemethod">
+  
+  
+  <a name="jstring.stringbuilder.StringBuilder.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, initial_data=None, capacity=16)</span>:
+    
+    <a class="headerLink" href="#__init__" title="jstring.stringbuilder.StringBuilder.__init__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Initializes a StringBuilder with optional initial data and capacity.
+
+:param initial_data: Initial content for the builder, which can be a string, list, tuple, or an integer
+                     representing the initial capacity.
+:param capacity: The initial capacity of the builder.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.stringbuilder.StringBuilder.__str__">
+    
+  </a>
+  <a name="__str__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__str__</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#__str__" title="jstring.stringbuilder.StringBuilder.__str__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the string representation of the current content of the builder.</p>
+<p>:return: The current content as a string.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.stringbuilder.StringBuilder.append">
+    
+  </a>
+  <a name="append">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">append</span><span class="function-signature">(self, obj)</span>:
+    
+    <a class="headerLink" href="#append" title="jstring.stringbuilder.StringBuilder.append">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Appends the string representation of the given object to the builder.</p>
+<p>:param obj: The object to append. Supported types include bool, str, int, float, list, tuple, and StringBuilder. :return: The current StringBuilder instance. :raises TypeError: If the object is of an unsupported type.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.stringbuilder.StringBuilder.capacity">
+    
+  </a>
+  <a name="capacity">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">capacity</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#capacity" title="jstring.stringbuilder.StringBuilder.capacity">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the current capacity of the builder.</p>
+<p>:return: The internal capacity of the builder.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.stringbuilder.StringBuilder.charAt">
+    
+  </a>
+  <a name="charAt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">charAt</span><span class="function-signature">(self, index)</span>:
+    
+    <a class="headerLink" href="#charAt" title="jstring.stringbuilder.StringBuilder.charAt">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the character at the specified index.</p>
+<p>:param index: The index of the character to return. :return: The character at the specified index.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.stringbuilder.StringBuilder.codePointAt">
+    
+  </a>
+  <a name="codePointAt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">codePointAt</span><span class="function-signature">(self, index)</span>:
+    
+    <a class="headerLink" href="#codePointAt" title="jstring.stringbuilder.StringBuilder.codePointAt">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the Unicode code point of the character at the specified index.</p>
+<p>:param index: The index of the character. :return: The Unicode code point of the character.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.stringbuilder.StringBuilder.codePointBefore">
+    
+  </a>
+  <a name="codePointBefore">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">codePointBefore</span><span class="function-signature">(self, index)</span>:
+    
+    <a class="headerLink" href="#codePointBefore" title="jstring.stringbuilder.StringBuilder.codePointBefore">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the Unicode code point of the character before the specified index.</p>
+<p>:param index: The index of the character after the one to return. :return: The Unicode code point of the preceding character.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.stringbuilder.StringBuilder.codePointCount">
+    
+  </a>
+  <a name="codePointCount">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">codePointCount</span><span class="function-signature">(self, beginIndex, endIndex)</span>:
+    
+    <a class="headerLink" href="#codePointCount" title="jstring.stringbuilder.StringBuilder.codePointCount">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the number of Unicode code points in the specified text range.</p>
+<p>:param beginIndex: The beginning index (inclusive). :param endIndex: The ending index (exclusive). :return: The number of Unicode code points in the range.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.stringbuilder.StringBuilder.delete">
+    
+  </a>
+  <a name="delete">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">delete</span><span class="function-signature">(self, start, end)</span>:
+    
+    <a class="headerLink" href="#delete" title="jstring.stringbuilder.StringBuilder.delete">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Removes the characters in the specified range from the builder.</p>
+<p>:param start: The starting index (inclusive). :param end: The ending index (exclusive). :return: The current StringBuilder instance.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.stringbuilder.StringBuilder.deleteCharAt">
+    
+  </a>
+  <a name="deleteCharAt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">deleteCharAt</span><span class="function-signature">(self, index)</span>:
+    
+    <a class="headerLink" href="#deleteCharAt" title="jstring.stringbuilder.StringBuilder.deleteCharAt">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Removes the character at the specified index.</p>
+<p>:param index: The index of the character to remove. :return: The current StringBuilder instance.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.stringbuilder.StringBuilder.ensureCapacity">
+    
+  </a>
+  <a name="ensureCapacity">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">ensureCapacity</span><span class="function-signature">(self, minimumCapacity)</span>:
+    
+    <a class="headerLink" href="#ensureCapacity" title="jstring.stringbuilder.StringBuilder.ensureCapacity">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Ensures that the builder's capacity is at least the specified minimum.</p>
+<p>:param minimumCapacity: The minimum capacity to ensure.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.stringbuilder.StringBuilder.getChars">
+    
+  </a>
+  <a name="getChars">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">getChars</span><span class="function-signature">(self, srcBegin, srcEnd, dst, dstBegin)</span>:
+    
+    <a class="headerLink" href="#getChars" title="jstring.stringbuilder.StringBuilder.getChars">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Copies characters from the builder into a specified destination list.</p>
+<p>:param srcBegin: The starting index of the source range (inclusive). :param srcEnd: The ending index of the source range (exclusive). :param dst: The destination list to copy characters into. :param dstBegin: The starting index in the destination list.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.stringbuilder.StringBuilder.indexOf">
+    
+  </a>
+  <a name="indexOf">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">indexOf</span><span class="function-signature">(self, jstr, fromIndex=0)</span>:
+    
+    <a class="headerLink" href="#indexOf" title="jstring.stringbuilder.StringBuilder.indexOf">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Finds the index of the first occurrence of a specified substring.</p>
+<p>:param jstr: The substring to find. :param fromIndex: The index to start searching from. :return: The index of the first occurrence of the substring, or -1 if not found.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.stringbuilder.StringBuilder.insert">
+    
+  </a>
+  <a name="insert">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">insert</span><span class="function-signature">(self, offset, obj)</span>:
+    
+    <a class="headerLink" href="#insert" title="jstring.stringbuilder.StringBuilder.insert">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Inserts the string representation of the given object at the specified offset.</p>
+<p>:param offset: The index at which to insert. :param obj: The object to insert. :return: The current StringBuilder instance.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.stringbuilder.StringBuilder.lastIndexOf">
+    
+  </a>
+  <a name="lastIndexOf">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">lastIndexOf</span><span class="function-signature">(self, jstr, fromIndex=None)</span>:
+    
+    <a class="headerLink" href="#lastIndexOf" title="jstring.stringbuilder.StringBuilder.lastIndexOf">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Finds the index of the last occurrence of a specified substring.</p>
+<p>:param jstr: The substring to find. :param fromIndex: The index to start searching backwards from (optional). :return: The index of the last occurrence of the substring, or -1 if not found.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.stringbuilder.StringBuilder.length">
+    
+  </a>
+  <a name="length">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">length</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#length" title="jstring.stringbuilder.StringBuilder.length">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the length of the current content.</p>
+<p>:return: The length of the content.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.stringbuilder.StringBuilder.offsetByCodePoints">
+    
+  </a>
+  <a name="offsetByCodePoints">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">offsetByCodePoints</span><span class="function-signature">(self, index, codePointOffset)</span>:
+    
+    <a class="headerLink" href="#offsetByCodePoints" title="jstring.stringbuilder.StringBuilder.offsetByCodePoints">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Calculates the offset of a position by a specified number of code points.</p>
+<p>:param index: The starting index. :param codePointOffset: The number of code points to offset by. :return: The new index after offsetting.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.stringbuilder.StringBuilder.replace">
+    
+  </a>
+  <a name="replace">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">replace</span><span class="function-signature">(self, start, end, jstr)</span>:
+    
+    <a class="headerLink" href="#replace" title="jstring.stringbuilder.StringBuilder.replace">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Replaces the characters in the specified range with a new string.</p>
+<p>:param start: The starting index (inclusive). :param end: The ending index (exclusive). :param jstr: The string to replace the current content with. :return: The current StringBuilder instance.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.stringbuilder.StringBuilder.reverse">
+    
+  </a>
+  <a name="reverse">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">reverse</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#reverse" title="jstring.stringbuilder.StringBuilder.reverse">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Reverses the characters in the builder.</p>
+<p>:return: The current StringBuilder instance.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.stringbuilder.StringBuilder.setCharAt">
+    
+  </a>
+  <a name="setCharAt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">setCharAt</span><span class="function-signature">(self, index, ch)</span>:
+    
+    <a class="headerLink" href="#setCharAt" title="jstring.stringbuilder.StringBuilder.setCharAt">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Sets the character at the specified index.</p>
+<p>:param index: The index at which to set the character. :param ch: The character to set.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.stringbuilder.StringBuilder.setLength">
+    
+  </a>
+  <a name="setLength">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">setLength</span><span class="function-signature">(self, newLength)</span>:
+    
+    <a class="headerLink" href="#setLength" title="jstring.stringbuilder.StringBuilder.setLength">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Sets the length of the builder's content. If the new length is less than the current length, the content is truncated. If the new length is greater, the content is padded with null characters.</p>
+<p>:param newLength: The new length to set.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.stringbuilder.StringBuilder.subSequence">
+    
+  </a>
+  <a name="subSequence">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">subSequence</span><span class="function-signature">(self, start, end)</span>:
+    
+    <a class="headerLink" href="#subSequence" title="jstring.stringbuilder.StringBuilder.subSequence">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns a new string that is a subsequence of the builder's content.</p>
+<p>:param start: The starting index (inclusive). :param end: The ending index (exclusive). :return: A new string that is a subsequence of the content.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.stringbuilder.StringBuilder.substring">
+    
+  </a>
+  <a name="substring">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">substring</span><span class="function-signature">(self, start, end=None)</span>:
+    
+    <a class="headerLink" href="#substring" title="jstring.stringbuilder.StringBuilder.substring">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns a substring of the builder's content.</p>
+<p>:param start: The starting index (inclusive). :param end: The ending index (exclusive), or None to include the rest of the content. :return: A new string that is a substring of the content.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.stringbuilder.StringBuilder.toString">
+    
+  </a>
+  <a name="toString">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">toString</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#toString" title="jstring.stringbuilder.StringBuilder.toString">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the string representation of the current content.</p>
+<p>:return: The current content as a string.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.stringbuilder.StringBuilder.trimToSize">
+    
+  </a>
+  <a name="trimToSize">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">trimToSize</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#trimToSize" title="jstring.stringbuilder.StringBuilder.trimToSize">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Adjusts the builder's capacity to match its current size.</p>
+<p>This method is used to minimize the internal capacity to the length of the current content.</p>
+</div>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="jstring.stringbuilder.StringBuilder.data">
+    
+  </a>
+  <a name="data">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">data</span>: <code>list</code> =
+    
+    <a class="headerLink" href="#data" title="jstring.stringbuilder.StringBuilder.data">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="jstring.stringbuilder.StringBuilder._internal_capacity">
+    
+  </a>
+  <a name="_internal_capacity">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_internal_capacity</span> =
+    
+    <a class="headerLink" href="#_internal_capacity" title="jstring.stringbuilder.StringBuilder._internal_capacity">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container">
+    <a href="index.html">API Documentation</a> for PyJCore,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.3.3 at 2024-10-06 14:13:38.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

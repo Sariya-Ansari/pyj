@@ -1,9 +1,17 @@
+"""
+This module defines an abstract base class `Map` that represents a dictionary-like data structure.
+It provides the fundamental operations that any concrete map implementation must support, such as key-value storage,
+retrieval, and other map-related operations.
+
+Classes:
+    - Map: Abstract class for key-value mapping operations.
+"""
+
 from abc import ABC, abstractmethod
 from typing import TypeVar, Generic, Callable, Optional, Set, Collection, Any
 
 K = TypeVar('K')  # Type variable for keys
 V = TypeVar('V')  # Type variable for values
-
 
 class Map(ABC, Generic[K, V]):
     """

@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>jcollections.abstractqueue.AbstractQueue</title>
+    <meta name="generator" content="pydoctor 24.3.3"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          PyJCore <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="jcollections.abstractqueue.AbstractQueue.html" class="internal-link" title="This class"><wbr></wbr>Abstract<wbr></wbr>Queue</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#add" class="internal-link" title="jcollections.abstractqueue.AbstractQueue.add">add</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#element" class="internal-link" title="jcollections.abstractqueue.AbstractQueue.element">element</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#offer" class="internal-link" title="jcollections.abstractqueue.AbstractQueue.offer">offer</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#peek" class="internal-link" title="jcollections.abstractqueue.AbstractQueue.peek">peek</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#poll" class="internal-link" title="jcollections.abstractqueue.AbstractQueue.poll">poll</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#remove" class="internal-link" title="jcollections.abstractqueue.AbstractQueue.remove">remove</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Inherited Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#clear" class="internal-link" title="jcollections.collection.Collection.clear">clear</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#contains" class="internal-link" title="jcollections.collection.Collection.contains">contains</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#containsAll" class="internal-link" title="jcollections.collection.Collection.containsAll">contains<wbr></wbr>All</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#equals" class="internal-link" title="jcollections.collection.Collection.equals">equals</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#hashCode" class="internal-link" title="jcollections.collection.Collection.hashCode">hash<wbr></wbr>Code</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#isEmpty" class="internal-link" title="jcollections.collection.Collection.isEmpty">is<wbr></wbr>Empty</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#iterator" class="internal-link" title="jcollections.collection.Collection.iterator">iterator</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#parallelStream" class="internal-link" title="jcollections.collection.Collection.parallelStream">parallel<wbr></wbr>Stream</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#removeAll" class="internal-link" title="jcollections.collection.Collection.removeAll">remove<wbr></wbr>All</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#removeIf" class="internal-link" title="jcollections.collection.Collection.removeIf">remove<wbr></wbr>If</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#retainAll" class="internal-link" title="jcollections.collection.Collection.retainAll">retain<wbr></wbr>All</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#size" class="internal-link" title="jcollections.collection.Collection.size">size</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#spliterator" class="internal-link" title="jcollections.collection.Collection.spliterator">spliterator</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#stream" class="internal-link" title="jcollections.collection.Collection.stream">stream</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#toArray" class="internal-link" title="jcollections.collection.Collection.toArray">to<wbr></wbr>Array</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.Iterable.Iterable.html#__iter__" class="internal-link" title="jcollections.Iterable.Iterable.__iter__">__iter__</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="jcollections.abstractqueue.html" class="internal-link" title="The parent of this class">abstractqueue</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.abstractqueue.AbstractQueue.html" class="internal-link" title="jcollections.abstractqueue.AbstractQueue"><wbr></wbr>Abstract<wbr></wbr>Queue</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="jcollections.html" class="internal-link">jcollections</a></code><wbr></wbr>.<code><a href="jcollections.abstractqueue.html" class="internal-link" title="jcollections.abstractqueue">abstractqueue</a></code><wbr></wbr>.<code><a href="jcollections.abstractqueue.AbstractQueue.html" class="internal-link" title="jcollections.abstractqueue.AbstractQueue">AbstractQueue</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">AbstractQueue</span>(<a href="jcollections.collection.Collection.html" class="internal-link" title="jcollections.collection.Collection">Collection</a>):</code></p>
+          <p><a href="classIndex.html#jcollections.abstractqueue.AbstractQueue">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="pre">AbstractQueue is an abstract class that provides a skeletal implementation of a queue.
+
+Concrete implementations of a queue must extend this class and implement the provided abstract methods.
+These methods define standard queue operations such as adding, removing, and retrieving elements from the queue.
+
+Inherits from:
+    Collection: The base interface for all collection types.</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id3">
+  
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#add" class="internal-link" title="jcollections.abstractqueue.AbstractQueue.add">add</a></code></td>
+    <td>Inserts the specified element into the queue if possible, without violating capacity restrictions.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#element" class="internal-link" title="jcollections.abstractqueue.AbstractQueue.element">element</a></code></td>
+    <td>Retrieves, but does not remove, the head of this queue.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#offer" class="internal-link" title="jcollections.abstractqueue.AbstractQueue.offer">offer</a></code></td>
+    <td>Attempts to insert the specified element into the queue without violating capacity restrictions.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#peek" class="internal-link" title="jcollections.abstractqueue.AbstractQueue.peek">peek</a></code></td>
+    <td>Retrieves, but does not remove, the head of this queue, or returns None if the queue is empty.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#poll" class="internal-link" title="jcollections.abstractqueue.AbstractQueue.poll">poll</a></code></td>
+    <td>Retrieves and removes the head of this queue, or returns None if the queue is empty.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#remove" class="internal-link" title="jcollections.abstractqueue.AbstractQueue.remove">remove</a></code></td>
+    <td>Retrieves and removes the head of this queue.</td>
+  </tr>
+</table>
+          
+            <p class="inheritedFrom">
+              Inherited from <code><a href="jcollections.collection.Collection.html" class="internal-link" title="jcollections.collection.Collection">Collection</a></code>:
+            </p>
+            <table class="children sortable" id="id4">
+  
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#clear" class="internal-link" title="jcollections.collection.Collection.clear">clear</a></code></td>
+    <td>Removes all the elements from this collection (optional operation).</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#contains" class="internal-link" title="jcollections.collection.Collection.contains">contains</a></code></td>
+    <td>Returns True if this collection contains the specified element.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#containsAll" class="internal-link" title="jcollections.collection.Collection.containsAll">contains<wbr></wbr>All</a></code></td>
+    <td>Returns True if this collection contains all the elements in the specified collection.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#equals" class="internal-link" title="jcollections.collection.Collection.equals">equals</a></code></td>
+    <td>Compares the specified object with this collection for equality.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#hashCode" class="internal-link" title="jcollections.collection.Collection.hashCode">hash<wbr></wbr>Code</a></code></td>
+    <td>Returns the hash code value for this collection.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#isEmpty" class="internal-link" title="jcollections.collection.Collection.isEmpty">is<wbr></wbr>Empty</a></code></td>
+    <td>Returns True if this collection contains no elements.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#iterator" class="internal-link" title="jcollections.collection.Collection.iterator">iterator</a></code></td>
+    <td>Returns an iterator over the elements in this collection.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#parallelStream" class="internal-link" title="jcollections.collection.Collection.parallelStream">parallel<wbr></wbr>Stream</a></code></td>
+    <td>Returns a possibly parallel Stream with this collection as its source.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#removeAll" class="internal-link" title="jcollections.collection.Collection.removeAll">remove<wbr></wbr>All</a></code></td>
+    <td>Removes all of this collection's elements that are also contained in the specified collection (optional operation).</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#removeIf" class="internal-link" title="jcollections.collection.Collection.removeIf">remove<wbr></wbr>If</a></code></td>
+    <td>Removes all the elements of this collection that satisfy the given predicate.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#retainAll" class="internal-link" title="jcollections.collection.Collection.retainAll">retain<wbr></wbr>All</a></code></td>
+    <td>Retains only the elements in this collection that are contained in the specified collection (optional operation).</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#size" class="internal-link" title="jcollections.collection.Collection.size">size</a></code></td>
+    <td>Returns the number of elements in this collection.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#spliterator" class="internal-link" title="jcollections.collection.Collection.spliterator">spliterator</a></code></td>
+    <td>Creates a Spliterator over the elements in this collection.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#stream" class="internal-link" title="jcollections.collection.Collection.stream">stream</a></code></td>
+    <td>Returns a sequential Stream with this collection as its source.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#toArray" class="internal-link" title="jcollections.collection.Collection.toArray">to<wbr></wbr>Array</a></code></td>
+    <td>Converts the elements of the collection into an array.</td>
+  </tr>
+</table>
+            
+            <p class="inheritedFrom">
+              Inherited from <code><a href="jcollections.Iterable.Iterable.html" class="internal-link" title="jcollections.Iterable.Iterable">Iterable</a></code> (via <code><a href="jcollections.collection.Collection.html" class="internal-link" title="jcollections.collection.Collection">Collection</a></code>):
+            </p>
+            <table class="children sortable" id="id5">
+  
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.Iterable.Iterable.html#__iter__" class="internal-link" title="jcollections.Iterable.Iterable.__iter__">__iter__</a></code></td>
+    <td>Returns an iterator over the elements in the collection. Subclasses must implement this method to return an iterator object.</td>
+  </tr>
+</table>
+            
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basemethod">
+  
+  
+  <a name="jcollections.abstractqueue.AbstractQueue.add">
+    
+  </a>
+  <a name="add">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">add</span><span class="function-signature">(self, e)</span>:
+    
+    <a class="headerLink" href="#add" title="jcollections.abstractqueue.AbstractQueue.add">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#add" class="internal-link">jcollections.collection.Collection.add</a></code></div>
+    <div><p>Inserts the specified element into the queue if possible, without violating capacity restrictions.</p>
+<p>This method may throw an exception if the insertion would exceed the queue's capacity limits.</p>
+<p>:param e: The element to be added to the queue. :type e: Any :returns: True if the element was successfully added. :raises: Exception if the queue is full or the element cannot be added.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.abstractqueue.AbstractQueue.element">
+    
+  </a>
+  <a name="element">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">element</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#element" title="jcollections.abstractqueue.AbstractQueue.element">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Retrieves, but does not remove, the head of this queue.</p>
+<p>This method throws an exception if the queue is empty.</p>
+<p>:returns: The head of the queue. :raises: Exception if the queue is empty.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.abstractqueue.AbstractQueue.offer">
+    
+  </a>
+  <a name="offer">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">offer</span><span class="function-signature">(self, e)</span>:
+    
+    <a class="headerLink" href="#offer" title="jcollections.abstractqueue.AbstractQueue.offer">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Attempts to insert the specified element into the queue without violating capacity restrictions.</p>
+<p>This method is similar to `add`, but instead of throwing an exception, it returns False if the element cannot be added (e.g., if the queue is full).</p>
+<p>:param e: The element to be added to the queue. :type e: Any :returns: True if the element was successfully added, or False if the queue is full.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.abstractqueue.AbstractQueue.peek">
+    
+  </a>
+  <a name="peek">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">peek</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#peek" title="jcollections.abstractqueue.AbstractQueue.peek">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Retrieves, but does not remove, the head of this queue, or returns None if the queue is empty.</p>
+<p>:returns: The head of the queue, or None if the queue is empty.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.abstractqueue.AbstractQueue.poll">
+    
+  </a>
+  <a name="poll">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">poll</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#poll" title="jcollections.abstractqueue.AbstractQueue.poll">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Retrieves and removes the head of this queue, or returns None if the queue is empty.</p>
+<p>:returns: The head of the queue, or None if the queue is empty.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.abstractqueue.AbstractQueue.remove">
+    
+  </a>
+  <a name="remove">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">remove</span><span class="function-signature">(self, o)</span>:
+    
+    <a class="headerLink" href="#remove" title="jcollections.abstractqueue.AbstractQueue.remove">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.collection.Collection.html#remove" class="internal-link">jcollections.collection.Collection.remove</a></code></div>
+    <div><p>Retrieves and removes the head of this queue.</p>
+<p>This method throws an exception if the queue is empty.</p>
+<p>:param o: The element to be removed. :type o: Any :returns: The removed element. :raises: Exception if the queue is empty or the element cannot be found.</p>
+</div>
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container">
+    <a href="index.html">API Documentation</a> for PyJCore,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.3.3 at 2024-10-06 14:13:38.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

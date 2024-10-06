@@ -1,3 +1,11 @@
+"""
+This module provides a `LinkedHashSet` class, which extends the `Set` class to maintain the insertion order
+of elements while ensuring that elements are unique.
+
+Classes:
+    - LinkedHashSet: A set that maintains the order of elements based on their insertion.
+"""
+
 from collections import OrderedDict
 from jcollections.set import Set
 

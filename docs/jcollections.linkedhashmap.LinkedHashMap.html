@@ -1,0 +1,1237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>jcollections.linkedhashmap.LinkedHashMap</title>
+    <meta name="generator" content="pydoctor 24.3.3"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          PyJCore <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="jcollections.linkedhashmap.LinkedHashMap.html" class="internal-link" title="This class"><wbr></wbr>Linked<wbr></wbr>Hash<wbr></wbr>Map</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__init__" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap.__init__">__init__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__str__" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap.__str__">__str__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#clear" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap.clear">clear</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#entrySet" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap.entrySet">entry<wbr></wbr>Set</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#forEach" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap.forEach">for<wbr></wbr>Each</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#get" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap.get">get</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#getOrDefault" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap.getOrDefault">get<wbr></wbr>Or<wbr></wbr>Default</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#keySet" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap.keySet">key<wbr></wbr>Set</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#put" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap.put">put</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#remove" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap.remove">remove</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#removeEldestEntry" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap.removeEldestEntry">remove<wbr></wbr>Eldest<wbr></wbr>Entry</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#replaceAll" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap.replaceAll">replace<wbr></wbr>All</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#values" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap.values">values</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Inherited Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.hashmap.HashMap.html#clone" class="internal-link" title="jcollections.hashmap.HashMap.clone">clone</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.hashmap.HashMap.html#containsKey" class="internal-link" title="jcollections.hashmap.HashMap.containsKey">contains<wbr></wbr>Key</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.hashmap.HashMap.html#containsValue" class="internal-link" title="jcollections.hashmap.HashMap.containsValue">contains<wbr></wbr>Value</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.hashmap.HashMap.html#isEmpty" class="internal-link" title="jcollections.hashmap.HashMap.isEmpty">is<wbr></wbr>Empty</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.hashmap.HashMap.html#putAll" class="internal-link" title="jcollections.hashmap.HashMap.putAll">put<wbr></wbr>All</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.hashmap.HashMap.html#size" class="internal-link" title="jcollections.hashmap.HashMap.size">size</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.map.Map.html#compute" class="internal-link" title="jcollections.map.Map.compute">compute</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.map.Map.html#computeIfAbsent" class="internal-link" title="jcollections.map.Map.computeIfAbsent">compute<wbr></wbr>If<wbr></wbr>Absent</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.map.Map.html#computeIfPresent" class="internal-link" title="jcollections.map.Map.computeIfPresent">compute<wbr></wbr>If<wbr></wbr>Present</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.map.Map.html#merge" class="internal-link" title="jcollections.map.Map.merge">merge</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.map.Map.html#putIfAbsent" class="internal-link" title="jcollections.map.Map.putIfAbsent">put<wbr></wbr>If<wbr></wbr>Absent</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.map.Map.html#removeIf" class="internal-link" title="jcollections.map.Map.removeIf">remove<wbr></wbr>If</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.map.Map.html#replace" class="internal-link" title="jcollections.map.Map.replace">replace</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_access_order" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap._access_order">_access<wbr></wbr>_order</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_insertion_order" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap._insertion_order">_insertion<wbr></wbr>_order</a></code>
+            </div>
+        
+
+    </li><li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_map" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap._map">_map</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Inherited Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.hashmap.HashMap.html#initial_capacity" class="internal-link" title="jcollections.hashmap.HashMap.initial_capacity">initial<wbr></wbr>_capacity</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.hashmap.HashMap.html#load_factor" class="internal-link" title="jcollections.hashmap.HashMap.load_factor">load<wbr></wbr>_factor</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.hashmap.HashMap.html#store" class="internal-link" title="jcollections.hashmap.HashMap.store">store</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="jcollections.linkedhashmap.html" class="internal-link" title="The parent of this class">linkedhashmap</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.linkedhashmap.LinkedHashMap.html" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap"><wbr></wbr>Linked<wbr></wbr>Hash<wbr></wbr>Map</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        
+         
+
+        
+         
+
+        <div class="childrenKindTitle">Variables</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.linkedhashmap.html#K" class="internal-link" title="jcollections.linkedhashmap.K">K</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.linkedhashmap.html#V" class="internal-link" title="jcollections.linkedhashmap.V">V</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="jcollections.html" class="internal-link">jcollections</a></code><wbr></wbr>.<code><a href="jcollections.linkedhashmap.html" class="internal-link" title="jcollections.linkedhashmap">linkedhashmap</a></code><wbr></wbr>.<code><a href="jcollections.linkedhashmap.LinkedHashMap.html" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap">LinkedHashMap</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">LinkedHashMap</span>(<a href="jcollections.hashmap.HashMap.html" class="internal-link" title="jcollections.hashmap.HashMap">HashMap</a>[<wbr></wbr><a href="jcollections.linkedhashmap.html#K" class="internal-link" title="jcollections.linkedhashmap.K">K</a>, <wbr></wbr><a href="jcollections.linkedhashmap.html#V" class="internal-link" title="jcollections.linkedhashmap.V">V</a>]):</code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap.__init__">LinkedHashMap(initial_capacity, load_factor, access_order)</a></code></p>
+          <p><a href="classIndex.html#jcollections.linkedhashmap.LinkedHashMap">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="pre">A hash map implementation that maintains insertion order or access order of entries.
+
+Inherits from the `HashMap` class and adds functionality to maintain the order of keys based
+on either insertion or access order. This class provides methods to handle the order of key-value
+pairs and manage the map's entries efficiently.
+
+Attributes:
+    _access_order (bool): If True, maintains access order of entries; otherwise, maintains insertion order.
+    _insertion_order (List[K]): A list to keep track of the order of keys.
+    _map (Dict[K, V]): Internal dictionary to store key-value pairs.</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id24">
+  
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap.__init__">__init__</a></code></td>
+    <td>Constructs a new LinkedHashMap with the specified initial capacity, load factor, and order type.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__str__" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap.__str__">__str__</a></code></td>
+    <td>Returns a string representation of the LinkedHashMap.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#clear" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap.clear">clear</a></code></td>
+    <td>Removes all entries from the map and clears the order list.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#entrySet" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap.entrySet">entry<wbr></wbr>Set</a></code></td>
+    <td>Returns a list of MapEntry objects representing all key-value pairs in the map, in the order of keys.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#forEach" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap.forEach">for<wbr></wbr>Each</a></code></td>
+    <td>Applies the specified action to each entry in the map in the order of keys.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#get" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap.get">get</a></code></td>
+    <td>Retrieves the value associated with the specified key. If access order is enabled, the key is moved to the end of the order list.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#getOrDefault" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap.getOrDefault">get<wbr></wbr>Or<wbr></wbr>Default</a></code></td>
+    <td>Returns the value associated with the specified key, or a default value if the key is not present.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#keySet" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap.keySet">key<wbr></wbr>Set</a></code></td>
+    <td>Returns a set of all keys in the map, maintaining the order of insertion or access.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#put" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap.put">put</a></code></td>
+    <td>Associates the specified value with the specified key in the map. If the key is new, it is added to the order list. If access order is enabled, the key is moved to the end of the list.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#remove" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap.remove">remove</a></code></td>
+    <td>Removes the mapping for the specified key if it exists and updates the order list accordingly.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#removeEldestEntry" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap.removeEldestEntry">remove<wbr></wbr>Eldest<wbr></wbr>Entry</a></code></td>
+    <td>Override this method in subclasses to implement a policy for removing the eldest entry.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#replaceAll" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap.replaceAll">replace<wbr></wbr>All</a></code></td>
+    <td>Replaces each value in the map with the result of applying the specified function to each key-value pair.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#values" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap.values">values</a></code></td>
+    <td>Returns a list of all values in the map, maintaining the order of keys.</td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_access_order" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap._access_order">_access<wbr></wbr>_order</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_insertion_order" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap._insertion_order">_insertion<wbr></wbr>_order</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_map" class="internal-link" title="jcollections.linkedhashmap.LinkedHashMap._map">_map</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+            <p class="inheritedFrom">
+              Inherited from <code><a href="jcollections.hashmap.HashMap.html" class="internal-link" title="jcollections.hashmap.HashMap">HashMap</a></code>:
+            </p>
+            <table class="children sortable" id="id25">
+  
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.hashmap.HashMap.html#clone" class="internal-link" title="jcollections.hashmap.HashMap.clone">clone</a></code></td>
+    <td>Creates a shallow copy of the hash map.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.hashmap.HashMap.html#containsKey" class="internal-link" title="jcollections.hashmap.HashMap.containsKey">contains<wbr></wbr>Key</a></code></td>
+    <td>Checks if the hash map contains a mapping for the specified key.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.hashmap.HashMap.html#containsValue" class="internal-link" title="jcollections.hashmap.HashMap.containsValue">contains<wbr></wbr>Value</a></code></td>
+    <td>Checks if the hash map contains a mapping for the specified value.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.hashmap.HashMap.html#isEmpty" class="internal-link" title="jcollections.hashmap.HashMap.isEmpty">is<wbr></wbr>Empty</a></code></td>
+    <td>Checks if the hash map is empty.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.hashmap.HashMap.html#putAll" class="internal-link" title="jcollections.hashmap.HashMap.putAll">put<wbr></wbr>All</a></code></td>
+    <td>Copies all key-value mappings from the specified map to this hash map.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.hashmap.HashMap.html#size" class="internal-link" title="jcollections.hashmap.HashMap.size">size</a></code></td>
+    <td>Returns the number of key-value pairs in the hash map.</td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="jcollections.hashmap.HashMap.html#initial_capacity" class="internal-link" title="jcollections.hashmap.HashMap.initial_capacity">initial<wbr></wbr>_capacity</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="jcollections.hashmap.HashMap.html#load_factor" class="internal-link" title="jcollections.hashmap.HashMap.load_factor">load<wbr></wbr>_factor</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="baseinstancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="jcollections.hashmap.HashMap.html#store" class="internal-link" title="jcollections.hashmap.HashMap.store">store</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+            
+            <p class="inheritedFrom">
+              Inherited from <code><a href="jcollections.map.Map.html" class="internal-link" title="jcollections.map.Map">Map</a></code> (via <code><a href="jcollections.hashmap.HashMap.html" class="internal-link" title="jcollections.hashmap.HashMap">HashMap</a></code>):
+            </p>
+            <table class="children sortable" id="id26">
+  
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.map.Map.html#compute" class="internal-link" title="jcollections.map.Map.compute">compute</a></code></td>
+    <td>Computes a new value for the specified key using the given remapping function.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.map.Map.html#computeIfAbsent" class="internal-link" title="jcollections.map.Map.computeIfAbsent">compute<wbr></wbr>If<wbr></wbr>Absent</a></code></td>
+    <td>Computes a value for the specified key if the key is not already associated with a value.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.map.Map.html#computeIfPresent" class="internal-link" title="jcollections.map.Map.computeIfPresent">compute<wbr></wbr>If<wbr></wbr>Present</a></code></td>
+    <td>Computes a new value for the specified key if the key is already associated with a value.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.map.Map.html#merge" class="internal-link" title="jcollections.map.Map.merge">merge</a></code></td>
+    <td>Merges the specified value with the existing value associated with the key using the given remapping function.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.map.Map.html#putIfAbsent" class="internal-link" title="jcollections.map.Map.putIfAbsent">put<wbr></wbr>If<wbr></wbr>Absent</a></code></td>
+    <td>Adds the specified key-value pair to the map if the key is not already associated with a value.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.map.Map.html#removeIf" class="internal-link" title="jcollections.map.Map.removeIf">remove<wbr></wbr>If</a></code></td>
+    <td>Removes the specified key-value pair from the map if it is currently associated with the specified value.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.map.Map.html#replace" class="internal-link" title="jcollections.map.Map.replace">replace</a></code></td>
+    <td>Replaces the value associated with the specified key if the key is currently present.</td>
+  </tr>
+</table>
+            
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basemethod">
+  
+  
+  <a name="jcollections.linkedhashmap.LinkedHashMap.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, initial_capacity=16, load_factor=0.75, access_order=False)</span>:
+    
+    <a class="headerLink" href="#__init__" title="jcollections.linkedhashmap.LinkedHashMap.__init__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.hashmap.HashMap.html#__init__" class="internal-link">jcollections.hashmap.HashMap.__init__</a></code></div>
+    <div><p>Constructs a new LinkedHashMap with the specified initial capacity, load factor, and order type.</p>
+<p>:param initial_capacity: Initial capacity of the hash map (default is 16). :param load_factor: Load factor for resizing the hash map (default is 0.75). :param access_order: If True, maintain access order; otherwise, maintain insertion order (default is False).</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedhashmap.LinkedHashMap.__str__">
+    
+  </a>
+  <a name="__str__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__str__</span><span class="function-signature">(self) -&gt; <code>str</code></span>:
+    
+    <a class="headerLink" href="#__str__" title="jcollections.linkedhashmap.LinkedHashMap.__str__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns a string representation of the LinkedHashMap.</p>
+<p>:return: A string representation of the map.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedhashmap.LinkedHashMap.clear">
+    
+  </a>
+  <a name="clear">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">clear</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#clear" title="jcollections.linkedhashmap.LinkedHashMap.clear">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.hashmap.HashMap.html#clear" class="internal-link">jcollections.hashmap.HashMap.clear</a></code></div>
+    <div><p>Removes all entries from the map and clears the order list.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedhashmap.LinkedHashMap.entrySet">
+    
+  </a>
+  <a name="entrySet">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">entrySet</span><span class="function-signature">(self) -&gt; <code>list[<wbr></wbr><a href="jcollections.mapentry.MapEntry.html" class="internal-link" title="jcollections.mapentry.MapEntry">MapEntry</a>[<wbr></wbr><a href="jcollections.linkedhashmap.html#K" class="internal-link" title="jcollections.linkedhashmap.K">K</a>, <wbr></wbr><a href="jcollections.linkedhashmap.html#V" class="internal-link" title="jcollections.linkedhashmap.V">V</a>]]</code></span>:
+    
+    <a class="headerLink" href="#entrySet" title="jcollections.linkedhashmap.LinkedHashMap.entrySet">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.hashmap.HashMap.html#entrySet" class="internal-link">jcollections.hashmap.HashMap.entrySet</a></code></div>
+    <div><p>Returns a list of MapEntry objects representing all key-value pairs in the map, in the order of keys.</p>
+<p>:return: A list of MapEntry objects.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedhashmap.LinkedHashMap.forEach">
+    
+  </a>
+  <a name="forEach">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">forEach</span><span class="function-signature">(self, action: <code>Callable[<wbr></wbr>[<wbr></wbr><a href="jcollections.linkedhashmap.html#K" class="internal-link" title="jcollections.linkedhashmap.K">K</a>, <wbr></wbr><a href="jcollections.linkedhashmap.html#V" class="internal-link" title="jcollections.linkedhashmap.V">V</a>], <wbr></wbr>None]</code>)</span>:
+    
+    <a class="headerLink" href="#forEach" title="jcollections.linkedhashmap.LinkedHashMap.forEach">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Applies the specified action to each entry in the map in the order of keys.</p>
+<p>:param action: A callable that accepts a key and a value.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedhashmap.LinkedHashMap.get">
+    
+  </a>
+  <a name="get">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">get</span><span class="function-signature">(self, key: <code><a href="jcollections.linkedhashmap.html#K" class="internal-link" title="jcollections.linkedhashmap.K">K</a></code>) -&gt; <code><a href="jcollections.linkedhashmap.html#V" class="internal-link" title="jcollections.linkedhashmap.V">V</a> | None</code></span>:
+    
+    <a class="headerLink" href="#get" title="jcollections.linkedhashmap.LinkedHashMap.get">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.hashmap.HashMap.html#get" class="internal-link">jcollections.hashmap.HashMap.get</a></code></div>
+    <div><p>Retrieves the value associated with the specified key. If access order is enabled, the key is moved to the end of the order list.</p>
+<p>:param key: The key whose associated value is to be returned. :return: The value associated with the key, or None if the key is not present.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedhashmap.LinkedHashMap.getOrDefault">
+    
+  </a>
+  <a name="getOrDefault">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">getOrDefault</span><span class="function-signature">(self, key: <code><a href="jcollections.linkedhashmap.html#K" class="internal-link" title="jcollections.linkedhashmap.K">K</a></code>, default_value: <code><a href="jcollections.linkedhashmap.html#V" class="internal-link" title="jcollections.linkedhashmap.V">V</a></code>) -&gt; <code><a href="jcollections.linkedhashmap.html#V" class="internal-link" title="jcollections.linkedhashmap.V">V</a></code></span>:
+    
+    <a class="headerLink" href="#getOrDefault" title="jcollections.linkedhashmap.LinkedHashMap.getOrDefault">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.map.Map.html#getOrDefault" class="internal-link">jcollections.map.Map.getOrDefault</a></code></div>
+    <div><p>Returns the value associated with the specified key, or a default value if the key is not present.</p>
+<p>:param key: The key whose associated value is to be returned. :param default_value: The default value to return if the key is not present. :return: The value associated with the key, or the default value.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedhashmap.LinkedHashMap.keySet">
+    
+  </a>
+  <a name="keySet">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">keySet</span><span class="function-signature">(self) -&gt; <code>Set[<wbr></wbr><a href="jcollections.linkedhashmap.html#K" class="internal-link" title="jcollections.linkedhashmap.K">K</a>]</code></span>:
+    
+    <a class="headerLink" href="#keySet" title="jcollections.linkedhashmap.LinkedHashMap.keySet">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.hashmap.HashMap.html#keySet" class="internal-link">jcollections.hashmap.HashMap.keySet</a></code></div>
+    <div><p>Returns a set of all keys in the map, maintaining the order of insertion or access.</p>
+<p>:return: A set of keys.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedhashmap.LinkedHashMap.put">
+    
+  </a>
+  <a name="put">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">put</span><span class="function-signature">(self, key: <code><a href="jcollections.linkedhashmap.html#K" class="internal-link" title="jcollections.linkedhashmap.K">K</a></code>, value: <code><a href="jcollections.linkedhashmap.html#V" class="internal-link" title="jcollections.linkedhashmap.V">V</a></code>) -&gt; <code><a href="jcollections.linkedhashmap.html#V" class="internal-link" title="jcollections.linkedhashmap.V">V</a> | None</code></span>:
+    
+    <a class="headerLink" href="#put" title="jcollections.linkedhashmap.LinkedHashMap.put">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.hashmap.HashMap.html#put" class="internal-link">jcollections.hashmap.HashMap.put</a></code></div>
+    <div><p>Associates the specified value with the specified key in the map. If the key is new, it is added to the order list. If access order is enabled, the key is moved to the end of the list.</p>
+<p>:param key: The key with which the value is to be associated. :param value: The value to associate with the key. :return: The previous value associated with the key, or None if there was no previous value.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedhashmap.LinkedHashMap.remove">
+    
+  </a>
+  <a name="remove">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">remove</span><span class="function-signature">(self, key: <code><a href="jcollections.linkedhashmap.html#K" class="internal-link" title="jcollections.linkedhashmap.K">K</a></code>) -&gt; <code><a href="jcollections.linkedhashmap.html#V" class="internal-link" title="jcollections.linkedhashmap.V">V</a> | None</code></span>:
+    
+    <a class="headerLink" href="#remove" title="jcollections.linkedhashmap.LinkedHashMap.remove">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.hashmap.HashMap.html#remove" class="internal-link">jcollections.hashmap.HashMap.remove</a></code></div>
+    <div><p>Removes the mapping for the specified key if it exists and updates the order list accordingly.</p>
+<p>:param key: The key whose mapping is to be removed. :return: The previous value associated with the key, or None if the key was not present.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedhashmap.LinkedHashMap.removeEldestEntry">
+    
+  </a>
+  <a name="removeEldestEntry">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">removeEldestEntry</span><span class="function-signature">(self, eldest: <code><a href="jcollections.mapentry.MapEntry.html" class="internal-link" title="jcollections.mapentry.MapEntry">MapEntry</a>[<wbr></wbr><a href="jcollections.linkedhashmap.html#K" class="internal-link" title="jcollections.linkedhashmap.K">K</a>, <wbr></wbr><a href="jcollections.linkedhashmap.html#V" class="internal-link" title="jcollections.linkedhashmap.V">V</a>]</code>) -&gt; <code>bool</code></span>:
+    
+    <a class="headerLink" href="#removeEldestEntry" title="jcollections.linkedhashmap.LinkedHashMap.removeEldestEntry">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Override this method in subclasses to implement a policy for removing the eldest entry.</p>
+<p>:param eldest: The eldest entry in the map. :return: True if the eldest entry should be removed, False otherwise.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedhashmap.LinkedHashMap.replaceAll">
+    
+  </a>
+  <a name="replaceAll">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">replaceAll</span><span class="function-signature">(self, function: <code>Callable[<wbr></wbr>[<wbr></wbr><a href="jcollections.linkedhashmap.html#K" class="internal-link" title="jcollections.linkedhashmap.K">K</a>, <wbr></wbr><a href="jcollections.linkedhashmap.html#V" class="internal-link" title="jcollections.linkedhashmap.V">V</a>], <wbr></wbr><a href="jcollections.linkedhashmap.html#V" class="internal-link" title="jcollections.linkedhashmap.V">V</a>]</code>)</span>:
+    
+    <a class="headerLink" href="#replaceAll" title="jcollections.linkedhashmap.LinkedHashMap.replaceAll">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.map.Map.html#replaceAll" class="internal-link">jcollections.map.Map.replaceAll</a></code></div>
+    <div><p>Replaces each value in the map with the result of applying the specified function to each key-value pair.</p>
+<p>:param function: A callable that accepts a key and a value and returns a new value.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.linkedhashmap.LinkedHashMap.values">
+    
+  </a>
+  <a name="values">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">values</span><span class="function-signature">(self) -&gt; <code>list[<wbr></wbr><a href="jcollections.linkedhashmap.html#V" class="internal-link" title="jcollections.linkedhashmap.V">V</a>]</code></span>:
+    
+    <a class="headerLink" href="#values" title="jcollections.linkedhashmap.LinkedHashMap.values">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.hashmap.HashMap.html#values" class="internal-link">jcollections.hashmap.HashMap.values</a></code></div>
+    <div><p>Returns a list of all values in the map, maintaining the order of keys.</p>
+<p>:return: A list of values.</p>
+</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="jcollections.linkedhashmap.LinkedHashMap._access_order">
+    
+  </a>
+  <a name="_access_order">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_access_order</span> =
+    
+    <a class="headerLink" href="#_access_order" title="jcollections.linkedhashmap.LinkedHashMap._access_order">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="jcollections.linkedhashmap.LinkedHashMap._insertion_order">
+    
+  </a>
+  <a name="_insertion_order">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_insertion_order</span>: <code>list[<wbr></wbr><a href="jcollections.linkedhashmap.html#K" class="internal-link" title="jcollections.linkedhashmap.K">K</a>]</code> =
+    
+    <a class="headerLink" href="#_insertion_order" title="jcollections.linkedhashmap.LinkedHashMap._insertion_order">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="jcollections.linkedhashmap.LinkedHashMap._map">
+    
+  </a>
+  <a name="_map">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_map</span>: <code>dict[<wbr></wbr><a href="jcollections.linkedhashmap.html#K" class="internal-link" title="jcollections.linkedhashmap.K">K</a>, <wbr></wbr><a href="jcollections.linkedhashmap.html#V" class="internal-link" title="jcollections.linkedhashmap.V">V</a>]</code> =
+    
+    <a class="headerLink" href="#_map" title="jcollections.linkedhashmap.LinkedHashMap._map">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container">
+    <a href="index.html">API Documentation</a> for PyJCore,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.3.3 at 2024-10-06 14:13:38.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

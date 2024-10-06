@@ -1,6 +1,21 @@
+"""
+This module defines a `LinkedList` class that implements the List interface with doubly linked nodes.
+The LinkedList provides functionalities for dynamic insertion, removal, and retrieval of elements in a
+linear sequence. It also maintains an iterator for list traversal.
+
+Classes:
+    - LinkedList: Implements a doubly linked list data structure.
+    - LinkedListIterator: Provides an iterator for the LinkedList.
+    - Node: Represents a node in the linked list.
+"""
+
 from jcollections.list import List
 
 class LinkedListIterator:
+    """
+    An iterator for the LinkedList class. Iterates over the elements in the list.
+    """
+
     def __init__(self, linked_list):
         """
         Initializes the iterator with the given linked list.
@@ -25,6 +40,11 @@ class LinkedListIterator:
         return data
 
 class Node:
+    """
+    Represents a node in the doubly linked list.
+    Each node contains data and links to the next and previous nodes.
+    """
+
     def __init__(self, data=None):
         """
         Initializes a node with the given data and no links.
@@ -34,6 +54,11 @@ class Node:
         self.prev = None
 
 class LinkedList(List):
+    """
+    Implements a doubly linked list where each element points to both the next and previous elements.
+    Provides methods for adding, removing, and accessing elements in the list.
+    """
+
     def __init__(self, collection=None):
         """
         Initializes an empty linked list or creates it from a given collection.

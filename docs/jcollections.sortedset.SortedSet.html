@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>jcollections.sortedset.SortedSet</title>
+    <meta name="generator" content="pydoctor 24.3.3"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          PyJCore <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="jcollections.sortedset.SortedSet.html" class="internal-link" title="This class"><wbr></wbr>Sorted<wbr></wbr>Set</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#comparator" class="internal-link" title="jcollections.sortedset.SortedSet.comparator">comparator</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#first" class="internal-link" title="jcollections.sortedset.SortedSet.first">first</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#headSet" class="internal-link" title="jcollections.sortedset.SortedSet.headSet">head<wbr></wbr>Set</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#last" class="internal-link" title="jcollections.sortedset.SortedSet.last">last</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#spliterator" class="internal-link" title="jcollections.sortedset.SortedSet.spliterator">spliterator</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#subSet" class="internal-link" title="jcollections.sortedset.SortedSet.subSet">sub<wbr></wbr>Set</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#tailSet" class="internal-link" title="jcollections.sortedset.SortedSet.tailSet">tail<wbr></wbr>Set</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        <div class="childrenKindTitle">Inherited Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#add" class="internal-link" title="jcollections.collection.Collection.add">add</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#clear" class="internal-link" title="jcollections.collection.Collection.clear">clear</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#contains" class="internal-link" title="jcollections.collection.Collection.contains">contains</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#containsAll" class="internal-link" title="jcollections.collection.Collection.containsAll">contains<wbr></wbr>All</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#equals" class="internal-link" title="jcollections.collection.Collection.equals">equals</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#hashCode" class="internal-link" title="jcollections.collection.Collection.hashCode">hash<wbr></wbr>Code</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#isEmpty" class="internal-link" title="jcollections.collection.Collection.isEmpty">is<wbr></wbr>Empty</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#iterator" class="internal-link" title="jcollections.collection.Collection.iterator">iterator</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#parallelStream" class="internal-link" title="jcollections.collection.Collection.parallelStream">parallel<wbr></wbr>Stream</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#remove" class="internal-link" title="jcollections.collection.Collection.remove">remove</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#removeAll" class="internal-link" title="jcollections.collection.Collection.removeAll">remove<wbr></wbr>All</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#removeIf" class="internal-link" title="jcollections.collection.Collection.removeIf">remove<wbr></wbr>If</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#retainAll" class="internal-link" title="jcollections.collection.Collection.retainAll">retain<wbr></wbr>All</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#size" class="internal-link" title="jcollections.collection.Collection.size">size</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#stream" class="internal-link" title="jcollections.collection.Collection.stream">stream</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.collection.Collection.html#toArray" class="internal-link" title="jcollections.collection.Collection.toArray">to<wbr></wbr>Array</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.Iterable.Iterable.html#__iter__" class="internal-link" title="jcollections.Iterable.Iterable.__iter__">__iter__</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="jcollections.sortedset.html" class="internal-link" title="The parent of this class">sortedset</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jcollections.sortedset.SortedSet.html" class="internal-link" title="jcollections.sortedset.SortedSet"><wbr></wbr>Sorted<wbr></wbr>Set</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="jcollections.html" class="internal-link">jcollections</a></code><wbr></wbr>.<code><a href="jcollections.sortedset.html" class="internal-link" title="jcollections.sortedset">sortedset</a></code><wbr></wbr>.<code><a href="jcollections.sortedset.SortedSet.html" class="internal-link" title="jcollections.sortedset.SortedSet">SortedSet</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">SortedSet</span>(<a href="jcollections.set.Set.html" class="internal-link" title="jcollections.set.Set">Set</a>, ABC):</code></p><p>Known subclasses: <code><a href="jcollections.treeset.TreeSet.html" class="internal-link">jcollections.treeset.TreeSet</a></code></p>
+          <p><a href="classIndex.html#jcollections.sortedset.SortedSet">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="pre">Abstract base class representing a sorted set of unique elements.
+
+Provides methods to access and manipulate elements in a set while maintaining sorted order.
+
+Methods:
+    comparator: Returns the comparator used to order the elements, or None if natural ordering is used.
+    first: Returns the first (lowest) element currently in the set.
+    last: Returns the last (highest) element currently in the set.
+    headSet: Returns a view of the set with elements strictly less than a specified element.
+    subSet: Returns a view of the set with elements between two specified elements.
+    tailSet: Returns a view of the set with elements greater than or equal to a specified element.
+    spliterator: Creates a Spliterator over the elements in the set (optional implementation).</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id55">
+  
+  
+  <tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#comparator" class="internal-link" title="jcollections.sortedset.SortedSet.comparator">comparator</a></code></td>
+    <td>Returns the comparator used to order the elements in this set, or None if this set uses the natural ordering of its elements.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#first" class="internal-link" title="jcollections.sortedset.SortedSet.first">first</a></code></td>
+    <td>Returns the first (lowest) element currently in this set.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#headSet" class="internal-link" title="jcollections.sortedset.SortedSet.headSet">head<wbr></wbr>Set</a></code></td>
+    <td>Returns a view of the portion of this set whose elements are strictly less than `toElement`.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#last" class="internal-link" title="jcollections.sortedset.SortedSet.last">last</a></code></td>
+    <td>Returns the last (highest) element currently in this set.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#spliterator" class="internal-link" title="jcollections.sortedset.SortedSet.spliterator">spliterator</a></code></td>
+    <td>Creates a Spliterator over the elements in this sorted set (optional implementation).</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#subSet" class="internal-link" title="jcollections.sortedset.SortedSet.subSet">sub<wbr></wbr>Set</a></code></td>
+    <td>Returns a view of the portion of this set whose elements range from `fromElement` (inclusive) to `toElement` (exclusive).</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#tailSet" class="internal-link" title="jcollections.sortedset.SortedSet.tailSet">tail<wbr></wbr>Set</a></code></td>
+    <td>Returns a view of the portion of this set whose elements are greater than or equal to `fromElement`.</td>
+  </tr>
+</table>
+          
+            <p class="inheritedFrom">
+              Inherited from <code><a href="jcollections.collection.Collection.html" class="internal-link" title="jcollections.collection.Collection">Collection</a></code> (via <code><a href="jcollections.set.Set.html" class="internal-link" title="jcollections.set.Set">Set</a></code>):
+            </p>
+            <table class="children sortable" id="id56">
+  
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#add" class="internal-link" title="jcollections.collection.Collection.add">add</a></code></td>
+    <td>Adds an element or elements to the collection.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#clear" class="internal-link" title="jcollections.collection.Collection.clear">clear</a></code></td>
+    <td>Removes all the elements from this collection (optional operation).</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#contains" class="internal-link" title="jcollections.collection.Collection.contains">contains</a></code></td>
+    <td>Returns True if this collection contains the specified element.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#containsAll" class="internal-link" title="jcollections.collection.Collection.containsAll">contains<wbr></wbr>All</a></code></td>
+    <td>Returns True if this collection contains all the elements in the specified collection.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#equals" class="internal-link" title="jcollections.collection.Collection.equals">equals</a></code></td>
+    <td>Compares the specified object with this collection for equality.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#hashCode" class="internal-link" title="jcollections.collection.Collection.hashCode">hash<wbr></wbr>Code</a></code></td>
+    <td>Returns the hash code value for this collection.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#isEmpty" class="internal-link" title="jcollections.collection.Collection.isEmpty">is<wbr></wbr>Empty</a></code></td>
+    <td>Returns True if this collection contains no elements.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#iterator" class="internal-link" title="jcollections.collection.Collection.iterator">iterator</a></code></td>
+    <td>Returns an iterator over the elements in this collection.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#parallelStream" class="internal-link" title="jcollections.collection.Collection.parallelStream">parallel<wbr></wbr>Stream</a></code></td>
+    <td>Returns a possibly parallel Stream with this collection as its source.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#remove" class="internal-link" title="jcollections.collection.Collection.remove">remove</a></code></td>
+    <td>Removes a single instance of the specified element from this collection, if present.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#removeAll" class="internal-link" title="jcollections.collection.Collection.removeAll">remove<wbr></wbr>All</a></code></td>
+    <td>Removes all of this collection's elements that are also contained in the specified collection (optional operation).</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#removeIf" class="internal-link" title="jcollections.collection.Collection.removeIf">remove<wbr></wbr>If</a></code></td>
+    <td>Removes all the elements of this collection that satisfy the given predicate.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#retainAll" class="internal-link" title="jcollections.collection.Collection.retainAll">retain<wbr></wbr>All</a></code></td>
+    <td>Retains only the elements in this collection that are contained in the specified collection (optional operation).</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#size" class="internal-link" title="jcollections.collection.Collection.size">size</a></code></td>
+    <td>Returns the number of elements in this collection.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#stream" class="internal-link" title="jcollections.collection.Collection.stream">stream</a></code></td>
+    <td>Returns a sequential Stream with this collection as its source.</td>
+  </tr><tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.collection.Collection.html#toArray" class="internal-link" title="jcollections.collection.Collection.toArray">to<wbr></wbr>Array</a></code></td>
+    <td>Converts the elements of the collection into an array.</td>
+  </tr>
+</table>
+            
+            <p class="inheritedFrom">
+              Inherited from <code><a href="jcollections.Iterable.Iterable.html" class="internal-link" title="jcollections.Iterable.Iterable">Iterable</a></code> (via <code><a href="jcollections.set.Set.html" class="internal-link" title="jcollections.set.Set">Set</a></code>, <code><a href="jcollections.collection.Collection.html" class="internal-link" title="jcollections.collection.Collection">Collection</a></code>):
+            </p>
+            <table class="children sortable" id="id57">
+  
+  
+  <tr class="basemethod">
+    
+    <td>Method</td>
+    <td><code><a href="jcollections.Iterable.Iterable.html#__iter__" class="internal-link" title="jcollections.Iterable.Iterable.__iter__">__iter__</a></code></td>
+    <td>Returns an iterator over the elements in the collection. Subclasses must implement this method to return an iterator object.</td>
+  </tr>
+</table>
+            
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basemethod">
+  
+  
+  <a name="jcollections.sortedset.SortedSet.comparator">
+    
+  </a>
+  <a name="comparator">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">comparator</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#comparator" title="jcollections.sortedset.SortedSet.comparator">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <code><a href="jcollections.treeset.TreeSet.html" class="internal-link">jcollections.treeset.TreeSet</a></code></div>
+    <div><p>Returns the comparator used to order the elements in this set, or None if this set uses the natural ordering of its elements.</p>
+<p>:return: A comparator function used to order the elements, or None if natural ordering is used.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.sortedset.SortedSet.first">
+    
+  </a>
+  <a name="first">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">first</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#first" title="jcollections.sortedset.SortedSet.first">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <code><a href="jcollections.treeset.TreeSet.html" class="internal-link">jcollections.treeset.TreeSet</a></code></div>
+    <div><p>Returns the first (lowest) element currently in this set.</p>
+<p>:return: The first (lowest) element in the set. :raises: ValueError if the set is empty.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.sortedset.SortedSet.headSet">
+    
+  </a>
+  <a name="headSet">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">headSet</span><span class="function-signature">(self, toElement)</span>:
+    
+    <a class="headerLink" href="#headSet" title="jcollections.sortedset.SortedSet.headSet">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <code><a href="jcollections.treeset.TreeSet.html" class="internal-link">jcollections.treeset.TreeSet</a></code></div>
+    <div><p>Returns a view of the portion of this set whose elements are strictly less than `toElement`.</p>
+<p>:param toElement: The high endpoint (exclusive) of the subset. :return: A view of the portion of this set whose elements are strictly less than `toElement`.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.sortedset.SortedSet.last">
+    
+  </a>
+  <a name="last">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">last</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#last" title="jcollections.sortedset.SortedSet.last">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <code><a href="jcollections.treeset.TreeSet.html" class="internal-link">jcollections.treeset.TreeSet</a></code></div>
+    <div><p>Returns the last (highest) element currently in this set.</p>
+<p>:return: The last (highest) element in the set. :raises: ValueError if the set is empty.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.sortedset.SortedSet.spliterator">
+    
+  </a>
+  <a name="spliterator">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">spliterator</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#spliterator" title="jcollections.sortedset.SortedSet.spliterator">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overrides <code><a href="jcollections.set.Set.html#spliterator" class="internal-link">jcollections.set.Set.spliterator</a></code></div>
+    <div><p>Creates a Spliterator over the elements in this sorted set (optional implementation).</p>
+<p>A Spliterator is used to traverse and partition elements of the set. This method is optional and can be implemented to provide a custom traversal mechanism.</p>
+<p>:return: A Spliterator over the elements in this set.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.sortedset.SortedSet.subSet">
+    
+  </a>
+  <a name="subSet">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">subSet</span><span class="function-signature">(self, fromElement, toElement)</span>:
+    
+    <a class="headerLink" href="#subSet" title="jcollections.sortedset.SortedSet.subSet">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <code><a href="jcollections.treeset.TreeSet.html" class="internal-link">jcollections.treeset.TreeSet</a></code></div>
+    <div><p>Returns a view of the portion of this set whose elements range from `fromElement` (inclusive) to `toElement` (exclusive).</p>
+<p>:param fromElement: The low endpoint (inclusive) of the subset. :param toElement: The high endpoint (exclusive) of the subset. :return: A view of the portion of this set whose elements range from `fromElement` to `toElement`.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jcollections.sortedset.SortedSet.tailSet">
+    
+  </a>
+  <a name="tailSet">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @abstractmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">tailSet</span><span class="function-signature">(self, fromElement)</span>:
+    
+    <a class="headerLink" href="#tailSet" title="jcollections.sortedset.SortedSet.tailSet">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    <div class="interfaceinfo">overridden in <code><a href="jcollections.treeset.TreeSet.html" class="internal-link">jcollections.treeset.TreeSet</a></code></div>
+    <div><p>Returns a view of the portion of this set whose elements are greater than or equal to `fromElement`.</p>
+<p>:param fromElement: The low endpoint (inclusive) of the subset. :return: A view of the portion of this set whose elements are greater than or equal to `fromElement`.</p>
+</div>
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container">
+    <a href="index.html">API Documentation</a> for PyJCore,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.3.3 at 2024-10-06 14:13:38.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

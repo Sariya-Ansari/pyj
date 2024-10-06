@@ -1,3 +1,10 @@
+"""
+This module provides a `String` class inspired by Java's `String` class,
+offering various methods for string manipulation, creation, and comparison.
+It supports initialization from multiple data types and provides methods for
+character-level operations, string comparison, and transformation.
+"""
+
 import re
 
 class String:
@@ -7,7 +14,7 @@ class String:
     instances of StringBuilder or StringBuffer.
 
     Attributes:
-        _value: The internal string value.
+        _value (str): The internal string value.
     """
 
     def __init__(self, *args):
@@ -21,6 +28,7 @@ class String:
                      - Two arguments: if the first is bytes, the second can be a charset or
                        a tuple specifying a subarray.
                      - Three arguments: used to initialize from a bytes object with a range.
+        :raises TypeError: If the provided arguments are of unsupported types or invalid combinations.
         """
         if len(args) == 0:
             self._value = ""
@@ -269,15 +277,6 @@ class String:
         """
         return s in self._value
 
-    def __setattr__(self, __name, __value):
-        """
-        Allows setting attributes, but restricts modification of the internal value.
-
-        :param __name: The attribute name.
-        :param __value: The attribute value.
-        """
-        super().__setattr__(__name, __value)
-
     def contentEquals(self, cs):
         """
         Compares this string to the specified CharSequence.
@@ -354,7 +353,6 @@ class String:
             format_string = args[1]
             format_args = args[2:]
             formatted_str = format_string.format(*format_args)
-            print(f"Formatted locale string inside format method: {formatted_str}")  # Debugging line
         else:
             raise TypeError("Invalid arguments provided to format method")
 

@@ -1,0 +1,3767 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>jstring.character.Character</title>
+    <meta name="generator" content="pydoctor 24.3.3"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          PyJCore <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="jstring.character.Character.html" class="internal-link" title="This class"><wbr></wbr>Character</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jstring.character.Character.Subset.html" class="internal-link" title="jstring.character.Character.Subset"><wbr></wbr>Subset</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jstring.character.Character.UnicodeBlock.html" class="internal-link" title="jstring.character.Character.UnicodeBlock"><wbr></wbr>Unicode<wbr></wbr>Block</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jstring.character.Character.UnicodeScript.html" class="internal-link" title="jstring.character.Character.UnicodeScript"><wbr></wbr>Unicode<wbr></wbr>Script</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#charCount" class="internal-link" title="jstring.character.Character.charCount">char<wbr></wbr>Count</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#codePointAt" class="internal-link" title="jstring.character.Character.codePointAt">code<wbr></wbr>Point<wbr></wbr>At</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#codePointBefore" class="internal-link" title="jstring.character.Character.codePointBefore">code<wbr></wbr>Point<wbr></wbr>Before</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#digit" class="internal-link" title="jstring.character.Character.digit">digit</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#forDigit" class="internal-link" title="jstring.character.Character.forDigit">for<wbr></wbr>Digit</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#highSurrogate" class="internal-link" title="jstring.character.Character.highSurrogate">high<wbr></wbr>Surrogate</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#isDigit" class="internal-link" title="jstring.character.Character.isDigit">is<wbr></wbr>Digit</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#isLetter" class="internal-link" title="jstring.character.Character.isLetter">is<wbr></wbr>Letter</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#isLowerCase" class="internal-link" title="jstring.character.Character.isLowerCase">is<wbr></wbr>Lower<wbr></wbr>Case</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#isSurrogate" class="internal-link" title="jstring.character.Character.isSurrogate">is<wbr></wbr>Surrogate</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#isTitleCase" class="internal-link" title="jstring.character.Character.isTitleCase">is<wbr></wbr>Title<wbr></wbr>Case</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#isUpperCase" class="internal-link" title="jstring.character.Character.isUpperCase">is<wbr></wbr>Upper<wbr></wbr>Case</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#isWhitespace" class="internal-link" title="jstring.character.Character.isWhitespace">is<wbr></wbr>Whitespace</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#lowSurrogate" class="internal-link" title="jstring.character.Character.lowSurrogate">low<wbr></wbr>Surrogate</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#toLowerCase" class="internal-link" title="jstring.character.Character.toLowerCase">to<wbr></wbr>Lower<wbr></wbr>Case</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#toUpperCase" class="internal-link" title="jstring.character.Character.toUpperCase">to<wbr></wbr>Upper<wbr></wbr>Case</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__init__" class="internal-link" title="jstring.character.Character.__init__">__init__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__str__" class="internal-link" title="jstring.character.Character.__str__">__str__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#charValue" class="internal-link" title="jstring.character.Character.charValue">char<wbr></wbr>Value</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#compareTo" class="internal-link" title="jstring.character.Character.compareTo">compare<wbr></wbr>To</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#equals" class="internal-link" title="jstring.character.Character.equals">equals</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#hashCode" class="internal-link" title="jstring.character.Character.hashCode">hash<wbr></wbr>Code</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#BYTES" class="internal-link" title="jstring.character.Character.BYTES">BYTES</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#COMBINING_SPACING_MARK" class="internal-link" title="jstring.character.Character.COMBINING_SPACING_MARK">COMBINING<wbr></wbr>_SPACING<wbr></wbr>_MARK</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#CONNECTOR_PUNCTUATION" class="internal-link" title="jstring.character.Character.CONNECTOR_PUNCTUATION">CONNECTOR<wbr></wbr>_PUNCTUATION</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#CONTROL" class="internal-link" title="jstring.character.Character.CONTROL">CONTROL</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#CURRENCY_SYMBOL" class="internal-link" title="jstring.character.Character.CURRENCY_SYMBOL">CURRENCY<wbr></wbr>_SYMBOL</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#DASH_PUNCTUATION" class="internal-link" title="jstring.character.Character.DASH_PUNCTUATION">DASH<wbr></wbr>_PUNCTUATION</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#DECIMAL_DIGIT_NUMBER" class="internal-link" title="jstring.character.Character.DECIMAL_DIGIT_NUMBER">DECIMAL<wbr></wbr>_DIGIT<wbr></wbr>_NUMBER</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#DIRECTIONALITY_ARABIC_NUMBER" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_ARABIC_NUMBER">DIRECTIONALITY<wbr></wbr>_ARABIC<wbr></wbr>_NUMBER</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#DIRECTIONALITY_BOUNDARY_NEUTRAL" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_BOUNDARY_NEUTRAL">DIRECTIONALITY<wbr></wbr>_BOUNDARY<wbr></wbr>_NEUTRAL</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#DIRECTIONALITY_COMMON_NUMBER_SEPARATOR" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_COMMON_NUMBER_SEPARATOR">DIRECTIONALITY<wbr></wbr>_COMMON<wbr></wbr>_NUMBER<wbr></wbr>_SEPARATOR</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#DIRECTIONALITY_EUROPEAN_NUMBER" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_EUROPEAN_NUMBER">DIRECTIONALITY<wbr></wbr>_EUROPEAN<wbr></wbr>_NUMBER</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#DIRECTIONALITY_EUROPEAN_NUMBER_SEPARATOR" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_EUROPEAN_NUMBER_SEPARATOR">DIRECTIONALITY<wbr></wbr>_EUROPEAN<wbr></wbr>_NUMBER<wbr></wbr>_SEPARATOR</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#DIRECTIONALITY_EUROPEAN_NUMBER_TERMINATOR" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_EUROPEAN_NUMBER_TERMINATOR">DIRECTIONALITY<wbr></wbr>_EUROPEAN<wbr></wbr>_NUMBER<wbr></wbr>_TERMINATOR</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#DIRECTIONALITY_LEFT_TO_RIGHT" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_LEFT_TO_RIGHT">DIRECTIONALITY<wbr></wbr>_LEFT<wbr></wbr>_TO<wbr></wbr>_RIGHT</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#DIRECTIONALITY_LEFT_TO_RIGHT_EMBEDDING" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_LEFT_TO_RIGHT_EMBEDDING">DIRECTIONALITY<wbr></wbr>_LEFT<wbr></wbr>_TO<wbr></wbr>_RIGHT<wbr></wbr>_EMBEDDING</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#DIRECTIONALITY_LEFT_TO_RIGHT_OVERRIDE" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_LEFT_TO_RIGHT_OVERRIDE">DIRECTIONALITY<wbr></wbr>_LEFT<wbr></wbr>_TO<wbr></wbr>_RIGHT<wbr></wbr>_OVERRIDE</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#DIRECTIONALITY_NONSPACING_MARK" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_NONSPACING_MARK">DIRECTIONALITY<wbr></wbr>_NONSPACING<wbr></wbr>_MARK</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#DIRECTIONALITY_OTHER_NEUTRALS" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_OTHER_NEUTRALS">DIRECTIONALITY<wbr></wbr>_OTHER<wbr></wbr>_NEUTRALS</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#DIRECTIONALITY_PARAGRAPH_SEPARATOR" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_PARAGRAPH_SEPARATOR">DIRECTIONALITY<wbr></wbr>_PARAGRAPH<wbr></wbr>_SEPARATOR</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#DIRECTIONALITY_POP_DIRECTIONAL_FORMAT" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_POP_DIRECTIONAL_FORMAT">DIRECTIONALITY<wbr></wbr>_POP<wbr></wbr>_DIRECTIONAL<wbr></wbr>_FORMAT</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#DIRECTIONALITY_RIGHT_TO_LEFT" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_RIGHT_TO_LEFT">DIRECTIONALITY<wbr></wbr>_RIGHT<wbr></wbr>_TO<wbr></wbr>_LEFT</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#DIRECTIONALITY_RIGHT_TO_LEFT_ARABIC" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_RIGHT_TO_LEFT_ARABIC">DIRECTIONALITY<wbr></wbr>_RIGHT<wbr></wbr>_TO<wbr></wbr>_LEFT<wbr></wbr>_ARABIC</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#DIRECTIONALITY_RIGHT_TO_LEFT_EMBEDDING" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_RIGHT_TO_LEFT_EMBEDDING">DIRECTIONALITY<wbr></wbr>_RIGHT<wbr></wbr>_TO<wbr></wbr>_LEFT<wbr></wbr>_EMBEDDING</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#DIRECTIONALITY_RIGHT_TO_LEFT_OVERRIDE" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_RIGHT_TO_LEFT_OVERRIDE">DIRECTIONALITY<wbr></wbr>_RIGHT<wbr></wbr>_TO<wbr></wbr>_LEFT<wbr></wbr>_OVERRIDE</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#DIRECTIONALITY_SEGMENT_SEPARATOR" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_SEGMENT_SEPARATOR">DIRECTIONALITY<wbr></wbr>_SEGMENT<wbr></wbr>_SEPARATOR</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#DIRECTIONALITY_UNDEFINED" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_UNDEFINED">DIRECTIONALITY<wbr></wbr>_UNDEFINED</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#DIRECTIONALITY_WHITESPACE" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_WHITESPACE">DIRECTIONALITY<wbr></wbr>_WHITESPACE</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#ENCLOSING_MARK" class="internal-link" title="jstring.character.Character.ENCLOSING_MARK">ENCLOSING<wbr></wbr>_MARK</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#END_PUNCTUATION" class="internal-link" title="jstring.character.Character.END_PUNCTUATION">END<wbr></wbr>_PUNCTUATION</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#FINAL_QUOTE_PUNCTUATION" class="internal-link" title="jstring.character.Character.FINAL_QUOTE_PUNCTUATION">FINAL<wbr></wbr>_QUOTE<wbr></wbr>_PUNCTUATION</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#FORMAT" class="internal-link" title="jstring.character.Character.FORMAT">FORMAT</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#INITIAL_QUOTE_PUNCTUATION" class="internal-link" title="jstring.character.Character.INITIAL_QUOTE_PUNCTUATION">INITIAL<wbr></wbr>_QUOTE<wbr></wbr>_PUNCTUATION</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#LETTER_NUMBER" class="internal-link" title="jstring.character.Character.LETTER_NUMBER">LETTER<wbr></wbr>_NUMBER</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#LINE_SEPARATOR" class="internal-link" title="jstring.character.Character.LINE_SEPARATOR">LINE<wbr></wbr>_SEPARATOR</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#LOWERCASE_LETTER" class="internal-link" title="jstring.character.Character.LOWERCASE_LETTER">LOWERCASE<wbr></wbr>_LETTER</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#MATH_SYMBOL" class="internal-link" title="jstring.character.Character.MATH_SYMBOL">MATH<wbr></wbr>_SYMBOL</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#MAX_CODE_POINT" class="internal-link" title="jstring.character.Character.MAX_CODE_POINT">MAX<wbr></wbr>_CODE<wbr></wbr>_POINT</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#MAX_HIGH_SURROGATE" class="internal-link" title="jstring.character.Character.MAX_HIGH_SURROGATE">MAX<wbr></wbr>_HIGH<wbr></wbr>_SURROGATE</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#MAX_LOW_SURROGATE" class="internal-link" title="jstring.character.Character.MAX_LOW_SURROGATE">MAX<wbr></wbr>_LOW<wbr></wbr>_SURROGATE</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#MAX_RADIX" class="internal-link" title="jstring.character.Character.MAX_RADIX">MAX<wbr></wbr>_RADIX</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#MAX_VALUE" class="internal-link" title="jstring.character.Character.MAX_VALUE">MAX<wbr></wbr>_VALUE</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#MIN_CODE_POINT" class="internal-link" title="jstring.character.Character.MIN_CODE_POINT">MIN<wbr></wbr>_CODE<wbr></wbr>_POINT</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#MIN_HIGH_SURROGATE" class="internal-link" title="jstring.character.Character.MIN_HIGH_SURROGATE">MIN<wbr></wbr>_HIGH<wbr></wbr>_SURROGATE</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#MIN_LOW_SURROGATE" class="internal-link" title="jstring.character.Character.MIN_LOW_SURROGATE">MIN<wbr></wbr>_LOW<wbr></wbr>_SURROGATE</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#MIN_RADIX" class="internal-link" title="jstring.character.Character.MIN_RADIX">MIN<wbr></wbr>_RADIX</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#MIN_SUPPLEMENTARY_CODE_POINT" class="internal-link" title="jstring.character.Character.MIN_SUPPLEMENTARY_CODE_POINT">MIN<wbr></wbr>_SUPPLEMENTARY<wbr></wbr>_CODE<wbr></wbr>_POINT</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#MIN_VALUE" class="internal-link" title="jstring.character.Character.MIN_VALUE">MIN<wbr></wbr>_VALUE</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#MODIFIER_LETTER" class="internal-link" title="jstring.character.Character.MODIFIER_LETTER">MODIFIER<wbr></wbr>_LETTER</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#MODIFIER_SYMBOL" class="internal-link" title="jstring.character.Character.MODIFIER_SYMBOL">MODIFIER<wbr></wbr>_SYMBOL</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#NON_SPACING_MARK" class="internal-link" title="jstring.character.Character.NON_SPACING_MARK">NON<wbr></wbr>_SPACING<wbr></wbr>_MARK</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#OTHER_LETTER" class="internal-link" title="jstring.character.Character.OTHER_LETTER">OTHER<wbr></wbr>_LETTER</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#OTHER_NUMBER" class="internal-link" title="jstring.character.Character.OTHER_NUMBER">OTHER<wbr></wbr>_NUMBER</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#OTHER_PUNCTUATION" class="internal-link" title="jstring.character.Character.OTHER_PUNCTUATION">OTHER<wbr></wbr>_PUNCTUATION</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#OTHER_SYMBOL" class="internal-link" title="jstring.character.Character.OTHER_SYMBOL">OTHER<wbr></wbr>_SYMBOL</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#PARAGRAPH_SEPARATOR" class="internal-link" title="jstring.character.Character.PARAGRAPH_SEPARATOR">PARAGRAPH<wbr></wbr>_SEPARATOR</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#PRIVATE_USE" class="internal-link" title="jstring.character.Character.PRIVATE_USE">PRIVATE<wbr></wbr>_USE</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#SIZE" class="internal-link" title="jstring.character.Character.SIZE">SIZE</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#SPACE_SEPARATOR" class="internal-link" title="jstring.character.Character.SPACE_SEPARATOR">SPACE<wbr></wbr>_SEPARATOR</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#START_PUNCTUATION" class="internal-link" title="jstring.character.Character.START_PUNCTUATION">START<wbr></wbr>_PUNCTUATION</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#SURROGATE" class="internal-link" title="jstring.character.Character.SURROGATE">SURROGATE</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#TITLECASE_LETTER" class="internal-link" title="jstring.character.Character.TITLECASE_LETTER">TITLECASE<wbr></wbr>_LETTER</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#UNASSIGNED" class="internal-link" title="jstring.character.Character.UNASSIGNED">UNASSIGNED</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#UPPERCASE_LETTER" class="internal-link" title="jstring.character.Character.UPPERCASE_LETTER">UPPERCASE<wbr></wbr>_LETTER</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#value" class="internal-link" title="jstring.character.Character.value">value</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="jstring.character.html" class="internal-link" title="The parent of this class">character</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jstring.character.Character.html" class="internal-link" title="jstring.character.Character"><wbr></wbr>Character</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="jstring.html" class="internal-link">jstring</a></code><wbr></wbr>.<code><a href="jstring.character.html" class="internal-link" title="jstring.character">character</a></code><wbr></wbr>.<code><a href="jstring.character.Character.html" class="internal-link" title="jstring.character.Character">Character</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">Character</span>:</code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="jstring.character.Character.__init__">Character(value)</a></code></p>
+          <p><a href="classIndex.html#jstring.character.Character">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="pre">A class representing a single character, with utility methods for character
+manipulation and checking properties.
+
+The `Character` class provides constants for various character categories
+such as uppercase letters, decimal digits, and punctuation. It also includes
+methods to compare characters, convert them to lowercase or uppercase, and
+check if a character belongs to certain categories like letters, digits, or
+whitespace.
+
+Attributes:
+    BYTES (int): The number of bytes used by the character.
+    SIZE (int): The size of the character in bits.
+    MAX_RADIX (int): The maximum radix value for character conversions.
+    MIN_RADIX (int): The minimum radix value for character conversions.
+    MAX_CODE_POINT (int): The maximum Unicode code point.
+    MIN_CODE_POINT (int): The minimum Unicode code point.
+    MAX_VALUE (str): The maximum value of a character.
+    MIN_VALUE (str): The minimum value of a character.
+    MAX_HIGH_SURROGATE (str): The maximum value of a high surrogate.
+    MIN_HIGH_SURROGATE (str): The minimum value of a high surrogate.
+    MAX_LOW_SURROGATE (str): The maximum value of a low surrogate.
+    MIN_LOW_SURROGATE (str): The minimum value of a low surrogate.
+    MIN_SUPPLEMENTARY_CODE_POINT (int): The minimum supplementary code point.
+
+Field Constants:
+    Defines character categories like `COMBINING_SPACING_MARK`, `LOWERCASE_LETTER`, etc.</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id70">
+  
+  
+  <tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="jstring.character.Character.Subset.html" class="internal-link" title="jstring.character.Character.Subset"><wbr></wbr>Subset</a></code></td>
+    <td>A class representing a subset of Unicode characters.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="jstring.character.Character.UnicodeBlock.html" class="internal-link" title="jstring.character.Character.UnicodeBlock"><wbr></wbr>Unicode<wbr></wbr>Block</a></code></td>
+    <td>A class representing a block of Unicode characters.</td>
+  </tr><tr class="class">
+    
+    <td>Class</td>
+    <td><code><a href="jstring.character.Character.UnicodeScript.html" class="internal-link" title="jstring.character.Character.UnicodeScript"><wbr></wbr>Unicode<wbr></wbr>Script</a></code></td>
+    <td>A class representing a Unicode script.</td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#charCount" class="internal-link" title="jstring.character.Character.charCount">char<wbr></wbr>Count</a></code></td>
+    <td>Returns the number of char values needed to represent the specified code point.</td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#codePointAt" class="internal-link" title="jstring.character.Character.codePointAt">code<wbr></wbr>Point<wbr></wbr>At</a></code></td>
+    <td>Returns the code point value of the character at the specified index in the string.</td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#codePointBefore" class="internal-link" title="jstring.character.Character.codePointBefore">code<wbr></wbr>Point<wbr></wbr>Before</a></code></td>
+    <td>Returns the code point value of the character before the specified index in the string.</td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#digit" class="internal-link" title="jstring.character.Character.digit">digit</a></code></td>
+    <td>Converts a character to a digit in the specified radix.</td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#forDigit" class="internal-link" title="jstring.character.Character.forDigit">for<wbr></wbr>Digit</a></code></td>
+    <td>Converts an integer digit in the specified radix to a character.</td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#highSurrogate" class="internal-link" title="jstring.character.Character.highSurrogate">high<wbr></wbr>Surrogate</a></code></td>
+    <td>Returns the high surrogate for the specified code point.</td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#isDigit" class="internal-link" title="jstring.character.Character.isDigit">is<wbr></wbr>Digit</a></code></td>
+    <td>Determines if the specified character is a digit.</td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#isLetter" class="internal-link" title="jstring.character.Character.isLetter">is<wbr></wbr>Letter</a></code></td>
+    <td>Determines if the specified character is a letter.</td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#isLowerCase" class="internal-link" title="jstring.character.Character.isLowerCase">is<wbr></wbr>Lower<wbr></wbr>Case</a></code></td>
+    <td>Determines if the specified character is a lowercase letter.</td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#isSurrogate" class="internal-link" title="jstring.character.Character.isSurrogate">is<wbr></wbr>Surrogate</a></code></td>
+    <td>Determines if the specified character is a surrogate character.</td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#isTitleCase" class="internal-link" title="jstring.character.Character.isTitleCase">is<wbr></wbr>Title<wbr></wbr>Case</a></code></td>
+    <td>Determines if the specified character is a title case letter.</td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#isUpperCase" class="internal-link" title="jstring.character.Character.isUpperCase">is<wbr></wbr>Upper<wbr></wbr>Case</a></code></td>
+    <td>Determines if the specified character is an uppercase letter.</td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#isWhitespace" class="internal-link" title="jstring.character.Character.isWhitespace">is<wbr></wbr>Whitespace</a></code></td>
+    <td>Determines if the specified character is a whitespace character.</td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#lowSurrogate" class="internal-link" title="jstring.character.Character.lowSurrogate">low<wbr></wbr>Surrogate</a></code></td>
+    <td>Returns the low surrogate for the specified code point.</td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#toLowerCase" class="internal-link" title="jstring.character.Character.toLowerCase">to<wbr></wbr>Lower<wbr></wbr>Case</a></code></td>
+    <td>Converts the specified character to lowercase.</td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#toUpperCase" class="internal-link" title="jstring.character.Character.toUpperCase">to<wbr></wbr>Upper<wbr></wbr>Case</a></code></td>
+    <td>Converts the specified character to uppercase.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__" class="internal-link" title="jstring.character.Character.__init__">__init__</a></code></td>
+    <td>Initializes a Character instance with a given value.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__str__" class="internal-link" title="jstring.character.Character.__str__">__str__</a></code></td>
+    <td>Returns a string representation of the Character instance.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#charValue" class="internal-link" title="jstring.character.Character.charValue">char<wbr></wbr>Value</a></code></td>
+    <td>Returns the character value of this Character instance.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#compareTo" class="internal-link" title="jstring.character.Character.compareTo">compare<wbr></wbr>To</a></code></td>
+    <td>Compares this Character to another Character.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#equals" class="internal-link" title="jstring.character.Character.equals">equals</a></code></td>
+    <td>Compares this Character to another object for equality.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#hashCode" class="internal-link" title="jstring.character.Character.hashCode">hash<wbr></wbr>Code</a></code></td>
+    <td>Returns a hash code for this Character instance.</td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#BYTES" class="internal-link" title="jstring.character.Character.BYTES">BYTES</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#COMBINING_SPACING_MARK" class="internal-link" title="jstring.character.Character.COMBINING_SPACING_MARK">COMBINING<wbr></wbr>_SPACING<wbr></wbr>_MARK</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#CONNECTOR_PUNCTUATION" class="internal-link" title="jstring.character.Character.CONNECTOR_PUNCTUATION">CONNECTOR<wbr></wbr>_PUNCTUATION</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#CONTROL" class="internal-link" title="jstring.character.Character.CONTROL">CONTROL</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#CURRENCY_SYMBOL" class="internal-link" title="jstring.character.Character.CURRENCY_SYMBOL">CURRENCY<wbr></wbr>_SYMBOL</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#DASH_PUNCTUATION" class="internal-link" title="jstring.character.Character.DASH_PUNCTUATION">DASH<wbr></wbr>_PUNCTUATION</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#DECIMAL_DIGIT_NUMBER" class="internal-link" title="jstring.character.Character.DECIMAL_DIGIT_NUMBER">DECIMAL<wbr></wbr>_DIGIT<wbr></wbr>_NUMBER</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#DIRECTIONALITY_ARABIC_NUMBER" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_ARABIC_NUMBER">DIRECTIONALITY<wbr></wbr>_ARABIC<wbr></wbr>_NUMBER</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#DIRECTIONALITY_BOUNDARY_NEUTRAL" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_BOUNDARY_NEUTRAL">DIRECTIONALITY<wbr></wbr>_BOUNDARY<wbr></wbr>_NEUTRAL</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#DIRECTIONALITY_COMMON_NUMBER_SEPARATOR" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_COMMON_NUMBER_SEPARATOR">DIRECTIONALITY<wbr></wbr>_COMMON<wbr></wbr>_NUMBER<wbr></wbr>_SEPARATOR</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#DIRECTIONALITY_EUROPEAN_NUMBER" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_EUROPEAN_NUMBER">DIRECTIONALITY<wbr></wbr>_EUROPEAN<wbr></wbr>_NUMBER</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#DIRECTIONALITY_EUROPEAN_NUMBER_SEPARATOR" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_EUROPEAN_NUMBER_SEPARATOR">DIRECTIONALITY<wbr></wbr>_EUROPEAN<wbr></wbr>_NUMBER<wbr></wbr>_SEPARATOR</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#DIRECTIONALITY_EUROPEAN_NUMBER_TERMINATOR" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_EUROPEAN_NUMBER_TERMINATOR">DIRECTIONALITY<wbr></wbr>_EUROPEAN<wbr></wbr>_NUMBER<wbr></wbr>_TERMINATOR</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#DIRECTIONALITY_LEFT_TO_RIGHT" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_LEFT_TO_RIGHT">DIRECTIONALITY<wbr></wbr>_LEFT<wbr></wbr>_TO<wbr></wbr>_RIGHT</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#DIRECTIONALITY_LEFT_TO_RIGHT_EMBEDDING" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_LEFT_TO_RIGHT_EMBEDDING">DIRECTIONALITY<wbr></wbr>_LEFT<wbr></wbr>_TO<wbr></wbr>_RIGHT<wbr></wbr>_EMBEDDING</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#DIRECTIONALITY_LEFT_TO_RIGHT_OVERRIDE" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_LEFT_TO_RIGHT_OVERRIDE">DIRECTIONALITY<wbr></wbr>_LEFT<wbr></wbr>_TO<wbr></wbr>_RIGHT<wbr></wbr>_OVERRIDE</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#DIRECTIONALITY_NONSPACING_MARK" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_NONSPACING_MARK">DIRECTIONALITY<wbr></wbr>_NONSPACING<wbr></wbr>_MARK</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#DIRECTIONALITY_OTHER_NEUTRALS" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_OTHER_NEUTRALS">DIRECTIONALITY<wbr></wbr>_OTHER<wbr></wbr>_NEUTRALS</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#DIRECTIONALITY_PARAGRAPH_SEPARATOR" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_PARAGRAPH_SEPARATOR">DIRECTIONALITY<wbr></wbr>_PARAGRAPH<wbr></wbr>_SEPARATOR</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#DIRECTIONALITY_POP_DIRECTIONAL_FORMAT" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_POP_DIRECTIONAL_FORMAT">DIRECTIONALITY<wbr></wbr>_POP<wbr></wbr>_DIRECTIONAL<wbr></wbr>_FORMAT</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#DIRECTIONALITY_RIGHT_TO_LEFT" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_RIGHT_TO_LEFT">DIRECTIONALITY<wbr></wbr>_RIGHT<wbr></wbr>_TO<wbr></wbr>_LEFT</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#DIRECTIONALITY_RIGHT_TO_LEFT_ARABIC" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_RIGHT_TO_LEFT_ARABIC">DIRECTIONALITY<wbr></wbr>_RIGHT<wbr></wbr>_TO<wbr></wbr>_LEFT<wbr></wbr>_ARABIC</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#DIRECTIONALITY_RIGHT_TO_LEFT_EMBEDDING" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_RIGHT_TO_LEFT_EMBEDDING">DIRECTIONALITY<wbr></wbr>_RIGHT<wbr></wbr>_TO<wbr></wbr>_LEFT<wbr></wbr>_EMBEDDING</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#DIRECTIONALITY_RIGHT_TO_LEFT_OVERRIDE" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_RIGHT_TO_LEFT_OVERRIDE">DIRECTIONALITY<wbr></wbr>_RIGHT<wbr></wbr>_TO<wbr></wbr>_LEFT<wbr></wbr>_OVERRIDE</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#DIRECTIONALITY_SEGMENT_SEPARATOR" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_SEGMENT_SEPARATOR">DIRECTIONALITY<wbr></wbr>_SEGMENT<wbr></wbr>_SEPARATOR</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#DIRECTIONALITY_UNDEFINED" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_UNDEFINED">DIRECTIONALITY<wbr></wbr>_UNDEFINED</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#DIRECTIONALITY_WHITESPACE" class="internal-link" title="jstring.character.Character.DIRECTIONALITY_WHITESPACE">DIRECTIONALITY<wbr></wbr>_WHITESPACE</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#ENCLOSING_MARK" class="internal-link" title="jstring.character.Character.ENCLOSING_MARK">ENCLOSING<wbr></wbr>_MARK</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#END_PUNCTUATION" class="internal-link" title="jstring.character.Character.END_PUNCTUATION">END<wbr></wbr>_PUNCTUATION</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#FINAL_QUOTE_PUNCTUATION" class="internal-link" title="jstring.character.Character.FINAL_QUOTE_PUNCTUATION">FINAL<wbr></wbr>_QUOTE<wbr></wbr>_PUNCTUATION</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#FORMAT" class="internal-link" title="jstring.character.Character.FORMAT">FORMAT</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#INITIAL_QUOTE_PUNCTUATION" class="internal-link" title="jstring.character.Character.INITIAL_QUOTE_PUNCTUATION">INITIAL<wbr></wbr>_QUOTE<wbr></wbr>_PUNCTUATION</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#LETTER_NUMBER" class="internal-link" title="jstring.character.Character.LETTER_NUMBER">LETTER<wbr></wbr>_NUMBER</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#LINE_SEPARATOR" class="internal-link" title="jstring.character.Character.LINE_SEPARATOR">LINE<wbr></wbr>_SEPARATOR</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#LOWERCASE_LETTER" class="internal-link" title="jstring.character.Character.LOWERCASE_LETTER">LOWERCASE<wbr></wbr>_LETTER</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#MATH_SYMBOL" class="internal-link" title="jstring.character.Character.MATH_SYMBOL">MATH<wbr></wbr>_SYMBOL</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#MAX_CODE_POINT" class="internal-link" title="jstring.character.Character.MAX_CODE_POINT">MAX<wbr></wbr>_CODE<wbr></wbr>_POINT</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#MAX_HIGH_SURROGATE" class="internal-link" title="jstring.character.Character.MAX_HIGH_SURROGATE">MAX<wbr></wbr>_HIGH<wbr></wbr>_SURROGATE</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#MAX_LOW_SURROGATE" class="internal-link" title="jstring.character.Character.MAX_LOW_SURROGATE">MAX<wbr></wbr>_LOW<wbr></wbr>_SURROGATE</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#MAX_RADIX" class="internal-link" title="jstring.character.Character.MAX_RADIX">MAX<wbr></wbr>_RADIX</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#MAX_VALUE" class="internal-link" title="jstring.character.Character.MAX_VALUE">MAX<wbr></wbr>_VALUE</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#MIN_CODE_POINT" class="internal-link" title="jstring.character.Character.MIN_CODE_POINT">MIN<wbr></wbr>_CODE<wbr></wbr>_POINT</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#MIN_HIGH_SURROGATE" class="internal-link" title="jstring.character.Character.MIN_HIGH_SURROGATE">MIN<wbr></wbr>_HIGH<wbr></wbr>_SURROGATE</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#MIN_LOW_SURROGATE" class="internal-link" title="jstring.character.Character.MIN_LOW_SURROGATE">MIN<wbr></wbr>_LOW<wbr></wbr>_SURROGATE</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#MIN_RADIX" class="internal-link" title="jstring.character.Character.MIN_RADIX">MIN<wbr></wbr>_RADIX</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#MIN_SUPPLEMENTARY_CODE_POINT" class="internal-link" title="jstring.character.Character.MIN_SUPPLEMENTARY_CODE_POINT">MIN<wbr></wbr>_SUPPLEMENTARY<wbr></wbr>_CODE<wbr></wbr>_POINT</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#MIN_VALUE" class="internal-link" title="jstring.character.Character.MIN_VALUE">MIN<wbr></wbr>_VALUE</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#MODIFIER_LETTER" class="internal-link" title="jstring.character.Character.MODIFIER_LETTER">MODIFIER<wbr></wbr>_LETTER</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#MODIFIER_SYMBOL" class="internal-link" title="jstring.character.Character.MODIFIER_SYMBOL">MODIFIER<wbr></wbr>_SYMBOL</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#NON_SPACING_MARK" class="internal-link" title="jstring.character.Character.NON_SPACING_MARK">NON<wbr></wbr>_SPACING<wbr></wbr>_MARK</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#OTHER_LETTER" class="internal-link" title="jstring.character.Character.OTHER_LETTER">OTHER<wbr></wbr>_LETTER</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#OTHER_NUMBER" class="internal-link" title="jstring.character.Character.OTHER_NUMBER">OTHER<wbr></wbr>_NUMBER</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#OTHER_PUNCTUATION" class="internal-link" title="jstring.character.Character.OTHER_PUNCTUATION">OTHER<wbr></wbr>_PUNCTUATION</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#OTHER_SYMBOL" class="internal-link" title="jstring.character.Character.OTHER_SYMBOL">OTHER<wbr></wbr>_SYMBOL</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#PARAGRAPH_SEPARATOR" class="internal-link" title="jstring.character.Character.PARAGRAPH_SEPARATOR">PARAGRAPH<wbr></wbr>_SEPARATOR</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#PRIVATE_USE" class="internal-link" title="jstring.character.Character.PRIVATE_USE">PRIVATE<wbr></wbr>_USE</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#SIZE" class="internal-link" title="jstring.character.Character.SIZE">SIZE</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#SPACE_SEPARATOR" class="internal-link" title="jstring.character.Character.SPACE_SEPARATOR">SPACE<wbr></wbr>_SEPARATOR</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#START_PUNCTUATION" class="internal-link" title="jstring.character.Character.START_PUNCTUATION">START<wbr></wbr>_PUNCTUATION</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#SURROGATE" class="internal-link" title="jstring.character.Character.SURROGATE">SURROGATE</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#TITLECASE_LETTER" class="internal-link" title="jstring.character.Character.TITLECASE_LETTER">TITLECASE<wbr></wbr>_LETTER</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#UNASSIGNED" class="internal-link" title="jstring.character.Character.UNASSIGNED">UNASSIGNED</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="constant">
+    
+    <td>Constant</td>
+    <td><code><a href="#UPPERCASE_LETTER" class="internal-link" title="jstring.character.Character.UPPERCASE_LETTER">UPPERCASE<wbr></wbr>_LETTER</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="instancevariable">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#value" class="internal-link" title="jstring.character.Character.value">value</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basestaticmethod">
+  
+  
+  <a name="jstring.character.Character.charCount">
+    
+  </a>
+  <a name="charCount">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @staticmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">charCount</span><span class="function-signature">(codePoint)</span>:
+    
+    <a class="headerLink" href="#charCount" title="jstring.character.Character.charCount">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the number of char values needed to represent the specified code point.</p>
+<p>:param codePoint: The code point value. :return: 2 if the code point is greater than or equal to 0x10000, otherwise 1.</p>
+</div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  
+  <a name="jstring.character.Character.codePointAt">
+    
+  </a>
+  <a name="codePointAt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @staticmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">codePointAt</span><span class="function-signature">(a, index)</span>:
+    
+    <a class="headerLink" href="#codePointAt" title="jstring.character.Character.codePointAt">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the code point value of the character at the specified index in the string.</p>
+<p>:param a: The string containing the character. :param index: The index of the character. :return: The code point of the character.</p>
+</div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  
+  <a name="jstring.character.Character.codePointBefore">
+    
+  </a>
+  <a name="codePointBefore">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @staticmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">codePointBefore</span><span class="function-signature">(a, index)</span>:
+    
+    <a class="headerLink" href="#codePointBefore" title="jstring.character.Character.codePointBefore">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the code point value of the character before the specified index in the string.</p>
+<p>:param a: The string containing the character. :param index: The index of the character. :return: The code point of the character before the specified index.</p>
+</div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  
+  <a name="jstring.character.Character.digit">
+    
+  </a>
+  <a name="digit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @staticmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">digit</span><span class="function-signature">(ch, radix)</span>:
+    
+    <a class="headerLink" href="#digit" title="jstring.character.Character.digit">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Converts a character to a digit in the specified radix.</p>
+<p>:param ch: The character to convert. :param radix: The radix to use for conversion. :return: The integer value of the character in the specified radix.</p>
+</div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  
+  <a name="jstring.character.Character.forDigit">
+    
+  </a>
+  <a name="forDigit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @staticmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">forDigit</span><span class="function-signature">(digit, radix)</span>:
+    
+    <a class="headerLink" href="#forDigit" title="jstring.character.Character.forDigit">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Converts an integer digit in the specified radix to a character.</p>
+<p>:param digit: The integer digit. :param radix: The radix to use for conversion. :return: The character representing the digit in the specified radix, or '' if invalid.</p>
+</div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  
+  <a name="jstring.character.Character.highSurrogate">
+    
+  </a>
+  <a name="highSurrogate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @staticmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">highSurrogate</span><span class="function-signature">(codePoint)</span>:
+    
+    <a class="headerLink" href="#highSurrogate" title="jstring.character.Character.highSurrogate">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the high surrogate for the specified code point.</p>
+<p>:param codePoint: The code point value. :return: The high surrogate character.</p>
+</div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  
+  <a name="jstring.character.Character.isDigit">
+    
+  </a>
+  <a name="isDigit">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @staticmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">isDigit</span><span class="function-signature">(ch)</span>:
+    
+    <a class="headerLink" href="#isDigit" title="jstring.character.Character.isDigit">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Determines if the specified character is a digit.</p>
+<p>:param ch: The character to check. :return: True if the character is a digit, otherwise False.</p>
+</div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  
+  <a name="jstring.character.Character.isLetter">
+    
+  </a>
+  <a name="isLetter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @staticmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">isLetter</span><span class="function-signature">(ch)</span>:
+    
+    <a class="headerLink" href="#isLetter" title="jstring.character.Character.isLetter">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Determines if the specified character is a letter.</p>
+<p>:param ch: The character to check. :return: True if the character is a letter, otherwise False.</p>
+</div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  
+  <a name="jstring.character.Character.isLowerCase">
+    
+  </a>
+  <a name="isLowerCase">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @staticmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">isLowerCase</span><span class="function-signature">(ch)</span>:
+    
+    <a class="headerLink" href="#isLowerCase" title="jstring.character.Character.isLowerCase">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Determines if the specified character is a lowercase letter.</p>
+<p>:param ch: The character to check. :return: True if the character is lowercase, otherwise False.</p>
+</div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  
+  <a name="jstring.character.Character.isSurrogate">
+    
+  </a>
+  <a name="isSurrogate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @staticmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">isSurrogate</span><span class="function-signature">(ch)</span>:
+    
+    <a class="headerLink" href="#isSurrogate" title="jstring.character.Character.isSurrogate">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Determines if the specified character is a surrogate character.</p>
+<p>:param ch: The character to check. :return: True if the character is a surrogate, otherwise False.</p>
+</div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  
+  <a name="jstring.character.Character.isTitleCase">
+    
+  </a>
+  <a name="isTitleCase">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @staticmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">isTitleCase</span><span class="function-signature">(ch)</span>:
+    
+    <a class="headerLink" href="#isTitleCase" title="jstring.character.Character.isTitleCase">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Determines if the specified character is a title case letter.</p>
+<p>:param ch: The character to check. :return: True if the character is title case, otherwise False.</p>
+</div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  
+  <a name="jstring.character.Character.isUpperCase">
+    
+  </a>
+  <a name="isUpperCase">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @staticmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">isUpperCase</span><span class="function-signature">(ch)</span>:
+    
+    <a class="headerLink" href="#isUpperCase" title="jstring.character.Character.isUpperCase">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Determines if the specified character is an uppercase letter.</p>
+<p>:param ch: The character to check. :return: True if the character is uppercase, otherwise False.</p>
+</div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  
+  <a name="jstring.character.Character.isWhitespace">
+    
+  </a>
+  <a name="isWhitespace">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @staticmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">isWhitespace</span><span class="function-signature">(ch)</span>:
+    
+    <a class="headerLink" href="#isWhitespace" title="jstring.character.Character.isWhitespace">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Determines if the specified character is a whitespace character.</p>
+<p>:param ch: The character to check. :return: True if the character is a whitespace, otherwise False.</p>
+</div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  
+  <a name="jstring.character.Character.lowSurrogate">
+    
+  </a>
+  <a name="lowSurrogate">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @staticmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">lowSurrogate</span><span class="function-signature">(codePoint)</span>:
+    
+    <a class="headerLink" href="#lowSurrogate" title="jstring.character.Character.lowSurrogate">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the low surrogate for the specified code point.</p>
+<p>:param codePoint: The code point value. :return: The low surrogate character.</p>
+</div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  
+  <a name="jstring.character.Character.toLowerCase">
+    
+  </a>
+  <a name="toLowerCase">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @staticmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">toLowerCase</span><span class="function-signature">(ch)</span>:
+    
+    <a class="headerLink" href="#toLowerCase" title="jstring.character.Character.toLowerCase">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Converts the specified character to lowercase.</p>
+<p>:param ch: The character to convert. :return: The lowercase representation of the character.</p>
+</div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  
+  <a name="jstring.character.Character.toUpperCase">
+    
+  </a>
+  <a name="toUpperCase">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @staticmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">toUpperCase</span><span class="function-signature">(ch)</span>:
+    
+    <a class="headerLink" href="#toUpperCase" title="jstring.character.Character.toUpperCase">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Converts the specified character to uppercase.</p>
+<p>:param ch: The character to convert. :return: The uppercase representation of the character.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.character.Character.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, value)</span>:
+    
+    <a class="headerLink" href="#__init__" title="jstring.character.Character.__init__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Initializes a Character instance with a given value.</p>
+<p>:param value: A single character string. :raises ValueError: If the input value is not a single character.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.character.Character.__str__">
+    
+  </a>
+  <a name="__str__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__str__</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#__str__" title="jstring.character.Character.__str__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns a string representation of the Character instance.</p>
+<p>:return: The character value as a string.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.character.Character.charValue">
+    
+  </a>
+  <a name="charValue">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">charValue</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#charValue" title="jstring.character.Character.charValue">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the character value of this Character instance.</p>
+<p>:return: The character value as a string.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.character.Character.compareTo">
+    
+  </a>
+  <a name="compareTo">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">compareTo</span><span class="function-signature">(self, anotherCharacter)</span>:
+    
+    <a class="headerLink" href="#compareTo" title="jstring.character.Character.compareTo">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Compares this Character to another Character.
+
+:param anotherCharacter: The Character to compare with.
+:return: A negative integer, zero, or a positive integer as this Character
+         is less than, equal to, or greater than the specified Character.
+:raises TypeError: If the provided argument is not of type Character.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.character.Character.equals">
+    
+  </a>
+  <a name="equals">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">equals</span><span class="function-signature">(self, obj)</span>:
+    
+    <a class="headerLink" href="#equals" title="jstring.character.Character.equals">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Compares this Character to another object for equality.</p>
+<p>:param obj: The object to compare with. :return: True if the objects are equal, otherwise False.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.character.Character.hashCode">
+    
+  </a>
+  <a name="hashCode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">hashCode</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#hashCode" title="jstring.character.Character.hashCode">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns a hash code for this Character instance.</p>
+<p>:return: The hash code of the character value.</p>
+</div>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.BYTES">
+    
+  </a>
+  <a name="BYTES">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">BYTES</span>: <code>int</code> =
+    
+    <a class="headerLink" href="#BYTES" title="jstring.character.Character.BYTES">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>2</code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.COMBINING_SPACING_MARK">
+    
+  </a>
+  <a name="COMBINING_SPACING_MARK">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">COMBINING_SPACING_MARK</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#COMBINING_SPACING_MARK" title="jstring.character.Character.COMBINING_SPACING_MARK">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">Mc</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.CONNECTOR_PUNCTUATION">
+    
+  </a>
+  <a name="CONNECTOR_PUNCTUATION">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">CONNECTOR_PUNCTUATION</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#CONNECTOR_PUNCTUATION" title="jstring.character.Character.CONNECTOR_PUNCTUATION">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">Pc</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.CONTROL">
+    
+  </a>
+  <a name="CONTROL">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">CONTROL</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#CONTROL" title="jstring.character.Character.CONTROL">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">Cc</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.CURRENCY_SYMBOL">
+    
+  </a>
+  <a name="CURRENCY_SYMBOL">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">CURRENCY_SYMBOL</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#CURRENCY_SYMBOL" title="jstring.character.Character.CURRENCY_SYMBOL">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">Sc</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.DASH_PUNCTUATION">
+    
+  </a>
+  <a name="DASH_PUNCTUATION">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">DASH_PUNCTUATION</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#DASH_PUNCTUATION" title="jstring.character.Character.DASH_PUNCTUATION">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">Pd</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.DECIMAL_DIGIT_NUMBER">
+    
+  </a>
+  <a name="DECIMAL_DIGIT_NUMBER">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">DECIMAL_DIGIT_NUMBER</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#DECIMAL_DIGIT_NUMBER" title="jstring.character.Character.DECIMAL_DIGIT_NUMBER">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">Nd</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.DIRECTIONALITY_ARABIC_NUMBER">
+    
+  </a>
+  <a name="DIRECTIONALITY_ARABIC_NUMBER">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">DIRECTIONALITY_ARABIC_NUMBER</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#DIRECTIONALITY_ARABIC_NUMBER" title="jstring.character.Character.DIRECTIONALITY_ARABIC_NUMBER">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">AN</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.DIRECTIONALITY_BOUNDARY_NEUTRAL">
+    
+  </a>
+  <a name="DIRECTIONALITY_BOUNDARY_NEUTRAL">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">DIRECTIONALITY_BOUNDARY_NEUTRAL</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#DIRECTIONALITY_BOUNDARY_NEUTRAL" title="jstring.character.Character.DIRECTIONALITY_BOUNDARY_NEUTRAL">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">BN</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.DIRECTIONALITY_COMMON_NUMBER_SEPARATOR">
+    
+  </a>
+  <a name="DIRECTIONALITY_COMMON_NUMBER_SEPARATOR">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">DIRECTIONALITY_COMMON_NUMBER_SEPARATOR</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#DIRECTIONALITY_COMMON_NUMBER_SEPARATOR" title="jstring.character.Character.DIRECTIONALITY_COMMON_NUMBER_SEPARATOR">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">CS</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.DIRECTIONALITY_EUROPEAN_NUMBER">
+    
+  </a>
+  <a name="DIRECTIONALITY_EUROPEAN_NUMBER">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">DIRECTIONALITY_EUROPEAN_NUMBER</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#DIRECTIONALITY_EUROPEAN_NUMBER" title="jstring.character.Character.DIRECTIONALITY_EUROPEAN_NUMBER">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">EN</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.DIRECTIONALITY_EUROPEAN_NUMBER_SEPARATOR">
+    
+  </a>
+  <a name="DIRECTIONALITY_EUROPEAN_NUMBER_SEPARATOR">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">DIRECTIONALITY_EUROPEAN_NUMBER_SEPARATOR</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#DIRECTIONALITY_EUROPEAN_NUMBER_SEPARATOR" title="jstring.character.Character.DIRECTIONALITY_EUROPEAN_NUMBER_SEPARATOR">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">ES</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.DIRECTIONALITY_EUROPEAN_NUMBER_TERMINATOR">
+    
+  </a>
+  <a name="DIRECTIONALITY_EUROPEAN_NUMBER_TERMINATOR">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">DIRECTIONALITY_EUROPEAN_NUMBER_TERMINATOR</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#DIRECTIONALITY_EUROPEAN_NUMBER_TERMINATOR" title="jstring.character.Character.DIRECTIONALITY_EUROPEAN_NUMBER_TERMINATOR">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">ET</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.DIRECTIONALITY_LEFT_TO_RIGHT">
+    
+  </a>
+  <a name="DIRECTIONALITY_LEFT_TO_RIGHT">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">DIRECTIONALITY_LEFT_TO_RIGHT</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#DIRECTIONALITY_LEFT_TO_RIGHT" title="jstring.character.Character.DIRECTIONALITY_LEFT_TO_RIGHT">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">L</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.DIRECTIONALITY_LEFT_TO_RIGHT_EMBEDDING">
+    
+  </a>
+  <a name="DIRECTIONALITY_LEFT_TO_RIGHT_EMBEDDING">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">DIRECTIONALITY_LEFT_TO_RIGHT_EMBEDDING</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#DIRECTIONALITY_LEFT_TO_RIGHT_EMBEDDING" title="jstring.character.Character.DIRECTIONALITY_LEFT_TO_RIGHT_EMBEDDING">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">LRE</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.DIRECTIONALITY_LEFT_TO_RIGHT_OVERRIDE">
+    
+  </a>
+  <a name="DIRECTIONALITY_LEFT_TO_RIGHT_OVERRIDE">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">DIRECTIONALITY_LEFT_TO_RIGHT_OVERRIDE</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#DIRECTIONALITY_LEFT_TO_RIGHT_OVERRIDE" title="jstring.character.Character.DIRECTIONALITY_LEFT_TO_RIGHT_OVERRIDE">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">LRO</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.DIRECTIONALITY_NONSPACING_MARK">
+    
+  </a>
+  <a name="DIRECTIONALITY_NONSPACING_MARK">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">DIRECTIONALITY_NONSPACING_MARK</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#DIRECTIONALITY_NONSPACING_MARK" title="jstring.character.Character.DIRECTIONALITY_NONSPACING_MARK">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">NSM</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.DIRECTIONALITY_OTHER_NEUTRALS">
+    
+  </a>
+  <a name="DIRECTIONALITY_OTHER_NEUTRALS">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">DIRECTIONALITY_OTHER_NEUTRALS</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#DIRECTIONALITY_OTHER_NEUTRALS" title="jstring.character.Character.DIRECTIONALITY_OTHER_NEUTRALS">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">ON</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.DIRECTIONALITY_PARAGRAPH_SEPARATOR">
+    
+  </a>
+  <a name="DIRECTIONALITY_PARAGRAPH_SEPARATOR">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">DIRECTIONALITY_PARAGRAPH_SEPARATOR</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#DIRECTIONALITY_PARAGRAPH_SEPARATOR" title="jstring.character.Character.DIRECTIONALITY_PARAGRAPH_SEPARATOR">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">B</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.DIRECTIONALITY_POP_DIRECTIONAL_FORMAT">
+    
+  </a>
+  <a name="DIRECTIONALITY_POP_DIRECTIONAL_FORMAT">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">DIRECTIONALITY_POP_DIRECTIONAL_FORMAT</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#DIRECTIONALITY_POP_DIRECTIONAL_FORMAT" title="jstring.character.Character.DIRECTIONALITY_POP_DIRECTIONAL_FORMAT">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">PDF</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.DIRECTIONALITY_RIGHT_TO_LEFT">
+    
+  </a>
+  <a name="DIRECTIONALITY_RIGHT_TO_LEFT">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">DIRECTIONALITY_RIGHT_TO_LEFT</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#DIRECTIONALITY_RIGHT_TO_LEFT" title="jstring.character.Character.DIRECTIONALITY_RIGHT_TO_LEFT">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">R</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.DIRECTIONALITY_RIGHT_TO_LEFT_ARABIC">
+    
+  </a>
+  <a name="DIRECTIONALITY_RIGHT_TO_LEFT_ARABIC">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">DIRECTIONALITY_RIGHT_TO_LEFT_ARABIC</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#DIRECTIONALITY_RIGHT_TO_LEFT_ARABIC" title="jstring.character.Character.DIRECTIONALITY_RIGHT_TO_LEFT_ARABIC">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">AL</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.DIRECTIONALITY_RIGHT_TO_LEFT_EMBEDDING">
+    
+  </a>
+  <a name="DIRECTIONALITY_RIGHT_TO_LEFT_EMBEDDING">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">DIRECTIONALITY_RIGHT_TO_LEFT_EMBEDDING</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#DIRECTIONALITY_RIGHT_TO_LEFT_EMBEDDING" title="jstring.character.Character.DIRECTIONALITY_RIGHT_TO_LEFT_EMBEDDING">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">RLE</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.DIRECTIONALITY_RIGHT_TO_LEFT_OVERRIDE">
+    
+  </a>
+  <a name="DIRECTIONALITY_RIGHT_TO_LEFT_OVERRIDE">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">DIRECTIONALITY_RIGHT_TO_LEFT_OVERRIDE</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#DIRECTIONALITY_RIGHT_TO_LEFT_OVERRIDE" title="jstring.character.Character.DIRECTIONALITY_RIGHT_TO_LEFT_OVERRIDE">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">RLO</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.DIRECTIONALITY_SEGMENT_SEPARATOR">
+    
+  </a>
+  <a name="DIRECTIONALITY_SEGMENT_SEPARATOR">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">DIRECTIONALITY_SEGMENT_SEPARATOR</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#DIRECTIONALITY_SEGMENT_SEPARATOR" title="jstring.character.Character.DIRECTIONALITY_SEGMENT_SEPARATOR">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">S</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.DIRECTIONALITY_UNDEFINED">
+    
+  </a>
+  <a name="DIRECTIONALITY_UNDEFINED">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">DIRECTIONALITY_UNDEFINED</span> =
+    
+    <a class="headerLink" href="#DIRECTIONALITY_UNDEFINED" title="jstring.character.Character.DIRECTIONALITY_UNDEFINED">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>None</code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.DIRECTIONALITY_WHITESPACE">
+    
+  </a>
+  <a name="DIRECTIONALITY_WHITESPACE">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">DIRECTIONALITY_WHITESPACE</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#DIRECTIONALITY_WHITESPACE" title="jstring.character.Character.DIRECTIONALITY_WHITESPACE">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">WS</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.ENCLOSING_MARK">
+    
+  </a>
+  <a name="ENCLOSING_MARK">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">ENCLOSING_MARK</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#ENCLOSING_MARK" title="jstring.character.Character.ENCLOSING_MARK">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">Me</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.END_PUNCTUATION">
+    
+  </a>
+  <a name="END_PUNCTUATION">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">END_PUNCTUATION</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#END_PUNCTUATION" title="jstring.character.Character.END_PUNCTUATION">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">Pe</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.FINAL_QUOTE_PUNCTUATION">
+    
+  </a>
+  <a name="FINAL_QUOTE_PUNCTUATION">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">FINAL_QUOTE_PUNCTUATION</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#FINAL_QUOTE_PUNCTUATION" title="jstring.character.Character.FINAL_QUOTE_PUNCTUATION">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">Pf</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.FORMAT">
+    
+  </a>
+  <a name="FORMAT">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">FORMAT</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#FORMAT" title="jstring.character.Character.FORMAT">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">Cf</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.INITIAL_QUOTE_PUNCTUATION">
+    
+  </a>
+  <a name="INITIAL_QUOTE_PUNCTUATION">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">INITIAL_QUOTE_PUNCTUATION</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#INITIAL_QUOTE_PUNCTUATION" title="jstring.character.Character.INITIAL_QUOTE_PUNCTUATION">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">Pi</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.LETTER_NUMBER">
+    
+  </a>
+  <a name="LETTER_NUMBER">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">LETTER_NUMBER</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#LETTER_NUMBER" title="jstring.character.Character.LETTER_NUMBER">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">Nl</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.LINE_SEPARATOR">
+    
+  </a>
+  <a name="LINE_SEPARATOR">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">LINE_SEPARATOR</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#LINE_SEPARATOR" title="jstring.character.Character.LINE_SEPARATOR">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">Zl</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.LOWERCASE_LETTER">
+    
+  </a>
+  <a name="LOWERCASE_LETTER">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">LOWERCASE_LETTER</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#LOWERCASE_LETTER" title="jstring.character.Character.LOWERCASE_LETTER">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">Ll</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.MATH_SYMBOL">
+    
+  </a>
+  <a name="MATH_SYMBOL">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">MATH_SYMBOL</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#MATH_SYMBOL" title="jstring.character.Character.MATH_SYMBOL">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">Sm</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.MAX_CODE_POINT">
+    
+  </a>
+  <a name="MAX_CODE_POINT">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">MAX_CODE_POINT</span>: <code>int</code> =
+    
+    <a class="headerLink" href="#MAX_CODE_POINT" title="jstring.character.Character.MAX_CODE_POINT">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>1114111</code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.MAX_HIGH_SURROGATE">
+    
+  </a>
+  <a name="MAX_HIGH_SURROGATE">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">MAX_HIGH_SURROGATE</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#MAX_HIGH_SURROGATE" title="jstring.character.Character.MAX_HIGH_SURROGATE">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">\udbff</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.MAX_LOW_SURROGATE">
+    
+  </a>
+  <a name="MAX_LOW_SURROGATE">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">MAX_LOW_SURROGATE</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#MAX_LOW_SURROGATE" title="jstring.character.Character.MAX_LOW_SURROGATE">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">\udfff</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.MAX_RADIX">
+    
+  </a>
+  <a name="MAX_RADIX">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">MAX_RADIX</span>: <code>int</code> =
+    
+    <a class="headerLink" href="#MAX_RADIX" title="jstring.character.Character.MAX_RADIX">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>36</code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.MAX_VALUE">
+    
+  </a>
+  <a name="MAX_VALUE">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">MAX_VALUE</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#MAX_VALUE" title="jstring.character.Character.MAX_VALUE">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>'￿'</code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.MIN_CODE_POINT">
+    
+  </a>
+  <a name="MIN_CODE_POINT">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">MIN_CODE_POINT</span>: <code>int</code> =
+    
+    <a class="headerLink" href="#MIN_CODE_POINT" title="jstring.character.Character.MIN_CODE_POINT">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>0</code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.MIN_HIGH_SURROGATE">
+    
+  </a>
+  <a name="MIN_HIGH_SURROGATE">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">MIN_HIGH_SURROGATE</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#MIN_HIGH_SURROGATE" title="jstring.character.Character.MIN_HIGH_SURROGATE">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">\ud800</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.MIN_LOW_SURROGATE">
+    
+  </a>
+  <a name="MIN_LOW_SURROGATE">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">MIN_LOW_SURROGATE</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#MIN_LOW_SURROGATE" title="jstring.character.Character.MIN_LOW_SURROGATE">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">\udc00</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.MIN_RADIX">
+    
+  </a>
+  <a name="MIN_RADIX">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">MIN_RADIX</span>: <code>int</code> =
+    
+    <a class="headerLink" href="#MIN_RADIX" title="jstring.character.Character.MIN_RADIX">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>2</code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.MIN_SUPPLEMENTARY_CODE_POINT">
+    
+  </a>
+  <a name="MIN_SUPPLEMENTARY_CODE_POINT">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">MIN_SUPPLEMENTARY_CODE_POINT</span>: <code>int</code> =
+    
+    <a class="headerLink" href="#MIN_SUPPLEMENTARY_CODE_POINT" title="jstring.character.Character.MIN_SUPPLEMENTARY_CODE_POINT">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>65536</code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.MIN_VALUE">
+    
+  </a>
+  <a name="MIN_VALUE">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">MIN_VALUE</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#MIN_VALUE" title="jstring.character.Character.MIN_VALUE">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string"></span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.MODIFIER_LETTER">
+    
+  </a>
+  <a name="MODIFIER_LETTER">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">MODIFIER_LETTER</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#MODIFIER_LETTER" title="jstring.character.Character.MODIFIER_LETTER">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">Lm</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.MODIFIER_SYMBOL">
+    
+  </a>
+  <a name="MODIFIER_SYMBOL">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">MODIFIER_SYMBOL</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#MODIFIER_SYMBOL" title="jstring.character.Character.MODIFIER_SYMBOL">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">Sk</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.NON_SPACING_MARK">
+    
+  </a>
+  <a name="NON_SPACING_MARK">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">NON_SPACING_MARK</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#NON_SPACING_MARK" title="jstring.character.Character.NON_SPACING_MARK">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">Mn</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.OTHER_LETTER">
+    
+  </a>
+  <a name="OTHER_LETTER">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">OTHER_LETTER</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#OTHER_LETTER" title="jstring.character.Character.OTHER_LETTER">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">Lo</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.OTHER_NUMBER">
+    
+  </a>
+  <a name="OTHER_NUMBER">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">OTHER_NUMBER</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#OTHER_NUMBER" title="jstring.character.Character.OTHER_NUMBER">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">No</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.OTHER_PUNCTUATION">
+    
+  </a>
+  <a name="OTHER_PUNCTUATION">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">OTHER_PUNCTUATION</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#OTHER_PUNCTUATION" title="jstring.character.Character.OTHER_PUNCTUATION">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">Po</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.OTHER_SYMBOL">
+    
+  </a>
+  <a name="OTHER_SYMBOL">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">OTHER_SYMBOL</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#OTHER_SYMBOL" title="jstring.character.Character.OTHER_SYMBOL">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">So</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.PARAGRAPH_SEPARATOR">
+    
+  </a>
+  <a name="PARAGRAPH_SEPARATOR">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">PARAGRAPH_SEPARATOR</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#PARAGRAPH_SEPARATOR" title="jstring.character.Character.PARAGRAPH_SEPARATOR">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">Zp</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.PRIVATE_USE">
+    
+  </a>
+  <a name="PRIVATE_USE">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">PRIVATE_USE</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#PRIVATE_USE" title="jstring.character.Character.PRIVATE_USE">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">Co</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.SIZE">
+    
+  </a>
+  <a name="SIZE">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">SIZE</span>: <code>int</code> =
+    
+    <a class="headerLink" href="#SIZE" title="jstring.character.Character.SIZE">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code>16</code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.SPACE_SEPARATOR">
+    
+  </a>
+  <a name="SPACE_SEPARATOR">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">SPACE_SEPARATOR</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#SPACE_SEPARATOR" title="jstring.character.Character.SPACE_SEPARATOR">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">Zs</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.START_PUNCTUATION">
+    
+  </a>
+  <a name="START_PUNCTUATION">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">START_PUNCTUATION</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#START_PUNCTUATION" title="jstring.character.Character.START_PUNCTUATION">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">Ps</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.SURROGATE">
+    
+  </a>
+  <a name="SURROGATE">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">SURROGATE</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#SURROGATE" title="jstring.character.Character.SURROGATE">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">Cs</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.TITLECASE_LETTER">
+    
+  </a>
+  <a name="TITLECASE_LETTER">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">TITLECASE_LETTER</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#TITLECASE_LETTER" title="jstring.character.Character.TITLECASE_LETTER">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">Lt</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.UNASSIGNED">
+    
+  </a>
+  <a name="UNASSIGNED">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">UNASSIGNED</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#UNASSIGNED" title="jstring.character.Character.UNASSIGNED">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">Cn</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseconstant">
+  
+  
+  <a name="jstring.character.Character.UPPERCASE_LETTER">
+    
+  </a>
+  <a name="UPPERCASE_LETTER">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">UPPERCASE_LETTER</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#UPPERCASE_LETTER" title="jstring.character.Character.UPPERCASE_LETTER">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    <table class="valueTable"><tr class="fieldStart"><td class="fieldName">Value</td></tr><tr><td><pre class="constant-value"><code><span class="rst-variable-quote">'</span><span class="rst-variable-string">Lu</span><span class="rst-variable-quote">'</span></code></pre></td></tr></table>
+  </div>
+</div><div class="baseinstancevariable">
+  
+  
+  <a name="jstring.character.Character.value">
+    
+  </a>
+  <a name="value">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">value</span> =
+    
+    <a class="headerLink" href="#value" title="jstring.character.Character.value">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container">
+    <a href="index.html">API Documentation</a> for PyJCore,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.3.3 at 2024-10-06 14:13:38.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

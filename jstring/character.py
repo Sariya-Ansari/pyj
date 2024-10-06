@@ -1,4 +1,43 @@
+"""
+This module provides a `Character` class inspired by the Java `Character` class,
+including utility methods for checking character properties and converting case.
+
+The class also defines constants for various character categories, surrogate
+pairs, and Unicode ranges. The nested classes `Subset`, `UnicodeBlock`, and
+`UnicodeScript` are used to represent different subsets of characters.
+"""
+
+
 class Character:
+    """
+    A class representing a single character, with utility methods for character
+    manipulation and checking properties.
+
+    The `Character` class provides constants for various character categories
+    such as uppercase letters, decimal digits, and punctuation. It also includes
+    methods to compare characters, convert them to lowercase or uppercase, and
+    check if a character belongs to certain categories like letters, digits, or
+    whitespace.
+
+    Attributes:
+        BYTES (int): The number of bytes used by the character.
+        SIZE (int): The size of the character in bits.
+        MAX_RADIX (int): The maximum radix value for character conversions.
+        MIN_RADIX (int): The minimum radix value for character conversions.
+        MAX_CODE_POINT (int): The maximum Unicode code point.
+        MIN_CODE_POINT (int): The minimum Unicode code point.
+        MAX_VALUE (str): The maximum value of a character.
+        MIN_VALUE (str): The minimum value of a character.
+        MAX_HIGH_SURROGATE (str): The maximum value of a high surrogate.
+        MIN_HIGH_SURROGATE (str): The minimum value of a high surrogate.
+        MAX_LOW_SURROGATE (str): The maximum value of a low surrogate.
+        MIN_LOW_SURROGATE (str): The minimum value of a low surrogate.
+        MIN_SUPPLEMENTARY_CODE_POINT (int): The minimum supplementary code point.
+
+    Field Constants:
+        Defines character categories like `COMBINING_SPACING_MARK`, `LOWERCASE_LETTER`, etc.
+    """
+
     # Field Constants
     BYTES = 2
     SIZE = 16
@@ -14,7 +53,7 @@ class Character:
     MIN_LOW_SURROGATE = '\uDC00'
     MIN_SUPPLEMENTARY_CODE_POINT = 0x10000
 
-    # General categories
+    # Character Categories
     COMBINING_SPACING_MARK = 'Mc'
     CONNECTOR_PUNCTUATION = 'Pc'
     CONTROL = 'Cc'
@@ -66,11 +105,14 @@ class Character:
     UNASSIGNED = 'Cn'
     UPPERCASE_LETTER = 'Lu'
 
+    # Additional constants for other categories...
+
     def __init__(self, value):
         """
         Initializes a Character instance with a given value.
 
         :param value: A single character string.
+        :raises ValueError: If the input value is not a single character.
         """
         if len(value) != 1:
             raise ValueError("value must be a single character")
@@ -80,7 +122,7 @@ class Character:
         """
         Returns the character value of this Character instance.
 
-        :return: The character value.
+        :return: The character value as a string.
         """
         return self.value
 
@@ -99,6 +141,7 @@ class Character:
         :param anotherCharacter: The Character to compare with.
         :return: A negative integer, zero, or a positive integer as this Character
                  is less than, equal to, or greater than the specified Character.
+        :raises TypeError: If the provided argument is not of type Character.
         """
         if not isinstance(anotherCharacter, Character):
             raise TypeError("Argument must be of type Character")
@@ -289,6 +332,10 @@ class Character:
 
     # Nested Classes
     class Subset:
+        """
+        A class representing a subset of Unicode characters.
+        """
+
         def __init__(self, name):
             """
             Initializes a Subset instance with a given name.
@@ -298,6 +345,10 @@ class Character:
             self.name = name
 
     class UnicodeBlock:
+        """
+        A class representing a block of Unicode characters.
+        """
+
         def __init__(self, name):
             """
             Initializes a UnicodeBlock instance with a given name.
@@ -307,6 +358,10 @@ class Character:
             self.name = name
 
     class UnicodeScript:
+        """
+        A class representing a Unicode script.
+        """
+
         def __init__(self, name):
             """
             Initializes a UnicodeScript instance with a given name.

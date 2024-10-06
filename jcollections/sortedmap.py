@@ -1,3 +1,14 @@
+"""
+This module defines an abstract base class `SortedMap`, which represents a sorted map of key-value pairs.
+
+Classes:
+    - SortedMap: Abstract base class for a map that maintains keys in a sorted order.
+
+Type Parameters:
+    - K: The type of keys maintained by this map.
+    - V: The type of mapped values.
+"""
+
 from typing import TypeVar, Generic, Callable, Optional, Set, Collection
 from jcollections.mapentry import MapEntry
 

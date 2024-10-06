@@ -1,18 +1,34 @@
+"""
+This module defines a `PriorityQueue` class, which provides a priority-based ordering of elements
+using a heap. The class supports common queue operations such as adding, peeking, polling, and more.
+
+Classes:
+    - PriorityQueue: A collection that stores elements in priority order, optionally using a comparator.
+"""
+
 from heapq import heappush, heappop, heapify
 from jcollections.collection import Collection
 from jcollections.queue import Queue
 
 class PriorityQueue(Collection, Queue):
+    """
+    A priority queue implementation using a binary heap. This class allows elements to be stored
+    and retrieved based on their priority. An optional comparator can be provided for custom ordering.
+
+    Attributes:
+        _heap (list): Internal heap structure to store elements.
+        comparator (Callable, optional): A function to compare elements for priority ordering.
+    """
+
     def __init__(self, initial=None, comparator=None, initial_capacity=11):
         """
         Initializes a PriorityQueue with optional initial elements, a comparator, and an initial capacity.
-        - `initial`: Collection or list of initial elements.
-        - `comparator`: Function to compare elements for priority.
-        - `initial_capacity`: Initial capacity (not used in this implementation).
-        """
-        # Initialize with a default list_type (ArrayList or LinkedList can be used if needed)
-        super().__init__(list_type=None)  # Default list_type is None; can be ArrayList or LinkedList
 
+        :param initial: Collection or list of initial elements.
+        :param comparator: Function to compare elements for priority.
+        :param initial_capacity: Initial capacity (not used in this implementation).
+        """
+        super().__init__(list_type=None)  # Default list_type is None; can be ArrayList or LinkedList
         self.comparator = comparator
         self._heap = []  # Internal heap to store elements in heap order
 
@@ -26,8 +42,9 @@ class PriorityQueue(Collection, Queue):
     def add(self, e):
         """
         Adds an element to the priority queue.
-        - If a comparator is defined, use it to determine the priority.
-        - Otherwise, add the element directly.
+
+        :param e: The element to add.
+        :return: True if the element was successfully added.
         """
         if self.comparator:
             heappush(self._heap, (self.comparator(e), e))
@@ -37,15 +54,18 @@ class PriorityQueue(Collection, Queue):
 
     def offer(self, e):
         """
-        Adds an element to the priority queue.
-        Same as `add()`; included for consistency with Queue interface.
+        Adds an element to the priority queue. Same as `add()`.
+
+        :param e: The element to add.
+        :return: True if the element was successfully added.
         """
         return self.add(e)
 
     def peek(self):
         """
         Retrieves but does not remove the highest-priority element from the queue.
-        - Returns None if the queue is empty.
+
+        :return: The highest-priority element, or None if the queue is empty.
         """
         if self.isEmpty():
             return None
@@ -54,7 +74,8 @@ class PriorityQueue(Collection, Queue):
     def poll(self):
         """
         Removes and returns the highest-priority element from the queue.
-        - Returns None if the queue is empty.
+
+        :return: The highest-priority element, or None if the queue is empty.
         """
         if self.isEmpty():
             return None
@@ -63,8 +84,9 @@ class PriorityQueue(Collection, Queue):
     def remove(self, o):
         """
         Removes a specific element from the queue.
-        - Re-heapify the heap after removal.
-        - Returns True if the element was removed, False if not found.
+
+        :param o: The element to remove.
+        :return: True if the element was successfully removed, False otherwise.
         """
         try:
             self._heap.remove(o)
@@ -76,12 +98,17 @@ class PriorityQueue(Collection, Queue):
     def contains(self, o):
         """
         Checks if the queue contains a specific element.
+
+        :param o: The element to check for.
+        :return: True if the element is present, False otherwise.
         """
         return o in self._heap
 
     def size(self):
         """
         Returns the number of elements in the queue.
+
+        :return: The number of elements.
         """
         return len(self._heap)
 
@@ -94,43 +121,57 @@ class PriorityQueue(Collection, Queue):
     def isEmpty(self):
         """
         Checks if the queue is empty.
+
+        :return: True if the queue is empty, False otherwise.
         """
         return len(self._heap) == 0
 
     def iterator(self):
         """
         Returns an iterator over the elements in the queue.
+
+        :return: An iterator for the queue.
         """
         return iter(self._heap)
 
     def toArray(self):
         """
         Converts the queue to a list.
+
+        :return: A list of elements in the queue.
         """
         return list(self._heap)
 
     def toArrayWithType(self, arr):
         """
         Converts the queue to an array with the runtime type of the specified array.
-        Note: In Python, this is implemented the same as `toArray()`.
+
+        :param arr: The array type to convert to.
+        :return: A list of elements in the queue.
         """
         return list(self._heap)
 
     def comparator(self):
         """
         Returns the comparator function used for the priority queue.
+
+        :return: The comparator function.
         """
         return self.comparator
 
     def spliterator(self):
         """
-        Returns a spliterator (not implemented, as it's not common in Python).
+        Returns a spliterator (not implemented).
+
+        :return: None.
         """
         pass
 
     def addAll(self, collection):
         """
         Adds all elements from another collection to the queue.
+
+        :param collection: The collection of elements to add.
         """
         for item in collection:
             self.add(item)
@@ -138,7 +179,9 @@ class PriorityQueue(Collection, Queue):
     def element(self):
         """
         Retrieves but does not remove the highest-priority element.
-        - Raises IndexError if the queue is empty.
+
+        :return: The highest-priority element.
+        :raises IndexError: If the queue is empty.
         """
         if self.isEmpty():
             raise IndexError("Queue is empty")
@@ -147,6 +190,8 @@ class PriorityQueue(Collection, Queue):
     def removeAll(self, collection):
         """
         Removes all elements that are also contained in the specified collection.
+
+        :param collection: The collection of elements to remove.
         """
         for item in collection:
             self.remove(item)
@@ -154,7 +199,8 @@ class PriorityQueue(Collection, Queue):
     def retainAll(self, collection):
         """
         Retains only the elements contained in the specified collection.
-        - Removes all elements not in the collection.
+
+        :param collection: The collection to retain.
         """
         self._heap = [item for item in self._heap if item in collection]
         heapify(self._heap)
@@ -162,19 +208,26 @@ class PriorityQueue(Collection, Queue):
     def __iter__(self):
         """
         Returns an iterator over the elements in the priority queue.
+
+        :return: An iterator for the queue.
         """
         return iter(self._heap)
 
     def containsAll(self, collection):
         """
-        Returns True if all elements in the given collection are in the queue.
+        Checks if all elements in the given collection are in the queue.
+
+        :param collection: The collection to check.
+        :return: True if all elements are present, False otherwise.
         """
         return all(item in self._heap for item in collection)
 
     def equals(self, other):
         """
         Compares this queue with another for equality.
-        - Returns True if the queues have the same elements in the same order.
+
+        :param other: The queue to compare with.
+        :return: True if the queues have the same elements, False otherwise.
         """
         if not isinstance(other, PriorityQueue):
             return False
@@ -183,12 +236,16 @@ class PriorityQueue(Collection, Queue):
     def hashCode(self):
         """
         Returns the hash code for this queue.
+
+        :return: The hash code.
         """
         return hash(tuple(self._heap))
 
     def removeIf(self, predicate):
         """
         Removes all elements that satisfy the given predicate.
+
+        :param predicate: The predicate to evaluate.
         """
         self._heap = [item for item in self._heap if not predicate(item)]
         heapify(self._heap)
@@ -196,11 +253,15 @@ class PriorityQueue(Collection, Queue):
     def stream(self):
         """
         Returns a generator for the elements in the queue.
+
+        :return: A generator for the elements.
         """
         return iter(self._heap)
 
     def parallelStream(self):
         """
-        Returns a parallel stream (not applicable in Python, so using normal stream).
+        Returns a parallel stream (not applicable in Python).
+
+        :return: A normal stream (iterator).
         """
         return self.stream()

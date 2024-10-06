@@ -1,3 +1,12 @@
+"""
+This module defines an abstract base class `Iterable` for iterable objects.
+Subclasses that inherit from `Iterable` must implement the `__iter__` method,
+ensuring that instances of the subclass can return an iterator over the elements.
+
+Classes:
+    - Iterable: Abstract base class that defines the contract for objects that are iterable.
+"""
+
 from abc import ABC, abstractmethod
 
 class Iterable(ABC):

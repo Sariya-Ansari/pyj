@@ -1,0 +1,2603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "DTD/xhtml1-strict.dtd">
+<html>
+  
+
+  <head>
+    
+    <title>jstring.string.String</title>
+    <meta name="generator" content="pydoctor 24.3.3"> 
+        
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="apidocs.css" />
+    <link rel="stylesheet" type="text/css" href="extra.css" />
+</head>
+
+  <body>
+
+    
+
+    <nav class="navbar navbar-default mainnavbar">
+      
+  
+  <div class="container-fluid">
+
+
+    <div class="navbar-header">
+      
+      <div class="navlinks">
+        <span class="navbar-brand">
+          PyJCore <a href="index.html">API Documentation</a>
+        </span>
+
+        <a href="moduleIndex.html">
+          Modules
+        </a>
+
+        <a href="classIndex.html">
+          Classes
+        </a>
+
+        <a href="nameIndex.html">
+          Names
+        </a>
+
+        <div id="search-box-container">
+          <div class="input-group">
+            <input id="search-box" type="search" name="search-query" placeholder="Search..." aria-label="Search" minlength="2" class="form-control" autocomplete="off" />
+            
+            <span class="input-group-btn">
+              <a style="display: none;" class="btn btn-default" id="search-clear-button" title="Clear" onclick="clearSearch()"><img src="fonts/x-circle.svg" alt="Clear" /></a>
+              <a class="btn btn-default" id="search-help-button" title="Help" onclick="toggleSearchHelpText()"><img src="fonts/info.svg" alt="Help" /></a>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="search-results-container" style="display: none;">
+        
+        <div id="search-buttons">
+          <span class="label label-default" id="search-docstrings-button">
+          <label class="checkbox-inline">
+            <input type="checkbox" id="toggle-search-in-docstrings-checkbox" value="false" onclick="toggleSearchInDocstrings()">
+              search in docstrings
+            </input>
+          </label>
+          </span>
+          
+        </div>
+        
+        <noscript>
+            <h1>Cannot search: JavaScript is not supported/enabled in your browser.</h1>
+        </noscript>
+
+        <div class="hint" id="search-help-box">
+          <p class="rst-last">
+      
+            Search bar offers the following options:
+            <ul>   
+                <li>
+                  <strong>Term presence.</strong> The below example searches for documents that 
+                    must contain “foo”, might contain “bar” and must not contain “baz”: <code>+foo bar -baz</code>
+                </li> 
+
+                <li>
+                  <strong>Wildcards.</strong> The below example searches for documents with words beginning with “foo”: <code>foo*</code>
+                </li> 
+
+                <li>
+                  <strong>Search in specific fields.</strong> The following search matches all objects 
+                  in "twisted.mail" that matches “search”: <code>+qname:twisted.mail.* +search</code>
+
+                  <p>
+                    Possible fields: 'name', 'qname' (fully qualified name), 'docstring', and 'kind'.
+                    Last two fields are only applicable if "search in docstrings" is enabled.
+                  </p>
+                </li>
+
+                <li>
+                  <strong>Fuzzy matches.</strong> The following search matches all documents 
+                  that have a word within 1 edit distance of “foo”: <code>foo~1</code>
+                </li>
+            </ul>
+
+          </p>
+        </div>
+
+        <div id="search-status"> </div>
+
+        <div class="warning" id="search-warn-box" style="display: none;">
+          <p class="rst-last"><span id="search-warn"></span></p>
+        </div>
+
+        <table id="search-results">
+          <!-- Filled dynamically by JS -->
+        </table>
+        
+        <div style="margin-top: 8px;">
+          <p>Results provided by <a href="https://lunrjs.com">Lunr.js</a></p>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</nav>
+    
+    <div class="container-fluid">
+
+      <!-- Side navigation -->
+      <div class="sidebarcontainer" style="display: none;">
+        
+        <div class="sidebar"><nav class="sidebar">
+  
+
+  <div>
+
+      <div class="thingTitle">
+        <span>Class</span>
+        <code class="thisobject"><a href="jstring.string.String.html" class="internal-link" title="This class"><wbr></wbr>String</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        
+        
+
+        <div class="childrenKindTitle">Methods</div>
+        <ul>
+    
+    <li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#copyValueOf" class="internal-link" title="jstring.string.String.copyValueOf">copy<wbr></wbr>Value<wbr></wbr>Of</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#format" class="internal-link" title="jstring.string.String.format">format</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#from_char_array" class="internal-link" title="jstring.string.String.from_char_array">from<wbr></wbr>_char<wbr></wbr>_array</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#from_code_points" class="internal-link" title="jstring.string.String.from_code_points">from<wbr></wbr>_code<wbr></wbr>_points</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#from_string_buffer" class="internal-link" title="jstring.string.String.from_string_buffer">from<wbr></wbr>_string<wbr></wbr>_buffer</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#from_string_builder" class="internal-link" title="jstring.string.String.from_string_builder">from<wbr></wbr>_string<wbr></wbr>_builder</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#join" class="internal-link" title="jstring.string.String.join">join</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#valueOf" class="internal-link" title="jstring.string.String.valueOf">value<wbr></wbr>Of</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__add__" class="internal-link" title="jstring.string.String.__add__">__add__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__eq__" class="internal-link" title="jstring.string.String.__eq__">__eq__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__getitem__" class="internal-link" title="jstring.string.String.__getitem__">__getitem__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__init__" class="internal-link" title="jstring.string.String.__init__">__init__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__len__" class="internal-link" title="jstring.string.String.__len__">__len__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__repr__" class="internal-link" title="jstring.string.String.__repr__">__repr__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#__str__" class="internal-link" title="jstring.string.String.__str__">__str__</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#charAt" class="internal-link" title="jstring.string.String.charAt">char<wbr></wbr>At</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#codePointAt" class="internal-link" title="jstring.string.String.codePointAt">code<wbr></wbr>Point<wbr></wbr>At</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#codePointBefore" class="internal-link" title="jstring.string.String.codePointBefore">code<wbr></wbr>Point<wbr></wbr>Before</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#codePointCount" class="internal-link" title="jstring.string.String.codePointCount">code<wbr></wbr>Point<wbr></wbr>Count</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#compareTo" class="internal-link" title="jstring.string.String.compareTo">compare<wbr></wbr>To</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#compareToIgnoreCase" class="internal-link" title="jstring.string.String.compareToIgnoreCase">compare<wbr></wbr>To<wbr></wbr>Ignore<wbr></wbr>Case</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#concat" class="internal-link" title="jstring.string.String.concat">concat</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#contains" class="internal-link" title="jstring.string.String.contains">contains</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#contentEquals" class="internal-link" title="jstring.string.String.contentEquals">content<wbr></wbr>Equals</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#contentEqualsBuffer" class="internal-link" title="jstring.string.String.contentEqualsBuffer">content<wbr></wbr>Equals<wbr></wbr>Buffer</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#endsWith" class="internal-link" title="jstring.string.String.endsWith">ends<wbr></wbr>With</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#equals" class="internal-link" title="jstring.string.String.equals">equals</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#equalsIgnoreCase" class="internal-link" title="jstring.string.String.equalsIgnoreCase">equals<wbr></wbr>Ignore<wbr></wbr>Case</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#getBytes" class="internal-link" title="jstring.string.String.getBytes">get<wbr></wbr>Bytes</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#getBytesCharset" class="internal-link" title="jstring.string.String.getBytesCharset">get<wbr></wbr>Bytes<wbr></wbr>Charset</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#getChars" class="internal-link" title="jstring.string.String.getChars">get<wbr></wbr>Chars</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#hashCode" class="internal-link" title="jstring.string.String.hashCode">hash<wbr></wbr>Code</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#indexOf" class="internal-link" title="jstring.string.String.indexOf">index<wbr></wbr>Of</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#indexOfSubstring" class="internal-link" title="jstring.string.String.indexOfSubstring">index<wbr></wbr>Of<wbr></wbr>Substring</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#intern" class="internal-link" title="jstring.string.String.intern">intern</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#isEmpty" class="internal-link" title="jstring.string.String.isEmpty">is<wbr></wbr>Empty</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#lastIndexOf" class="internal-link" title="jstring.string.String.lastIndexOf">last<wbr></wbr>Index<wbr></wbr>Of</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#lastIndexOfSubstring" class="internal-link" title="jstring.string.String.lastIndexOfSubstring">last<wbr></wbr>Index<wbr></wbr>Of<wbr></wbr>Substring</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#length" class="internal-link" title="jstring.string.String.length">length</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#matches" class="internal-link" title="jstring.string.String.matches">matches</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#offsetByCodePoints" class="internal-link" title="jstring.string.String.offsetByCodePoints">offset<wbr></wbr>By<wbr></wbr>Code<wbr></wbr>Points</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#regionMatches" class="internal-link" title="jstring.string.String.regionMatches">region<wbr></wbr>Matches</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#replace" class="internal-link" title="jstring.string.String.replace">replace</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#replaceAll" class="internal-link" title="jstring.string.String.replaceAll">replace<wbr></wbr>All</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#replaceFirst" class="internal-link" title="jstring.string.String.replaceFirst">replace<wbr></wbr>First</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#replaceSequence" class="internal-link" title="jstring.string.String.replaceSequence">replace<wbr></wbr>Sequence</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#split" class="internal-link" title="jstring.string.String.split">split</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#startsWith" class="internal-link" title="jstring.string.String.startsWith">starts<wbr></wbr>With</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#subSequence" class="internal-link" title="jstring.string.String.subSequence">sub<wbr></wbr>Sequence</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#substring" class="internal-link" title="jstring.string.String.substring">substring</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#toCharArray" class="internal-link" title="jstring.string.String.toCharArray">to<wbr></wbr>Char<wbr></wbr>Array</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#toLowerCase" class="internal-link" title="jstring.string.String.toLowerCase">to<wbr></wbr>Lower<wbr></wbr>Case</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#toString" class="internal-link" title="jstring.string.String.toString">to<wbr></wbr>String</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#toUpperCase" class="internal-link" title="jstring.string.String.toUpperCase">to<wbr></wbr>Upper<wbr></wbr>Case</a></code>
+            </div>
+        
+
+    </li><li class="">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#trim" class="internal-link" title="jstring.string.String.trim">trim</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+
+        <div class="childrenKindTitle">Attributes</div>
+        <ul>
+    
+    <li class="private">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="#_value" class="internal-link" title="jstring.string.String._value">_value</a></code>
+            </div>
+        
+
+    </li>
+</ul> 
+
+        
+         
+        
+      </div>
+  </div><div>
+
+      <div class="thingTitle">
+        <span>Module</span>
+        <code><a href="jstring.string.html" class="internal-link" title="The parent of this class">string</a></code> 
+      </div>
+      
+      <div>
+        
+
+        
+         
+
+        <div class="childrenKindTitle">Classes</div>
+        <ul>
+    
+    <li class=" thisobject">
+        
+        
+        
+
+        
+            <div class="itemName"><code><a href="jstring.string.String.html" class="internal-link" title="jstring.string.String"><wbr></wbr>String</a></code>
+            </div>
+        
+
+    </li>
+</ul>
+
+        
+         
+
+        
+         
+
+        
+         
+
+        
+         
+        
+      </div>
+  </div>
+
+</nav>
+        </div>
+        <div id="collapseSideBar">
+          <a class="btn btn-link" onclick="toggleSideBarCollapse()" title="Toggle Sidebar Collapse">
+          </a>
+        </div> 
+        <script src="sidebartoggle.js" type="text/javascript"></script>
+       
+      </div>
+
+      <div id="main" class="">
+        
+
+        
+
+        <div class="page-header">
+          <h1 class="class"><code><code><a href="jstring.html" class="internal-link">jstring</a></code><wbr></wbr>.<code><a href="jstring.string.html" class="internal-link" title="jstring.string">string</a></code><wbr></wbr>.<code><a href="jstring.string.String.html" class="internal-link" title="jstring.string.String">String</a></code></code></h1>
+          <div id="showPrivate">
+            <button class="btn btn-link" onclick="togglePrivate()">Toggle Private API</button>
+          </div>
+        </div>
+
+        <div class="categoryHeader">
+          class documentation
+        </div>
+
+        <div class="extrasDocstring">
+          <p class="class-signature"><code><span class="py-keyword">class</span> <span class="py-defname">String</span>:</code></p><p>Constructor: <code><a href="#__init__" class="internal-link" title="jstring.string.String.__init__">String(*args)</a></code></p>
+          <p><a href="classIndex.html#jstring.string.String">View In Hierarchy</a></p>
+        </div>
+
+        <div class="moduleDocstring">
+          <div><p class="pre">A class representing a sequence of characters, providing various string manipulation methods.
+Supports initialization from different types including bytes, strings, lists of strings, and
+instances of StringBuilder or StringBuffer.
+
+Attributes:
+    _value (str): The internal string value.</p></div>
+        </div>
+
+        <div id="splitTables">
+          <table class="children sortable" id="id75">
+  
+  
+  <tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#copyValueOf" class="internal-link" title="jstring.string.String.copyValueOf">copy<wbr></wbr>Value<wbr></wbr>Of</a></code></td>
+    <td>Returns a String that represents the characters of the specified character array.</td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#format" class="internal-link" title="jstring.string.String.format">format</a></code></td>
+    <td>Returns a formatted string using the specified format string and arguments.</td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#from_char_array" class="internal-link" title="jstring.string.String.from_char_array">from<wbr></wbr>_char<wbr></wbr>_array</a></code></td>
+    <td>Creates a String from a list of characters.</td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#from_code_points" class="internal-link" title="jstring.string.String.from_code_points">from<wbr></wbr>_code<wbr></wbr>_points</a></code></td>
+    <td>Creates a String from a list of Unicode code points.</td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#from_string_buffer" class="internal-link" title="jstring.string.String.from_string_buffer">from<wbr></wbr>_string<wbr></wbr>_buffer</a></code></td>
+    <td>Creates a String from a StringBuffer object.</td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#from_string_builder" class="internal-link" title="jstring.string.String.from_string_builder">from<wbr></wbr>_string<wbr></wbr>_builder</a></code></td>
+    <td>Creates a String from a StringBuilder object.</td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#join" class="internal-link" title="jstring.string.String.join">join</a></code></td>
+    <td>Joins the specified elements into a single string, separated by the specified delimiter.</td>
+  </tr><tr class="staticmethod">
+    
+    <td>Static Method</td>
+    <td><code><a href="#valueOf" class="internal-link" title="jstring.string.String.valueOf">value<wbr></wbr>Of</a></code></td>
+    <td>Returns a String object representing the specified value.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__add__" class="internal-link" title="jstring.string.String.__add__">__add__</a></code></td>
+    <td>Concatenates this String with another String or a regular string.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__eq__" class="internal-link" title="jstring.string.String.__eq__">__eq__</a></code></td>
+    <td>Checks equality between this String and another object.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__getitem__" class="internal-link" title="jstring.string.String.__getitem__">__getitem__</a></code></td>
+    <td>Returns a new String representing the substring specified by the key.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__init__" class="internal-link" title="jstring.string.String.__init__">__init__</a></code></td>
+    <td>Initializes the String object based on the provided arguments.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__len__" class="internal-link" title="jstring.string.String.__len__">__len__</a></code></td>
+    <td>Returns the length of the string.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__repr__" class="internal-link" title="jstring.string.String.__repr__">__repr__</a></code></td>
+    <td>Returns a string representation that can be used to recreate the object.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#__str__" class="internal-link" title="jstring.string.String.__str__">__str__</a></code></td>
+    <td>Returns the string representation of the current value.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#charAt" class="internal-link" title="jstring.string.String.charAt">char<wbr></wbr>At</a></code></td>
+    <td>Returns the character at the specified index.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#codePointAt" class="internal-link" title="jstring.string.String.codePointAt">code<wbr></wbr>Point<wbr></wbr>At</a></code></td>
+    <td>Returns the Unicode code point of the character at the specified index.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#codePointBefore" class="internal-link" title="jstring.string.String.codePointBefore">code<wbr></wbr>Point<wbr></wbr>Before</a></code></td>
+    <td>Returns the Unicode code point of the character before the specified index.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#codePointCount" class="internal-link" title="jstring.string.String.codePointCount">code<wbr></wbr>Point<wbr></wbr>Count</a></code></td>
+    <td>Returns the number of Unicode code points in the specified text range.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#compareTo" class="internal-link" title="jstring.string.String.compareTo">compare<wbr></wbr>To</a></code></td>
+    <td>Compares this string with another string lexicographically.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#compareToIgnoreCase" class="internal-link" title="jstring.string.String.compareToIgnoreCase">compare<wbr></wbr>To<wbr></wbr>Ignore<wbr></wbr>Case</a></code></td>
+    <td>Compares this string with another string lexicographically, ignoring case.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#concat" class="internal-link" title="jstring.string.String.concat">concat</a></code></td>
+    <td>Concatenates the specified string to the end of this string.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#contains" class="internal-link" title="jstring.string.String.contains">contains</a></code></td>
+    <td>Checks if the current string contains the specified substring.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#contentEquals" class="internal-link" title="jstring.string.String.contentEquals">content<wbr></wbr>Equals</a></code></td>
+    <td>Compares this string to the specified CharSequence.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#contentEqualsBuffer" class="internal-link" title="jstring.string.String.contentEqualsBuffer">content<wbr></wbr>Equals<wbr></wbr>Buffer</a></code></td>
+    <td>Compares this string to the specified StringBuffer.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#endsWith" class="internal-link" title="jstring.string.String.endsWith">ends<wbr></wbr>With</a></code></td>
+    <td>Checks if the current string ends with the specified suffix.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#equals" class="internal-link" title="jstring.string.String.equals">equals</a></code></td>
+    <td>Compares this string to the specified object for equality.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#equalsIgnoreCase" class="internal-link" title="jstring.string.String.equalsIgnoreCase">equals<wbr></wbr>Ignore<wbr></wbr>Case</a></code></td>
+    <td>Compares this string to another string, ignoring case considerations.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#getBytes" class="internal-link" title="jstring.string.String.getBytes">get<wbr></wbr>Bytes</a></code></td>
+    <td>Encodes the string into bytes using the default charset (UTF-8).</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#getBytesCharset" class="internal-link" title="jstring.string.String.getBytesCharset">get<wbr></wbr>Bytes<wbr></wbr>Charset</a></code></td>
+    <td>Encodes the string into bytes using the specified charset.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#getChars" class="internal-link" title="jstring.string.String.getChars">get<wbr></wbr>Chars</a></code></td>
+    <td>Copies characters from the specified range into the destination list.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#hashCode" class="internal-link" title="jstring.string.String.hashCode">hash<wbr></wbr>Code</a></code></td>
+    <td>Returns a hash code for this string.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#indexOf" class="internal-link" title="jstring.string.String.indexOf">index<wbr></wbr>Of</a></code></td>
+    <td>Returns the index of the first occurrence of the specified character.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#indexOfSubstring" class="internal-link" title="jstring.string.String.indexOfSubstring">index<wbr></wbr>Of<wbr></wbr>Substring</a></code></td>
+    <td>Returns the index of the first occurrence of the specified substring.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#intern" class="internal-link" title="jstring.string.String.intern">intern</a></code></td>
+    <td>Returns the interned string. In Python, this is the same as the original string.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#isEmpty" class="internal-link" title="jstring.string.String.isEmpty">is<wbr></wbr>Empty</a></code></td>
+    <td>Checks if the string is empty.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#lastIndexOf" class="internal-link" title="jstring.string.String.lastIndexOf">last<wbr></wbr>Index<wbr></wbr>Of</a></code></td>
+    <td>Returns the index of the last occurrence of the specified character.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#lastIndexOfSubstring" class="internal-link" title="jstring.string.String.lastIndexOfSubstring">last<wbr></wbr>Index<wbr></wbr>Of<wbr></wbr>Substring</a></code></td>
+    <td>Returns the index of the last occurrence of the specified substring.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#length" class="internal-link" title="jstring.string.String.length">length</a></code></td>
+    <td>Returns the length of the string.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#matches" class="internal-link" title="jstring.string.String.matches">matches</a></code></td>
+    <td>Checks if the string matches the specified regular expression.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#offsetByCodePoints" class="internal-link" title="jstring.string.String.offsetByCodePoints">offset<wbr></wbr>By<wbr></wbr>Code<wbr></wbr>Points</a></code></td>
+    <td>Calculates the index offset by the specified number of code points.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#regionMatches" class="internal-link" title="jstring.string.String.regionMatches">region<wbr></wbr>Matches</a></code></td>
+    <td>Compares a substring of this string with a substring of another string.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#replace" class="internal-link" title="jstring.string.String.replace">replace</a></code></td>
+    <td>Replaces occurrences of the specified character with a new character.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#replaceAll" class="internal-link" title="jstring.string.String.replaceAll">replace<wbr></wbr>All</a></code></td>
+    <td>Replaces all occurrences of the substrings that match the specified regular expression.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#replaceFirst" class="internal-link" title="jstring.string.String.replaceFirst">replace<wbr></wbr>First</a></code></td>
+    <td>Replaces the first occurrence of the substring that matches the specified regular expression.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#replaceSequence" class="internal-link" title="jstring.string.String.replaceSequence">replace<wbr></wbr>Sequence</a></code></td>
+    <td>Replaces occurrences of the specified substring with a new substring.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#split" class="internal-link" title="jstring.string.String.split">split</a></code></td>
+    <td>Splits the string into a list of substrings using the specified delimiter.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#startsWith" class="internal-link" title="jstring.string.String.startsWith">starts<wbr></wbr>With</a></code></td>
+    <td>Checks if the string starts with the specified prefix.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#subSequence" class="internal-link" title="jstring.string.String.subSequence">sub<wbr></wbr>Sequence</a></code></td>
+    <td>Returns a new String object that is a subsequence of this string.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#substring" class="internal-link" title="jstring.string.String.substring">substring</a></code></td>
+    <td>Returns a new String object that is a substring of this string.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#toCharArray" class="internal-link" title="jstring.string.String.toCharArray">to<wbr></wbr>Char<wbr></wbr>Array</a></code></td>
+    <td>Converts the string to a list of characters.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#toLowerCase" class="internal-link" title="jstring.string.String.toLowerCase">to<wbr></wbr>Lower<wbr></wbr>Case</a></code></td>
+    <td>Converts the string to lowercase.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#toString" class="internal-link" title="jstring.string.String.toString">to<wbr></wbr>String</a></code></td>
+    <td>Returns the string representation of the current value.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#toUpperCase" class="internal-link" title="jstring.string.String.toUpperCase">to<wbr></wbr>Upper<wbr></wbr>Case</a></code></td>
+    <td>Converts the string to uppercase.</td>
+  </tr><tr class="method">
+    
+    <td>Method</td>
+    <td><code><a href="#trim" class="internal-link" title="jstring.string.String.trim">trim</a></code></td>
+    <td>Removes leading and trailing whitespace from the string.</td>
+  </tr><tr class="instancevariable private">
+    
+    <td>Instance Variable</td>
+    <td><code><a href="#_value" class="internal-link" title="jstring.string.String._value">_value</a></code></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+</table>
+          
+
+            
+        </div>
+
+        <div id="childList">
+          <div class="basestaticmethod">
+  
+  
+  <a name="jstring.string.String.copyValueOf">
+    
+  </a>
+  <a name="copyValueOf">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @staticmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">copyValueOf</span><span class="function-signature">(data, offset=0, count=None)</span>:
+    
+    <a class="headerLink" href="#copyValueOf" title="jstring.string.String.copyValueOf">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns a String that represents the characters of the specified character array.</p>
+<p>:param data: The character array. :param offset: The starting index. :param count: The number of characters to use. :return: A new String object.</p>
+</div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  
+  <a name="jstring.string.String.format">
+    
+  </a>
+  <a name="format">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @staticmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">format</span><span class="function-signature">(*args)</span>:
+    
+    <a class="headerLink" href="#format" title="jstring.string.String.format">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns a formatted string using the specified format string and arguments.</p>
+<p>:param args: The format string and arguments for formatting. :return: A new String object representing the formatted result. :raises TypeError: If the arguments are not valid for formatting.</p>
+</div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  
+  <a name="jstring.string.String.from_char_array">
+    
+  </a>
+  <a name="from_char_array">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @staticmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">from_char_array</span><span class="function-signature">(char_array, offset=0, count=None)</span>:
+    
+    <a class="headerLink" href="#from_char_array" title="jstring.string.String.from_char_array">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Creates a String from a list of characters.</p>
+<p>:param char_array: The list of characters. :param offset: The starting index. :param count: The number of characters to use. :return: A new String object.</p>
+</div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  
+  <a name="jstring.string.String.from_code_points">
+    
+  </a>
+  <a name="from_code_points">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @staticmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">from_code_points</span><span class="function-signature">(code_points, offset=0, count=None)</span>:
+    
+    <a class="headerLink" href="#from_code_points" title="jstring.string.String.from_code_points">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Creates a String from a list of Unicode code points.</p>
+<p>:param code_points: The list of code points. :param offset: The starting index. :param count: The number of code points to use. :return: A new String object.</p>
+</div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  
+  <a name="jstring.string.String.from_string_buffer">
+    
+  </a>
+  <a name="from_string_buffer">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @staticmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">from_string_buffer</span><span class="function-signature">(buffer)</span>:
+    
+    <a class="headerLink" href="#from_string_buffer" title="jstring.string.String.from_string_buffer">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Creates a String from a StringBuffer object.</p>
+<p>:param buffer: The StringBuffer instance. :return: A new String object.</p>
+</div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  
+  <a name="jstring.string.String.from_string_builder">
+    
+  </a>
+  <a name="from_string_builder">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @staticmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">from_string_builder</span><span class="function-signature">(builder)</span>:
+    
+    <a class="headerLink" href="#from_string_builder" title="jstring.string.String.from_string_builder">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Creates a String from a StringBuilder object.</p>
+<p>:param builder: The StringBuilder instance. :return: A new String object.</p>
+</div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  
+  <a name="jstring.string.String.join">
+    
+  </a>
+  <a name="join">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @staticmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">join</span><span class="function-signature">(delimiter, *elements)</span>:
+    
+    <a class="headerLink" href="#join" title="jstring.string.String.join">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Joins the specified elements into a single string, separated by the specified delimiter.</p>
+<p>:param delimiter: The delimiter to use. :param elements: The elements to join. :return: A new String object representing the joined result.</p>
+</div>
+  </div>
+</div><div class="basestaticmethod">
+  
+  
+  <a name="jstring.string.String.valueOf">
+    
+  </a>
+  <a name="valueOf">
+    
+  </a>
+  <div class="functionHeader">
+    
+    @staticmethod<br />
+    <span class="py-keyword">def</span> <span class="py-defname">valueOf</span><span class="function-signature">(value)</span>:
+    
+    <a class="headerLink" href="#valueOf" title="jstring.string.String.valueOf">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns a String object representing the specified value.</p>
+<p>:param value: The value to convert to a string. :return: A new String object. :raises TypeError: If the value is of an unsupported type.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.__add__">
+    
+  </a>
+  <a name="__add__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__add__</span><span class="function-signature">(self, other)</span>:
+    
+    <a class="headerLink" href="#__add__" title="jstring.string.String.__add__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Concatenates this String with another String or a regular string.</p>
+<p>:param other: The string or String object to concatenate. :return: A new String object representing the concatenated result. :raises TypeError: If the other object is not a string or String.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.__eq__">
+    
+  </a>
+  <a name="__eq__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__eq__</span><span class="function-signature">(self, other)</span>:
+    
+    <a class="headerLink" href="#__eq__" title="jstring.string.String.__eq__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Checks equality between this String and another object.</p>
+<p>:param other: The object to compare with. :return: True if equal, otherwise False.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.__getitem__">
+    
+  </a>
+  <a name="__getitem__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__getitem__</span><span class="function-signature">(self, key)</span>:
+    
+    <a class="headerLink" href="#__getitem__" title="jstring.string.String.__getitem__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns a new String representing the substring specified by the key.</p>
+<p>:param key: The index or slice to retrieve. :return: A new String object containing the substring.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__init__</span><span class="function-signature">(self, *args)</span>:
+    
+    <a class="headerLink" href="#__init__" title="jstring.string.String.__init__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Initializes the String object based on the provided arguments.</p>
+<p>:param args: Variable length arguments to initialize the string. Can be:</p>
+<ul class="rst-simple">
+<li>No arguments: initializes to an empty string.</li>
+<li>One argument: can be a bytes object, a string, a list of strings, or an instance of StringBuilder or StringBuffer.</li>
+<li>Two arguments: if the first is bytes, the second can be a charset or a tuple specifying a subarray.</li>
+<li>Three arguments: used to initialize from a bytes object with a range.</li>
+</ul>
+<p>:raises TypeError: If the provided arguments are of unsupported types or invalid combinations.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.__len__">
+    
+  </a>
+  <a name="__len__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__len__</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#__len__" title="jstring.string.String.__len__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the length of the string.</p>
+<p>:return: The length of the string.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.__repr__">
+    
+  </a>
+  <a name="__repr__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__repr__</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#__repr__" title="jstring.string.String.__repr__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns a string representation that can be used to recreate the object.</p>
+<p>:return: A string representing the object.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.__str__">
+    
+  </a>
+  <a name="__str__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">__str__</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#__str__" title="jstring.string.String.__str__">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the string representation of the current value.</p>
+<p>:return: The internal string value.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.charAt">
+    
+  </a>
+  <a name="charAt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">charAt</span><span class="function-signature">(self, index)</span>:
+    
+    <a class="headerLink" href="#charAt" title="jstring.string.String.charAt">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the character at the specified index.</p>
+<p>:param index: The index of the character to return. :return: The character at the specified index. :raises IndexError: If the index is out of range.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.codePointAt">
+    
+  </a>
+  <a name="codePointAt">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">codePointAt</span><span class="function-signature">(self, index)</span>:
+    
+    <a class="headerLink" href="#codePointAt" title="jstring.string.String.codePointAt">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the Unicode code point of the character at the specified index.</p>
+<p>:param index: The index of the character. :return: The Unicode code point. :raises IndexError: If the index is out of range.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.codePointBefore">
+    
+  </a>
+  <a name="codePointBefore">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">codePointBefore</span><span class="function-signature">(self, index)</span>:
+    
+    <a class="headerLink" href="#codePointBefore" title="jstring.string.String.codePointBefore">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the Unicode code point of the character before the specified index.</p>
+<p>:param index: The index after the character. :return: The Unicode code point of the previous character. :raises IndexError: If the index is out of range.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.codePointCount">
+    
+  </a>
+  <a name="codePointCount">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">codePointCount</span><span class="function-signature">(self, beginIndex, endIndex)</span>:
+    
+    <a class="headerLink" href="#codePointCount" title="jstring.string.String.codePointCount">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the number of Unicode code points in the specified text range.</p>
+<p>:param beginIndex: The starting index (inclusive). :param endIndex: The ending index (exclusive). :return: The number of code points in the range.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.compareTo">
+    
+  </a>
+  <a name="compareTo">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">compareTo</span><span class="function-signature">(self, another_string)</span>:
+    
+    <a class="headerLink" href="#compareTo" title="jstring.string.String.compareTo">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Compares this string with another string lexicographically.
+
+:param another_string: The string to compare with.
+:return: A negative integer, zero, or a positive integer as this string is less than,
+         equal to, or greater than the specified string.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.compareToIgnoreCase">
+    
+  </a>
+  <a name="compareToIgnoreCase">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">compareToIgnoreCase</span><span class="function-signature">(self, another_string)</span>:
+    
+    <a class="headerLink" href="#compareToIgnoreCase" title="jstring.string.String.compareToIgnoreCase">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p class="pre">Compares this string with another string lexicographically, ignoring case.
+
+:param another_string: The string to compare with.
+:return: A negative integer, zero, or a positive integer as this string is less than,
+         equal to, or greater than the specified string, ignoring case considerations.</p></div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.concat">
+    
+  </a>
+  <a name="concat">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">concat</span><span class="function-signature">(self, s)</span>:
+    
+    <a class="headerLink" href="#concat" title="jstring.string.String.concat">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Concatenates the specified string to the end of this string.</p>
+<p>:param s: The string to concatenate. :return: A new String object representing the concatenated result.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.contains">
+    
+  </a>
+  <a name="contains">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">contains</span><span class="function-signature">(self, s)</span>:
+    
+    <a class="headerLink" href="#contains" title="jstring.string.String.contains">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Checks if the current string contains the specified substring.</p>
+<p>:param s: The substring to search for. :return: True if the substring is found, otherwise False.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.contentEquals">
+    
+  </a>
+  <a name="contentEquals">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">contentEquals</span><span class="function-signature">(self, cs)</span>:
+    
+    <a class="headerLink" href="#contentEquals" title="jstring.string.String.contentEquals">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Compares this string to the specified CharSequence.</p>
+<p>:param cs: The CharSequence to compare with. :return: True if the CharSequence is equal to this string, otherwise False.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.contentEqualsBuffer">
+    
+  </a>
+  <a name="contentEqualsBuffer">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">contentEqualsBuffer</span><span class="function-signature">(self, sb)</span>:
+    
+    <a class="headerLink" href="#contentEqualsBuffer" title="jstring.string.String.contentEqualsBuffer">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Compares this string to the specified StringBuffer.</p>
+<p>:param sb: The StringBuffer to compare with. :return: True if the StringBuffer is equal to this string, otherwise False.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.endsWith">
+    
+  </a>
+  <a name="endsWith">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">endsWith</span><span class="function-signature">(self, suffix)</span>:
+    
+    <a class="headerLink" href="#endsWith" title="jstring.string.String.endsWith">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Checks if the current string ends with the specified suffix.</p>
+<p>:param suffix: The suffix to check. :return: True if the string ends with the suffix, otherwise False.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.equals">
+    
+  </a>
+  <a name="equals">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">equals</span><span class="function-signature">(self, anObject)</span>:
+    
+    <a class="headerLink" href="#equals" title="jstring.string.String.equals">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Compares this string to the specified object for equality.</p>
+<p>:param anObject: The object to compare with. :return: True if the object is equal to this string, otherwise False.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.equalsIgnoreCase">
+    
+  </a>
+  <a name="equalsIgnoreCase">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">equalsIgnoreCase</span><span class="function-signature">(self, another_string)</span>:
+    
+    <a class="headerLink" href="#equalsIgnoreCase" title="jstring.string.String.equalsIgnoreCase">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Compares this string to another string, ignoring case considerations.</p>
+<p>:param another_string: The string to compare with. :return: True if the strings are equal, ignoring case, otherwise False.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.getBytes">
+    
+  </a>
+  <a name="getBytes">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">getBytes</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#getBytes" title="jstring.string.String.getBytes">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Encodes the string into bytes using the default charset (UTF-8).</p>
+<p>:return: The byte representation of the string.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.getBytesCharset">
+    
+  </a>
+  <a name="getBytesCharset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">getBytesCharset</span><span class="function-signature">(self, charset)</span>:
+    
+    <a class="headerLink" href="#getBytesCharset" title="jstring.string.String.getBytesCharset">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Encodes the string into bytes using the specified charset.</p>
+<p>:param charset: The charset to use for encoding. :return: The byte representation of the string.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.getChars">
+    
+  </a>
+  <a name="getChars">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">getChars</span><span class="function-signature">(self, src_begin, src_end, dst, dst_begin)</span>:
+    
+    <a class="headerLink" href="#getChars" title="jstring.string.String.getChars">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Copies characters from the specified range into the destination list.</p>
+<p>:param src_begin: The starting index of the source range. :param src_end: The ending index of the source range. :param dst: The destination list. :param dst_begin: The starting index in the destination list.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.hashCode">
+    
+  </a>
+  <a name="hashCode">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">hashCode</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#hashCode" title="jstring.string.String.hashCode">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns a hash code for this string.</p>
+<p>:return: The hash code of the string.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.indexOf">
+    
+  </a>
+  <a name="indexOf">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">indexOf</span><span class="function-signature">(self, ch, from_index=0)</span>:
+    
+    <a class="headerLink" href="#indexOf" title="jstring.string.String.indexOf">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the index of the first occurrence of the specified character.</p>
+<p>:param ch: The character to search for. :param from_index: The index to start the search from. :return: The index of the first occurrence, or -1 if not found.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.indexOfSubstring">
+    
+  </a>
+  <a name="indexOfSubstring">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">indexOfSubstring</span><span class="function-signature">(self, s, from_index=0)</span>:
+    
+    <a class="headerLink" href="#indexOfSubstring" title="jstring.string.String.indexOfSubstring">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the index of the first occurrence of the specified substring.</p>
+<p>:param s: The substring to search for. :param from_index: The index to start the search from. :return: The index of the first occurrence, or -1 if not found.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.intern">
+    
+  </a>
+  <a name="intern">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">intern</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#intern" title="jstring.string.String.intern">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the interned string. In Python, this is the same as the original string.</p>
+<p>:return: The interned string.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.isEmpty">
+    
+  </a>
+  <a name="isEmpty">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">isEmpty</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#isEmpty" title="jstring.string.String.isEmpty">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Checks if the string is empty.</p>
+<p>:return: True if the string is empty, otherwise False.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.lastIndexOf">
+    
+  </a>
+  <a name="lastIndexOf">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">lastIndexOf</span><span class="function-signature">(self, ch, from_index=None)</span>:
+    
+    <a class="headerLink" href="#lastIndexOf" title="jstring.string.String.lastIndexOf">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the index of the last occurrence of the specified character.</p>
+<p>:param ch: The character to search for. :param from_index: The index to start the search from, or None to search the entire string. :return: The index of the last occurrence, or -1 if not found.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.lastIndexOfSubstring">
+    
+  </a>
+  <a name="lastIndexOfSubstring">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">lastIndexOfSubstring</span><span class="function-signature">(self, another_string, from_index=None)</span>:
+    
+    <a class="headerLink" href="#lastIndexOfSubstring" title="jstring.string.String.lastIndexOfSubstring">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the index of the last occurrence of the specified substring.</p>
+<p>:param another_string: The substring to search for. :param from_index: The index to start the search from, or None to search the entire string. :return: The index of the last occurrence, or -1 if not found.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.length">
+    
+  </a>
+  <a name="length">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">length</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#length" title="jstring.string.String.length">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the length of the string.</p>
+<p>:return: The length of the string.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.matches">
+    
+  </a>
+  <a name="matches">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">matches</span><span class="function-signature">(self, regex)</span>:
+    
+    <a class="headerLink" href="#matches" title="jstring.string.String.matches">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Checks if the string matches the specified regular expression.</p>
+<p>:param regex: The regular expression to match. :return: True if the string matches the regex, otherwise False.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.offsetByCodePoints">
+    
+  </a>
+  <a name="offsetByCodePoints">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">offsetByCodePoints</span><span class="function-signature">(self, index, codePointOffset)</span>:
+    
+    <a class="headerLink" href="#offsetByCodePoints" title="jstring.string.String.offsetByCodePoints">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Calculates the index offset by the specified number of code points.</p>
+<p>:param index: The starting index. :param codePointOffset: The number of code points to offset by. :return: The new index.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.regionMatches">
+    
+  </a>
+  <a name="regionMatches">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">regionMatches</span><span class="function-signature">(self, ignoreCase, toffset, other, ooffset, length)</span>:
+    
+    <a class="headerLink" href="#regionMatches" title="jstring.string.String.regionMatches">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Compares a substring of this string with a substring of another string.</p>
+<p>:param ignoreCase: Whether to ignore case during the comparison. :param toffset: The starting index of the substring in this string. :param other: The other string to compare with. :param ooffset: The starting index of the substring in the other string. :param length: The length of the substrings to compare. :return: True if the substrings are equal, otherwise False.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.replace">
+    
+  </a>
+  <a name="replace">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">replace</span><span class="function-signature">(self, oldChar, newChar)</span>:
+    
+    <a class="headerLink" href="#replace" title="jstring.string.String.replace">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Replaces occurrences of the specified character with a new character.</p>
+<p>:param oldChar: The character to be replaced. :param newChar: The new character to replace with. :return: A new String object with the replacements.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.replaceAll">
+    
+  </a>
+  <a name="replaceAll">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">replaceAll</span><span class="function-signature">(self, regex, replacement)</span>:
+    
+    <a class="headerLink" href="#replaceAll" title="jstring.string.String.replaceAll">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Replaces all occurrences of the substrings that match the specified regular expression.</p>
+<p>:param regex: The regular expression to match. :param replacement: The new substring to replace with. :return: A new String object with the replacements.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.replaceFirst">
+    
+  </a>
+  <a name="replaceFirst">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">replaceFirst</span><span class="function-signature">(self, regex, replacement)</span>:
+    
+    <a class="headerLink" href="#replaceFirst" title="jstring.string.String.replaceFirst">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Replaces the first occurrence of the substring that matches the specified regular expression.</p>
+<p>:param regex: The regular expression to match. :param replacement: The new substring to replace with. :return: A new String object with the replacement.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.replaceSequence">
+    
+  </a>
+  <a name="replaceSequence">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">replaceSequence</span><span class="function-signature">(self, target, replacement)</span>:
+    
+    <a class="headerLink" href="#replaceSequence" title="jstring.string.String.replaceSequence">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Replaces occurrences of the specified substring with a new substring.</p>
+<p>:param target: The substring to be replaced. :param replacement: The new substring to replace with. :return: A new String object with the replacements.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.split">
+    
+  </a>
+  <a name="split">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">split</span><span class="function-signature">(self, delimiter=<span class="rst-variable-quote">'</span><span class="rst-variable-string"> </span><span class="rst-variable-quote">'</span>, limit=-1)</span>:
+    
+    <a class="headerLink" href="#split" title="jstring.string.String.split">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Splits the string into a list of substrings using the specified delimiter.</p>
+<p>:param delimiter: The delimiter to use for splitting. :param limit: The maximum number of substrings to return. If -1, there is no limit. :return: A list of String objects representing the substrings.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.startsWith">
+    
+  </a>
+  <a name="startsWith">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">startsWith</span><span class="function-signature">(self, prefix, toffset=0)</span>:
+    
+    <a class="headerLink" href="#startsWith" title="jstring.string.String.startsWith">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Checks if the string starts with the specified prefix.</p>
+<p>:param prefix: The prefix to check. :param toffset: The index to start the search from. :return: True if the string starts with the prefix, otherwise False.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.subSequence">
+    
+  </a>
+  <a name="subSequence">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">subSequence</span><span class="function-signature">(self, beginIndex, endIndex)</span>:
+    
+    <a class="headerLink" href="#subSequence" title="jstring.string.String.subSequence">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns a new String object that is a subsequence of this string.</p>
+<p>:param beginIndex: The starting index of the subsequence. :param endIndex: The ending index of the subsequence. :return: A new String object representing the subsequence.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.substring">
+    
+  </a>
+  <a name="substring">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">substring</span><span class="function-signature">(self, beginIndex, endIndex=None)</span>:
+    
+    <a class="headerLink" href="#substring" title="jstring.string.String.substring">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns a new String object that is a substring of this string.</p>
+<p>:param beginIndex: The starting index of the substring. :param endIndex: The ending index of the substring. If None, the substring extends to the end of the string. :return: A new String object representing the substring.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.toCharArray">
+    
+  </a>
+  <a name="toCharArray">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">toCharArray</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#toCharArray" title="jstring.string.String.toCharArray">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Converts the string to a list of characters.</p>
+<p>:return: A list of characters.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.toLowerCase">
+    
+  </a>
+  <a name="toLowerCase">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">toLowerCase</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#toLowerCase" title="jstring.string.String.toLowerCase">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Converts the string to lowercase.</p>
+<p>:return: A new String object with the lowercase representation.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.toString">
+    
+  </a>
+  <a name="toString">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">toString</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#toString" title="jstring.string.String.toString">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Returns the string representation of the current value.</p>
+<p>:return: The internal string value.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.toUpperCase">
+    
+  </a>
+  <a name="toUpperCase">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">toUpperCase</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#toUpperCase" title="jstring.string.String.toUpperCase">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Converts the string to uppercase.</p>
+<p>:return: A new String object with the uppercase representation.</p>
+</div>
+  </div>
+</div><div class="basemethod">
+  
+  
+  <a name="jstring.string.String.trim">
+    
+  </a>
+  <a name="trim">
+    
+  </a>
+  <div class="functionHeader">
+    
+    
+    <span class="py-keyword">def</span> <span class="py-defname">trim</span><span class="function-signature">(self)</span>:
+    
+    <a class="headerLink" href="#trim" title="jstring.string.String.trim">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="docstring functionBody">
+    
+    <div><p>Removes leading and trailing whitespace from the string.</p>
+<p>:return: A new String object with the whitespace removed.</p>
+</div>
+  </div>
+</div><div class="baseinstancevariable private">
+  
+  
+  <a name="jstring.string.String._value">
+    
+  </a>
+  <a name="_value">
+    
+  </a>
+  <div class="functionHeader">
+    
+    <span class="py-defname">_value</span>: <code>str</code> =
+    
+    <a class="headerLink" href="#_value" title="jstring.string.String._value">
+      
+      
+      ¶
+    </a>
+  </div>
+  <div class="functionBody">
+    
+    <div><p class="undocumented">Undocumented</p></div>
+    
+  </div>
+</div>
+        </div>
+      
+      </div>
+    </div>
+
+    <footer class="navbar navbar-default">
+
+  
+  <div class="container">
+    <a href="index.html">API Documentation</a> for PyJCore,
+  generated by <a href="https://github.com/twisted/pydoctor/">pydoctor</a>
+    24.3.3 at 2024-10-06 14:13:38.
+  </div>
+
+  <!-- Search related scripts needs to be loaded at the end of HTML 
+    parsing not to introduce overhead and display HTML data asap -->
+  <script src="ajax.js" type="text/javascript"></script>
+  <script src="searchlib.js" type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+
+</footer>
+  
+    <script src="pydoctor.js" type="text/javascript"></script>
+
+  </body>
+</html>

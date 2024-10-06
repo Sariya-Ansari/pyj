@@ -1,7 +1,13 @@
+"""
+The `arraylist` module implements the `ArrayList` class, a dynamic array-backed list that resizes itself as elements are added.
+It provides similar functionality to Java's `ArrayList`.
+"""
+
 from collections.abc import Iterator
 from jcollections import Predicate
 from jcollections.collection import Collection
 from jcollections.list import List
+
 
 class ArrayList(List):
     """
@@ -12,6 +18,7 @@ class ArrayList(List):
     def __init__(self, initial_capacity=5, c=None):
         """
         Initializes the ArrayList with an optional initial capacity or from an existing collection.
+
         :param initial_capacity: Initial capacity of the array (default: 5).
         :param c: Optional collection to initialize the ArrayList with.
         """
@@ -33,6 +40,7 @@ class ArrayList(List):
         """
         Ensures that the ArrayList has enough capacity to hold additional elements.
         If minimumCapacity is not provided, the capacity is doubled.
+
         :param minimumCapacity: The minimum required capacity.
         """
         if minimumCapacity is None:
@@ -44,7 +52,9 @@ class ArrayList(List):
     def add(self, *args):
         """
         Adds an element at the end of the list or at the specified index.
+
         :param args: Can be a single element or (index, element).
+        :return: True if the element was added successfully.
         """
         if len(args) == 1:
             element = args[0]
@@ -71,7 +81,9 @@ class ArrayList(List):
     def addAll(self, *args):
         """
         Adds all elements from a collection at the end or at the specified index.
+
         :param args: Can be a collection or (index, collection).
+        :return: True if all elements were added successfully.
         """
         if len(args) == 1:
             collection = args[0]
@@ -95,6 +107,7 @@ class ArrayList(List):
     def __resize(self, new_capacity):
         """
         Resizes the internal array to the specified new capacity.
+
         :param new_capacity: The new capacity of the array.
         """
         if new_capacity > self.__capacity:
@@ -113,6 +126,7 @@ class ArrayList(List):
     def __setattr__(self, name, value):
         """
         Sets an attribute on the ArrayList object. Overrides the default __setattr__ to handle internal attributes.
+
         :param name: The name of the attribute.
         :param value: The value to set.
         """
@@ -131,6 +145,7 @@ class ArrayList(List):
     def contains(self, o):
         """
         Checks if the specified element is present in the list.
+
         :param o: The element to check for.
         :return: True if the element is present, otherwise False.
         """
@@ -139,6 +154,7 @@ class ArrayList(List):
     def containsAll(self, c):
         """
         Checks if the list contains all elements from the specified collection.
+
         :param c: The collection of elements to check.
         :return: True if all elements are present, otherwise False.
         """
@@ -147,6 +163,7 @@ class ArrayList(List):
     def equals(self, o):
         """
         Compares this list with another object for equality.
+
         :param o: The object to compare with.
         :return: True if the objects are equal, otherwise False.
         """
@@ -157,6 +174,7 @@ class ArrayList(List):
     def get(self, index):
         """
         Returns the element at the specified index.
+
         :param index: The index of the element to return.
         :return: The element at the specified index.
         """
@@ -173,6 +191,7 @@ class ArrayList(List):
     def indexOf(self, o):
         """
         Returns the index of the first occurrence of the specified element, or -1 if not present.
+
         :param o: The element to search for.
         """
         try:
@@ -195,6 +214,7 @@ class ArrayList(List):
     def lastIndexOf(self, o):
         """
         Returns the index of the last occurrence of the specified element, or -1 if not present.
+
         :param o: The element to search for.
         """
         for i in range(self.__size - 1, -1, -1):
@@ -205,6 +225,7 @@ class ArrayList(List):
     def listIterator(self, *args):
         """
         Returns a list iterator over the elements in the list.
+
         :param args: Optional start index for the iterator.
         """
         if len(args) == 0:
@@ -220,7 +241,9 @@ class ArrayList(List):
     def remove(self, value_or_index):
         """
         Removes the element at the specified index or the specified value.
+
         :param value_or_index: Index of the element to remove or the value to remove.
+        :return: The removed element or True if the value was removed, False otherwise.
         """
         if isinstance(value_or_index, int):
             index = value_or_index
@@ -242,7 +265,9 @@ class ArrayList(List):
     def removeAll(self, c):
         """
         Removes all elements in the collection from the list.
+
         :param c: The collection of elements to remove.
+        :return: True if any elements were removed, False otherwise.
         """
         removed = False
         for element in c:
@@ -254,6 +279,7 @@ class ArrayList(List):
     def _shift_left(self, index):
         """
         Shifts elements to the left after an element has been removed.
+
         :param index: The index from where to start shifting elements.
         """
         for i in range(index, self.__size - 1):
@@ -263,7 +289,9 @@ class ArrayList(List):
     def retainAll(self, c):
         """
         Retains only the elements in the list that are also present in the specified collection.
+
         :param c: The collection of elements to retain.
+        :return: True if any elements were removed, False otherwise.
         """
         to_remove = [element for element in self.__data[:self.__size] if element not in c]
         return self.removeAll(to_remove)
@@ -271,6 +299,7 @@ class ArrayList(List):
     def replaceAll(self, operator):
         """
         Replaces each element of this list with the result of applying the operator to that element.
+
         :param operator: A function to apply to each element.
         """
         for i in range(self.__size):
@@ -279,6 +308,7 @@ class ArrayList(List):
     def set(self, index, element):
         """
         Replaces the element at the specified position in this list with the specified element.
+
         :param index: The index of the element to replace.
         :param element: The new element.
         :return: The old element at the specified position.
@@ -298,6 +328,7 @@ class ArrayList(List):
     def sort(self, c):
         """
         Sorts the list according to the order induced by the specified comparator.
+
         :param c: The comparator function used for sorting.
         """
         self.__data[:self.__size] = sorted(self.__data[:self.__size], key=c)
@@ -311,8 +342,10 @@ class ArrayList(List):
     def subList(self, fromIndex, toIndex):
         """
         Returns a view of the portion of this list between fromIndex, inclusive, and toIndex, exclusive.
+
         :param fromIndex: The start index of the sublist.
         :param toIndex: The end index of the sublist.
+        :return: A sublist of the elements.
         """
         if fromIndex < 0 or toIndex > self.__size or fromIndex > toIndex:
             raise IndexError("Index out of bounds")
@@ -324,6 +357,7 @@ class ArrayList(List):
     def toArray(self, *args) -> list:
         """
         Converts the list to an array.
+
         :param args: Optional argument to specify the type of array elements.
         :return: The array of elements in the list.
         """
@@ -352,6 +386,7 @@ class ArrayList(List):
     def removeIf(self, predicate: Predicate) -> bool:
         """
         Removes all elements that satisfy the given predicate.
+
         :param predicate: A function that returns True for elements to be removed.
         :return: True if any elements were removed, otherwise False.
         """

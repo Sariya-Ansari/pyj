@@ -1,19 +1,39 @@
+"""
+This module defines a `Queue` class that provides a basic queue implementation using either an `ArrayList` or a `LinkedList` for internal storage.
+
+Classes:
+    - Queue: A class that provides queue operations such as add, remove, and peek, using either an ArrayList or a LinkedList.
+"""
+
 from jcollections.arraylist import ArrayList
 from jcollections.linkedlist import LinkedList
 
+
 class Queue:
+    """
+    A queue implementation that can be backed by either an ArrayList or a LinkedList.
+
+    The choice of list type affects the underlying behavior of certain operations.
+    ArrayList is generally faster for indexed access, while LinkedList is better suited for insertion and deletion at the head or tail.
+    """
+
     def __init__(self, list_type):
         """
         Initializes a queue with the specified list type (ArrayList or LinkedList).
+
+        :param list_type: The list type (ArrayList or LinkedList) to use for internal storage.
         """
         self.list = list_type
 
     def addLast(self, element):
         """
         Adds the given element to the end of the queue.
-        Uses the appropriate method based on the list type:
-        - For ArrayList, uses add (appends the element at the end).
-        - For LinkedList, uses addLast (appends the element at the end).
+
+        Depending on the underlying list type:
+        - ArrayList: Uses `add` to append the element.
+        - LinkedList: Uses `addLast` to append the element at the end.
+
+        :param element: The element to add to the queue.
         """
         if isinstance(self.list, ArrayList):
             self.list.add(element)  # For ArrayList, use add (appends at the end)
@@ -23,10 +43,15 @@ class Queue:
     def removeFirst(self):
         """
         Removes and returns the first element of the queue.
-        Uses the appropriate method based on the list type:
-        - For ArrayList, removes the element at index 0.
-        - For LinkedList, uses removeFirst (removes the first element).
+
+        Depending on the underlying list type:
+        - ArrayList: Removes the element at index 0.
+        - LinkedList: Uses `removeFirst` to remove the first element.
+
         Raises IndexError if the queue is empty.
+
+        :return: The first element of the queue.
+        :raises IndexError: If the queue is empty.
         """
         if isinstance(self.list, ArrayList):
             if not self.list.isEmpty():
@@ -39,10 +64,14 @@ class Queue:
     def peek(self):
         """
         Retrieves, but does not remove, the first element of the queue.
-        Uses the appropriate method based on the list type:
-        - For ArrayList, retrieves the element at index 0.
-        - For LinkedList, uses peekFirst (retrieves the first element).
+
+        Depending on the underlying list type:
+        - ArrayList: Retrieves the element at index 0.
+        - LinkedList: Uses `peekFirst` to retrieve the first element.
+
         Returns None if the queue is empty.
+
+        :return: The first element of the queue, or None if the queue is empty.
         """
         if isinstance(self.list, ArrayList):
             if not self.list.isEmpty():
@@ -54,10 +83,14 @@ class Queue:
     def poll(self):
         """
         Removes and returns the first element of the queue.
-        Uses the appropriate method based on the list type:
-        - For ArrayList, removes and returns the element at index 0.
-        - For LinkedList, uses pollFirst (removes and returns the first element).
+
+        Depending on the underlying list type:
+        - ArrayList: Removes and returns the element at index 0.
+        - LinkedList: Uses `pollFirst` to remove and return the first element.
+
         Returns None if the queue is empty.
+
+        :return: The first element of the queue, or None if the queue is empty.
         """
         if isinstance(self.list, ArrayList):
             if not self.list.isEmpty():
@@ -69,9 +102,13 @@ class Queue:
     def element(self):
         """
         Retrieves but does not remove the first element of the queue.
-        Uses the appropriate method based on the list type:
-        - For ArrayList, retrieves the element at index 0 and raises IndexError if the queue is empty.
-        - For LinkedList, uses peekFirst and raises IndexError if the queue is empty.
+
+        Depending on the underlying list type:
+        - ArrayList: Retrieves the element at index 0 and raises IndexError if the queue is empty.
+        - LinkedList: Uses `peekFirst` and raises IndexError if the queue is empty.
+
+        :return: The first element of the queue.
+        :raises IndexError: If the queue is empty.
         """
         if isinstance(self.list, ArrayList):
             if not self.list.isEmpty():
@@ -87,8 +124,11 @@ class Queue:
     def offer(self, element):
         """
         Inserts the given element into the queue.
-        Since capacity restrictions are not handled, this method behaves the same as addLast.
-        Returns True to indicate successful insertion.
+
+        Since capacity restrictions are not handled, this method behaves the same as `addLast`.
+
+        :param element: The element to insert into the queue.
+        :return: True to indicate successful insertion.
         """
         self.addLast(element)
         return True
@@ -96,5 +136,7 @@ class Queue:
     def getList(self):
         """
         Returns the internal list instance used by the queue.
+
+        :return: The internal list instance (ArrayList or LinkedList).
         """
         return self.list
